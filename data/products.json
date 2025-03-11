@@ -1,0 +1,65 @@
+{
+  "bestSellers": ["1", "2", "3"],
+  "products": [
+    {
+      "id": "1",
+      "name": "Kayapalat Essential Oil",
+      "description": "Pure, therapeutic-grade essential oil for relaxation and balance.",
+      "longDescription": "Our Kayapalat Essential Oil is a carefully crafted blend of pure, therapeutic-grade essential oils designed to promote relaxation, balance, and overall well-being. This unique formulation combines the wisdom of ancient Ayurvedic practices with modern aromatherapy techniques to create a powerful tool for your daily wellness routine.\n\nEach bottle contains a harmonious blend of lavender, frankincense, sandalwood, and ylang-ylang oils, known for their calming and grounding properties. The oil can be used in a diffuser, added to bath water, or diluted with a carrier oil for a soothing massage.",
+      "price": "₹1,299",
+      "image": "/placeholder.svg?height=600&width=600&text=Essential+Oil",
+      "rating": 4.8,
+      "reviews": 120
+    },
+    {
+      "id": "2",
+      "name": "Ayurvedic Wellness Tea",
+      "description": "Organic herbal blend to support digestion and immunity.",
+      "longDescription": "Our Ayurvedic Wellness Tea is a delicious and nourishing blend of organic herbs carefully selected to support digestion and boost immunity. This unique formulation is based on traditional Ayurvedic principles and modern nutritional science to provide a holistic approach to your daily wellness routine.\n\nEach cup of this aromatic tea contains a perfect balance of ginger, turmeric, licorice root, fennel seeds, and holy basil (Tulsi). These powerful herbs work synergistically to soothe the digestive system, reduce inflammation, and strengthen the body's natural defenses.",
+      "price": "₹899",
+      "image": "/placeholder.svg?height=600&width=600&text=Wellness+Tea",
+      "rating": 4.6,
+      "reviews": 85
+    },
+    {
+      "id": "3",
+      "name": "Chakra Balancing Set",
+      "description": "Complete set of oils and herbs for energy center alignment.",
+      "longDescription": "Experience complete energy center alignment with our comprehensive Chakra Balancing Set.",
+      "price": "₹2,499",
+      "image": "/placeholder.svg?height=600&width=600&text=Chakra+Set",
+      "rating": 4.9,
+      "reviews": 95
+    },
+    {
+      "id": "4",
+      "name": "Ayurvedic Face Cream",
+      "description": "Nourishing face cream with traditional Ayurvedic ingredients.",
+      "longDescription": "Revitalize your skin with our traditional Ayurvedic face cream, packed with natural ingredients.",
+      "price": "₹1,599",
+      "image": "/placeholder.svg?height=600&width=600&text=Face+Cream",
+      "rating": 4.7,
+      "reviews": 150
+    },
+    {
+      "id": "5",
+      "name": "Meditation Cushion Set",
+      "description": "Comfortable cushion set for your daily meditation practice.",
+      "longDescription": "Enhance your meditation practice with our ergonomically designed cushion set.",
+      "price": "₹1,999",
+      "image": "/placeholder.svg?height=600&width=600&text=Meditation+Set",
+      "rating": 4.5,
+      "reviews": 75
+    },
+    {
+      "id": "6",
+      "name": "Ayurvedic Hair Oil",
+      "description": "Rejuvenating hair oil blend for healthy, lustrous hair.",
+      "longDescription": "Transform your hair care routine with our traditional Ayurvedic hair oil blend.",
+      "price": "₹1,099",
+      "image": "/placeholder.svg?height=600&width=600&text=Hair+Oil",
+      "rating": 4.7,
+      "reviews": 110
+    }
+  ]
+}
