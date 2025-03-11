@@ -297,7 +297,7 @@ export default function LandingPage() {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {bestSellerProducts.map((product) => (
+              {bestSellerProducts.map((product) => product && (
                 <Link
                   key={product.id}
                   href={`/products/${product.id}`}

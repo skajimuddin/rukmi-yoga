@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button"
 import { Star, Heart, ShoppingCart } from "lucide-react"
 import productsData from "@/data/products.json"
 
+import Header from "@/components/header"
+import Footer from "@/components/footer-minimal"
+
 function getProductData(id: string) {
   return productsData.products.find((p) => p.id === id)
 }
@@ -17,8 +20,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Header />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12">
           <div className="container px-4 md:px-6">
             <nav className="flex mb-8" aria-label="Breadcrumb">
               <ol className="inline-flex items-center space-x-1 md:space-x-3">
@@ -107,6 +111,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   )
 }

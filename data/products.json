@@ -1,8 +1,12 @@
 {
-  "bestSellers": ["1", "2", "3"],
+  "bestSellers": [
+    "a7x9d2e4k8m3p6w9y5n2",
+    "b3k5m8p2j7h4t6v9q1s3",
+    "f6h2n4r8w5c9x7t3m1k5"
+  ],
   "products": [
     {
-      "id": "1",
+      "id": "a7x9d2e4k8m3p6w9y5n2",
       "name": "Kayapalat Essential Oil",
       "description": "Pure, therapeutic-grade essential oil for relaxation and balance.",
       "longDescription": "Our Kayapalat Essential Oil is a carefully crafted blend of pure, therapeutic-grade essential oils designed to promote relaxation, balance, and overall well-being. This unique formulation combines the wisdom of ancient Ayurvedic practices with modern aromatherapy techniques to create a powerful tool for your daily wellness routine.\n\nEach bottle contains a harmonious blend of lavender, frankincense, sandalwood, and ylang-ylang oils, known for their calming and grounding properties. The oil can be used in a diffuser, added to bath water, or diluted with a carrier oil for a soothing massage.",
@@ -12,7 +16,7 @@
       "reviews": 120
     },
     {
-      "id": "2",
+      "id": "b3k5m8p2j7h4t6v9q1s3",
       "name": "Ayurvedic Wellness Tea",
       "description": "Organic herbal blend to support digestion and immunity.",
       "longDescription": "Our Ayurvedic Wellness Tea is a delicious and nourishing blend of organic herbs carefully selected to support digestion and boost immunity. This unique formulation is based on traditional Ayurvedic principles and modern nutritional science to provide a holistic approach to your daily wellness routine.\n\nEach cup of this aromatic tea contains a perfect balance of ginger, turmeric, licorice root, fennel seeds, and holy basil (Tulsi). These powerful herbs work synergistically to soothe the digestive system, reduce inflammation, and strengthen the body's natural defenses.",
@@ -22,7 +26,7 @@
       "reviews": 85
     },
     {
-      "id": "3",
+      "id": "f6h2n4r8w5c9x7t3m1k5",
       "name": "Chakra Balancing Set",
       "description": "Complete set of oils and herbs for energy center alignment.",
       "longDescription": "Experience complete energy center alignment with our comprehensive Chakra Balancing Set.",
@@ -32,7 +36,7 @@
       "reviews": 95
     },
     {
-      "id": "4",
+      "id": "j9l4q7t2n8s5v1x6y3w4",
       "name": "Ayurvedic Face Cream",
       "description": "Nourishing face cream with traditional Ayurvedic ingredients.",
       "longDescription": "Revitalize your skin with our traditional Ayurvedic face cream, packed with natural ingredients.",
@@ -42,7 +46,7 @@
       "reviews": 150
     },
     {
-      "id": "5",
+      "id": "m2p8s5v7k3h9n4c6t1w8",
       "name": "Meditation Cushion Set",
       "description": "Comfortable cushion set for your daily meditation practice.",
       "longDescription": "Enhance your meditation practice with our ergonomically designed cushion set.",
@@ -52,7 +56,7 @@
       "reviews": 75
     },
     {
-      "id": "6",
+      "id": "w4y7u3c9q5x2m8k6p1n4",
       "name": "Ayurvedic Hair Oil",
       "description": "Rejuvenating hair oil blend for healthy, lustrous hair.",
       "longDescription": "Transform your hair care routine with our traditional Ayurvedic hair oil blend.",
