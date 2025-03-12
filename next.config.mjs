@@ -7,6 +7,10 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export", // Ensures static HTML export
+  images: {
+    unoptimized: true, // Required if using Next.js Image component
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
