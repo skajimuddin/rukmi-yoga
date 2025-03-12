@@ -1,99 +1,25 @@
 {
-  "bestSellers": [
-    "a7x9d2e4k8m3p6w9y5n2",
-    "b3k5m8p2j7h4t6v9q1s3",
-    "f6h2n4r8w5c9x7t3m1k5"
-  ],
+  "bestSellers": ["a7x9d2e4k8m3p6w9y5n2"],
   "products": [
     {
       "id": "a7x9d2e4k8m3p6w9y5n2",
-      "name": "Kayapalat Essential Oil",
-      "description": "Pure, therapeutic-grade essential oil for relaxation and balance.",
-      "longDescription": "Our Kayapalat Essential Oil is a carefully crafted blend of pure, therapeutic-grade essential oils designed to promote relaxation, balance, and overall well-being. This unique formulation combines the wisdom of ancient Ayurvedic practices with modern aromatherapy techniques to create a powerful tool for your daily wellness routine.\n\nEach bottle contains a harmonious blend of lavender, frankincense, sandalwood, and ylang-ylang oils, known for their calming and grounding properties. The oil can be used in a diffuser, added to bath water, or diluted with a carrier oil for a soothing massage.",
-      "price": "₹1,299",
-      "image": "https://www.kayapalatcare.com/cdn/shop/files/WhatsApp_Image_2025-02-19_at_15.58.45_1d2447b7_1800x1800.jpg?v=1739964312",
+      "name": "Multi-Purpose Cream – Your Ultimate Skincare Solution",
+      "description": "No description available.",
+      "price": "₹199.00",
+      "image": "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_1800x1800.png?v=1737617807",
       "images": [
-        "https://www.kayapalatcare.com/cdn/shop/files/WhatsApp_Image_2025-02-19_at_15.58.45_1d2447b7_1800x1800.jpg?v=1739964312+1",
-        "https://www.kayapalatcare.com/cdn/shop/files/WhatsApp_Image_2025-02-19_at_15.58.45_1d2447b7_1800x1800.jpg?v=1739964312+2",
-        "https://www.kayapalatcare.com/cdn/shop/files/WhatsApp_Image_2025-02-19_at_15.58.45_1d2447b7_1800x1800.jpg?v=1739964312+3"
+        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Kayapalat_1800x1800.png?v=1737617842",
+        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Use_1800x1800.png?v=1737617973",
+        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Benefits.png?v=1737618019&width=1200",
+        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Benefits_1800x1800.png?v=1737618019",
+        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Ingredients.png?v=1737618064&width=1200",
+        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Best_Result.png?v=1737618113&width=1200",
+        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_for_Skin.png?v=1737618152&width=1200"
       ],
       "rating": 4.8,
-      "reviews": 120
-    },
-    {
-      "id": "b3k5m8p2j7h4t6v9q1s3",
-      "name": "Ayurvedic Wellness Tea",
-      "description": "Organic herbal blend to support digestion and immunity.",
-      "longDescription": "Our Ayurvedic Wellness Tea is a delicious and nourishing blend of organic herbs carefully selected to support digestion and boost immunity. This unique formulation is based on traditional Ayurvedic principles and modern nutritional science to provide a holistic approach to your daily wellness routine.\n\nEach cup of this aromatic tea contains a perfect balance of ginger, turmeric, licorice root, fennel seeds, and holy basil (Tulsi). These powerful herbs work synergistically to soothe the digestive system, reduce inflammation, and strengthen the body's natural defenses.",
-      "price": "₹899",
-      "image": "https://www.kayapalatcare.com/cdn/shop/files/Hair_Shampoo_1800x1800.png?v=1737544315",
-      "images": [
-        "https://www.kayapalatcare.com/cdn/shop/files/Hair_Shampoo_1800x1800.png?v=1737544315+1",
-        "https://www.kayapalatcare.com/cdn/shop/files/Hair_Shampoo_1800x1800.png?v=1737544315+2",
-        "https://www.kayapalatcare.com/cdn/shop/files/Hair_Shampoo_1800x1800.png?v=1737544315+3"
-      ],
-      "rating": 4.6,
-      "reviews": 85
-    },
-    {
-      "id": "f6h2n4r8w5c9x7t3m1k5",
-      "name": "Chakra Balancing Set",
-      "description": "Complete set of oils and herbs for energy center alignment.",
-      "longDescription": "Experience complete energy center alignment with our comprehensive Chakra Balancing Set.",
-      "price": "₹2,499",
-      "image": "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Kayapalat_1800x1800.png?v=1737617842",
-      "images": [
-        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Kayapalat_1800x1800.png?v=1737617842+1",
-        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Kayapalat_1800x1800.png?v=1737617842+2",
-        "https://www.kayapalatcare.com/cdn/shop/files/Multi-Purpose_Cream_Kayapalat_1800x1800.png?v=1737617842+3"
-      ],
-      "rating": 4.9,
-      "reviews": 95
-    },
-    {
-      "id": "j9l4q7t2n8s5v1x6y3w4",
-      "name": "Ayurvedic Face Cream",
-      "description": "Nourishing face cream with traditional Ayurvedic ingredients.",
-      "longDescription": "Revitalize your skin with our traditional Ayurvedic face cream, packed with natural ingredients.",
-      "price": "₹1,599",
-      "image": "https://www.kayapalatcare.com/cdn/shop/files/Face_Pack.png?v=1737546905&width=1200",
-      "images": [
-        "https://www.kayapalatcare.com/cdn/shop/files/Face_Pack.png?v=1737546905&width=1200+1",
-        "https://www.kayapalatcare.com/cdn/shop/files/Face_Pack.png?v=1737546905&width=1200+2",
-        "https://www.kayapalatcare.com/cdn/shop/files/Face_Pack.png?v=1737546905&width=1200+3"
-      ],
-      "rating": 4.7,
-      "reviews": 150
-    },
-    {
-      "id": "m2p8s5v7k3h9n4c6t1w8",
-      "name": "Meditation Cushion Set",
-      "description": "Comfortable cushion set for your daily meditation practice.",
-      "longDescription": "Enhance your meditation practice with our ergonomically designed cushion set.",
-      "price": "₹1,999",
-      "image": "https://www.kayapalatcare.com/cdn/shop/files/Rose_Toner_1800x1800.png?v=1737626393",
-      "images": [
-        "https://www.kayapalatcare.com/cdn/shop/files/Rose_Toner_1800x1800.png?v=1737626393+1",
-        "https://www.kayapalatcare.com/cdn/shop/files/Rose_Toner_1800x1800.png?v=1737626393+2",
-        "https://www.kayapalatcare.com/cdn/shop/files/Rose_Toner_1800x1800.png?v=1737626393+3"
-      ],
-      "rating": 4.5,
-      "reviews": 75
-    },
-    {
-      "id": "w4y7u3c9q5x2m8k6p1n4",
-      "name": "Ayurvedic Hair Oil",
-      "description": "Rejuvenating hair oil blend for healthy, lustrous hair.",
-      "longDescription": "Transform your hair care routine with our traditional Ayurvedic hair oil blend.",
-      "price": "₹1,099",
-      "image": "https://www.kayapalatcare.com/cdn/shop/files/Mud_Cleanser_Soap.png?v=1737546127&width=1200",
-      "images": [
-        "https://www.kayapalatcare.com/cdn/shop/files/Mud_Cleanser_Soap.png?v=1737546127&width=1200+1",
-        "https://www.kayapalatcare.com/cdn/shop/files/Mud_Cleanser_Soap.png?v=1737546127&width=1200+2",
-        "https://www.kayapalatcare.com/cdn/shop/files/Mud_Cleanser_Soap.png?v=1737546127&width=1200+3"
-      ],
-      "rating": 4.7,
-      "reviews": 110
+      "reviews": 120,
+      "categories": "Skin Care",
+      "longDescription": "## Kayapalat Mud Face Wash – Natural Skin Cleanser\n\nCleanse your skin naturally with **Kayapalat Mud Face Wash**, enriched with mineral-rich mud and herbal extracts. This gentle face wash for combination skin effectively removes impurities, excess oil, and dirt while maintaining your skin's natural moisture balance. It’s a perfect addition to your daily skincare routine, leaving your face feeling fresh, soft, and radiant.\n\n## Perfect for All Skin Types\n\n**Kayapalat Mud Face Wash** is designed to be suitable for all skin types. Whether you have oily, dry, or combination skin, this detan face wash will help you achieve a glowing and clear complexion. The unique formula balances your skin without stripping it of its natural oils.\n\n### Ideal for Tan Removal\nIf you're looking for a **tan removal face wash**, **Kayapalat Mud Face Wash** is your solution. It helps brighten dull, sun-tanned skin and promotes an even skin tone.\n\n### Say Goodbye to Pimples\nFor those struggling with acne, this **face wash for pimples** is perfect. It reduces excess oil production and helps in preventing breakouts.\n\n### For Young Skin\nLooking for a **face wash for girls**? **Kayapalat Mud Face Wash** is gentle yet effective, making it a great option for young adults seeking a healthy, clear complexion.\n\n## Ayurvedic and Chemical-Free\n\nAs an **ayurvedic face wash**, **Kayapalat Mud Face Wash** blends natural ingredients to nourish your skin deeply. It’s free from harsh chemicals, parabens, and sulfates, ensuring your skin gets only the best care.\n\n### Natural Herbal Ingredients\nEnriched with **mineral-rich mud** and **herbal extracts**, it revitalizes your skin and improves texture.\n\n### Gentle Yet Effective\nIts gentle formula makes it suitable for **sensitive skin**, providing a refreshing cleanse without causing irritation.\n\n## Benefits of Kayapalat Mud Face Wash\n\n- **Cleanses and Purifies**: Removes dirt, oil, and impurities.\n- **Balances Skin**: Maintains skin’s moisture balance without drying.\n- **Reduces Pimples**: Helps clear acne and prevent breakouts.\n- **Tan Removal**: Brightens skin and removes sun tan.\n- **Suitable for All Skin Types**: Works for oily, dry, and combination skin."
     }
   ]
 }
