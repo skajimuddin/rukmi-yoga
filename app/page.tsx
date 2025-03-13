@@ -125,11 +125,11 @@ export default function LandingPage() {
                 {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-white hover:bg-primary/80 w-fit">
                   New Collection
                 </div> */}
-                <h1 className="text-4xl text-center font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
+                <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
                   {/* Discover Holistic Wellness with */}
                   Welcome to The Gateway to Holistic Wellness
                 </h1>
-                <p className="max-w-[600px] text-gray-600 md:text-xl">
+                <p className="text-center md:text-left max-w-[600px] text-gray-600 md:text-xl">
                   {/* Premium Ayurvedic products designed to restore balance and
                   promote natural healing for mind, body, and spirit. */}
                   we bring you the wisdom of Ayurveda blended with modern
@@ -309,21 +309,21 @@ export default function LandingPage() {
                       href={`/products/${product.id}`}
                       className="group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md"
                     >
-                      <div className="aspect-square overflow-hidden bg-muted">
+                      <div className="aspect-square overflow-hidden">
                         <Image
-                          src={product.image}
+                          src={product.image || "/placeholder.svg"}
                           alt={product.name}
                           width={400}
                           height={400}
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
                       </div>
                       <div className="p-6">
                         <h3 className="text-xl font-bold">{product.name}</h3>
-                        <p className="mt-2 text-muted-foreground">
+                        {/* <p className="mt-2 text-muted-foreground">
                           {product.description}
-                        </p>
+                        </p> */}
                         <div className="mt-4 flex items-center justify-between">
                           <span className="text-lg font-bold">
                             {product.price}

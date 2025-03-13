@@ -11,7 +11,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer-minimal"
 
 export default function ProductsPage() {
-  const { products } = productsData;
+  const { products } = productsData
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -43,7 +43,7 @@ export default function ProductsPage() {
                       alt={product.name}
                       width={400}
                       height={400}
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
                   </div>

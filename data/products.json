@@ -1,8 +1,15 @@
 {
-  "bestSellers": ["a7x9d2e4k8m3p6w9y5n2"],
+  "bestSellers": [
+    "dr3dsr-dr43d-dr34ddd-e343d-jfe89ytvn754",
+    "4af5c1a8-8423-435b-9de1-d799112a6baf",
+    "c8d2a7f5-3b9e-4c6d-8f21-e5a47c1b9d3f",
+    "f7c3b9a1-5d2e-48a6-9f4c-e8b21d7c3f5a",
+    "a5d7c2f9-4b3e-48a1-8f6c-e9b21f7d3c5a",
+    "e9a7c5d3-4b2f-48a1-8d6c-f2b31f7d9c5a"
+  ],
   "products": [
     {
-      "id": "a7x9d2e4k8m3p6w9y5n2",
+      "id": "dr3dsr-dr43d-dr34ddd-e343d-jfe89ytvn754",
       "name": "Multi-Purpose Cream – Your Ultimate Skincare Solution",
       "description": "No description available.",
       "price": "₹199.00",
