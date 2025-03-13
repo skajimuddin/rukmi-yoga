@@ -50,7 +50,7 @@ export default function ProductsPage() {
                   <div className="p-6">
                     <h3 className="text-xl font-bold">{product.name}</h3>
                     <p className="mt-2 text-muted-foreground">
-                      {product.description}
+                      {/* {product.description} */}
                     </p>
                     <div className="mt-4 flex items-center justify-between">
                       <span className="text-lg font-bold">{product.price}</span>
