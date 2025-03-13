@@ -464,93 +464,47 @@ export default function LandingPage() {
         </section>
 
         {/* about us section*/}
-        <section
-          id="about-us"
-          className="py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50"
-        >
-          <div className="container px-4 md:px-6">
-            {/* Section Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center gap-4 text-center mb-12"
-            >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary/10 text-primary hover:bg-primary/20">
-                Our Story
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                About Us 
-              </h2>
-              <p className="max-w-[700px] text-gray-600 md:text-xl">
-                Your trusted partner in holistic wellness and natural
-                products
-              </p>
-            </motion.div>
-
-            {/* Our Story */}
-            <div className="grid gap-12 lg:grid-cols-2 items-center mb-16">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <h3 className="text-2xl font-bold text-primary">Our Journey</h3>
-                <p className="text-gray-600">
-                  Founded in 2018, Givve was born from a passion to make
-                  authentic Ayurvedic wellness accessible to everyone. As the
-                  official retailer of Kayapalat, we bridge the gap between
-                  ancient wisdom and modern convenience, bringing time-tested
-                  remedies to your doorstep.
-                </p>
-                <p className="text-gray-600">
-                  Our journey began when our founder experienced the
-                  transformative benefits of Ayurveda firsthand. After
-                  struggling with chronic health issues that conventional
-                  medicine couldn't resolve, they discovered the healing power
-                  of Ayurvedic practices and products.
-                </p>
-                
-                <Button className="mt-4 bg-primary text-white hover:bg-primary/90">
-                  Learn More About us
-                </Button>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="relative overflow-hidden rounded-xl shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-background/0 z-10"></div>
-                  <Image
-                    src="/placeholder.svg?height=500&width=600&text=Our+Journey"
-                    width={600}
-                    height={500}
-                    alt="Givve's journey in Ayurvedic wellness"
-                    className="mx-auto object-cover w-full aspect-[4/3] rounded-xl"
-                  />
-                </div>
-                <motion.div
-                  animate={{
-                    scale: [1, 1.1, 1],
-                    opacity: [0.5, 1, 0.5],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Number.POSITIVE_INFINITY,
-                    repeatType: "reverse",
-                  }}
-                  className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-secondary/30 blur-xl"
-                ></motion.div>
-              </motion.div>
+        <section id="who-we-are" className="py-16">
+      <div className="container px-4 md:px-6">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+          <div className="space-y-4">
+            <div className="inline-block px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">About Us</div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Who We Are</h2>
+            <p className="text-muted-foreground md:text-xl">
+            Founded in 2018, Givve was born from a passion to make
+authentic Ayurvedic wellness accessible to everyone. As the
+official retailer of Kayapalat,
+            </p>
+            <p className="text-muted-foreground md:text-xl">
+            Our journey began when our founder experienced the
+transformative benefits of Ayurveda firsthand. After
+struggling with chronic health issues that conventional
+medicine couldn't resolve
+            </p>
+            <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
+              <Button asChild>
+                <Link href="/about">Learn more</Link>
+              </Button>
+              {/* <Button variant="outline" asChild>
+                <Link href="/about">Meet The Team</Link>
+              </Button> */}
             </div>
           </div>
-        </section>
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <img
+                src="/placeholder.svg?height=500&width=600"
+                alt="Our team working together"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                width={600}
+                height={500}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
         {/* Contact Section */}
         <section
@@ -655,3 +609,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+
