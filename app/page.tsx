@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
 import {
   Heart,
   Leaf,
@@ -20,17 +20,17 @@ import {
   Clock,
   Shield,
   Target,
-} from "lucide-react";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+} from "lucide-react"
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
 
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import productsData from "@/data/products.json";
+import Header from "@/components/header"
+import Footer from "@/components/footer"
+import productsData from "@/data/products.json"
 
 export default function LandingPage() {
-  const [testimonialIndex, setTestimonialIndex] = useState(0);
-  const [cardsToShow, setCardsToShow] = useState(3);
+  const [testimonialIndex, setTestimonialIndex] = useState(0)
+  const [cardsToShow, setCardsToShow] = useState(3)
 
   const testimonials = [
     {
@@ -63,48 +63,48 @@ export default function LandingPage() {
       quote:
         "I've incorporated Kayapalat Care into my therapy sessions, and the results have been remarkable. My clients love the natural approach to wellness.",
     },
-  ];
+  ]
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setCardsToShow(3);
+        setCardsToShow(3)
       } else if (window.innerWidth >= 640) {
-        setCardsToShow(2);
+        setCardsToShow(2)
       } else {
-        setCardsToShow(1);
+        setCardsToShow(1)
       }
-    };
+    }
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   const nextTestimonial = () => {
     setTestimonialIndex(
       (prevIndex) => (prevIndex + 1) % (testimonials.length - cardsToShow + 1)
-    );
-  };
+    )
+  }
 
   const prevTestimonial = () => {
     setTestimonialIndex(
       (prevIndex) =>
         (prevIndex - 1 + testimonials.length - cardsToShow + 1) %
         (testimonials.length - cardsToShow + 1)
-    );
-  };
+    )
+  }
 
   const bestSellerProducts = productsData.bestSellers
     .map((id) => productsData.products.find((p) => p.id === id))
-    .filter(Boolean);
+    .filter(Boolean)
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
+        <section className="relative py-12 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="https://img.freepik.com/free-vector/hand-painted-watercolor-nature-background_52683-60523.jpg?semt=ais_hybrid"
@@ -120,12 +120,12 @@ export default function LandingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="flex flex-col justify-center space-y-4"
+                className="flex flex-col justify-center space-y-4 order-2 lg:order-1"
               >
                 {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-white hover:bg-primary/80 w-fit">
                   New Collection
                 </div> */}
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
+                <h1 className="text-4xl text-center font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
                   {/* Discover Holistic Wellness with */}
                   Welcome to The Gateway to Holistic Wellness
                 </h1>
@@ -170,16 +170,15 @@ export default function LandingPage() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative lg:ml-auto"
+                className="relative lg:ml-auto order-1 lg:order-2"
               >
-                <div className="relative overflow-hidden rounded-xl shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-background/0 z-10"></div>
+                <div className="relative overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=400&width=400&text=Kayapalat+Care"
+                    src="/hero_img.webp"
                     width={600}
-                    height={450}
+                    height={550}
                     alt="Kayapalat Care Products"
-                    className="mx-auto object-cover w-full aspect-square md:aspect-[4/3] lg:aspect-[3/2] rounded-xl"
+                    className="mx-auto object-contain w-full max-h-[550px] lg:h-[550px] aspect-square md:aspect-[4/3] lg:aspect-[3/2] rounded-xl"
                     priority
                   />
                 </div>
@@ -465,46 +464,49 @@ export default function LandingPage() {
 
         {/* about us section*/}
         <section id="who-we-are" className="py-16">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-          <div className="space-y-4">
-            <div className="inline-block px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">About Us</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Who We Are</h2>
-            <p className="text-muted-foreground md:text-xl">
-            Founded in 2018, Givve was born from a passion to make
-authentic Ayurvedic wellness accessible to everyone. As the
-official retailer of Kayapalat,
-            </p>
-            <p className="text-muted-foreground md:text-xl">
-            Our journey began when our founder experienced the
-transformative benefits of Ayurveda firsthand. After
-struggling with chronic health issues that conventional
-medicine couldn't resolve
-            </p>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
-              <Button asChild>
-                <Link href="/about">Learn more</Link>
-              </Button>
-              {/* <Button variant="outline" asChild>
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              <div className="space-y-4">
+                <div className="inline-block px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">
+                  About Us
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  Who We Are
+                </h2>
+                <p className="text-muted-foreground md:text-xl">
+                  Founded in 2018, Givve was born from a passion to make
+                  authentic Ayurvedic wellness accessible to everyone. As the
+                  official retailer of Kayapalat,
+                </p>
+                <p className="text-muted-foreground md:text-xl">
+                  Our journey began when our founder experienced the
+                  transformative benefits of Ayurveda firsthand. After
+                  struggling with chronic health issues that conventional
+                  medicine couldn't resolve
+                </p>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
+                  <Button asChild>
+                    <Link href="/about">Learn more</Link>
+                  </Button>
+                  {/* <Button variant="outline" asChild>
                 <Link href="/about">Meet The Team</Link>
               </Button> */}
+                </div>
+              </div>
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <img
+                    src="/placeholder.svg?height=500&width=600"
+                    alt="Our team working together"
+                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                    width={600}
+                    height={500}
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <img
-                src="/placeholder.svg?height=500&width=600"
-                alt="Our team working together"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                width={600}
-                height={500}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+        </section>
 
         {/* Contact Section */}
         <section
@@ -607,7 +609,5 @@ medicine couldn't resolve
       {/* Footer */}
       <Footer />
     </div>
-  );
+  )
 }
-
-
