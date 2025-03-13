@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import {
   Heart,
   Leaf,
@@ -15,17 +15,22 @@ import {
   MapPin,
   Phone,
   Mail,
-} from "lucide-react"
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+  Users,
+  Award,
+  Clock,
+  Shield,
+  Target,
+} from "lucide-react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import productsData from "@/data/products.json"
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import productsData from "@/data/products.json";
 
 export default function LandingPage() {
-  const [testimonialIndex, setTestimonialIndex] = useState(0)
-  const [cardsToShow, setCardsToShow] = useState(3)
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(3);
 
   const testimonials = [
     {
@@ -58,41 +63,41 @@ export default function LandingPage() {
       quote:
         "I've incorporated Kayapalat Care into my therapy sessions, and the results have been remarkable. My clients love the natural approach to wellness.",
     },
-  ]
+  ];
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setCardsToShow(3)
+        setCardsToShow(3);
       } else if (window.innerWidth >= 640) {
-        setCardsToShow(2)
+        setCardsToShow(2);
       } else {
-        setCardsToShow(1)
+        setCardsToShow(1);
       }
-    }
+    };
 
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextTestimonial = () => {
     setTestimonialIndex(
       (prevIndex) => (prevIndex + 1) % (testimonials.length - cardsToShow + 1)
-    )
-  }
+    );
+  };
 
   const prevTestimonial = () => {
     setTestimonialIndex(
       (prevIndex) =>
         (prevIndex - 1 + testimonials.length - cardsToShow + 1) %
         (testimonials.length - cardsToShow + 1)
-    )
-  }
+    );
+  };
 
   const bestSellerProducts = productsData.bestSellers
     .map((id) => productsData.products.find((p) => p.id === id))
-    .filter(Boolean)
+    .filter(Boolean);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -117,15 +122,19 @@ export default function LandingPage() {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col justify-center space-y-4"
               >
-                <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-white hover:bg-primary/80 w-fit">
+                {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-white hover:bg-primary/80 w-fit">
                   New Collection
-                </div>
+                </div> */}
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
-                  Discover Holistic Wellness with Kayapalat Care
+                  {/* Discover Holistic Wellness with */}
+                  Welcome to The Gateway to Holistic Wellness
                 </h1>
                 <p className="max-w-[600px] text-gray-600 md:text-xl">
-                  Premium Ayurvedic products designed to restore balance and
-                  promote natural healing for mind, body, and spirit.
+                  {/* Premium Ayurvedic products designed to restore balance and
+                  promote natural healing for mind, body, and spirit. */}
+                  we bring you the wisdom of Ayurveda blended with modern
+                  convenience. Our platform offers a curated selection of
+                  authentic Ayurvedic products,
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
                   <Button
@@ -144,20 +153,16 @@ export default function LandingPage() {
                 </div>
                 <div className="flex items-center gap-4 pt-4">
                   <div className="flex -space-x-2">
-                    {[1, 2, 3].map((i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: i * 0.1 }}
-                        className="inline-block h-8 w-8 rounded-full border-2 border-white bg-secondary overflow-hidden"
-                      >
-                        <span className="sr-only">Customer {i}</span>
-                      </motion.div>
-                    ))}
+                    <motion.img
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                      className="inline-block h-8 w-8 rounded-full border-2 border-white  overflow-hidden"
+                      src="/KayapalatLogo.png"
+                    ></motion.img>
                   </div>
-                  <div className="text-sm text-gray-600">
-                    <span className="font-medium">500+</span> happy customers
+                  <div className="text-sm text-gray-600 font-bold">
+                    <a> Official Retailer of Kayapalat</a>
                   </div>
                 </div>
               </motion.div>
@@ -225,11 +230,11 @@ export default function LandingPage() {
                 The Kayapalat Difference
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                Why Choose Our Products
+                Why Choose Us?
               </h2>
               <p className="max-w-[700px] text-gray-600 md:text-xl">
-                Our products combine ancient Ayurvedic wisdom with modern
-                science for optimal wellness.
+                we provide 100% Natural Laboratory Tested Health and Beauty
+                Products that suit almost all Human Bodies.
               </p>
             </motion.div>
             <div className="flex flex-col sm:flex-row gap-6 flex-wrap">
@@ -238,19 +243,19 @@ export default function LandingPage() {
                   icon: Leaf,
                   title: "100% Natural",
                   description:
-                    "Made with pure, organic ingredients sourced from trusted suppliers across India.",
+                    "Our products are made from carefully selected, high-quality herbs, ensuring purity and effectiveness without any harmful chemicals.",
                 },
                 {
                   icon: Heart,
                   title: "Holistic Healing",
                   description:
-                    "Addresses the root cause of imbalances, not just the symptoms for complete wellness.",
+                    "Crafted using ancient Ayurvedic wisdom, our products support overall well-being and balance, enhancing your body’s natural healing process.",
                 },
                 {
                   icon: Star,
                   title: "Scientifically Proven",
                   description:
-                    "Formulations backed by research and traditional Ayurvedic principles for guaranteed results.",
+                    "Thousands of satisfied customers trust us for their Ayurvedic needs, backed by expert recommendations and positive reviews.",
                 },
               ].map((benefit, index) => (
                 <motion.div
@@ -292,47 +297,52 @@ export default function LandingPage() {
                 Our Best Sellers
               </h2>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                Discover our most popular Kayapalat Care products loved by our
+                Discover our most popular Ayurvedic products loved by our
                 customers.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {bestSellerProducts.map((product) => product && (
-                <Link
-                  key={product.id}
-                  href={`/products/${product.id}`}
-                  className="group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md"
-                >
-                  <div className="aspect-square overflow-hidden bg-muted">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      width={400}
-                      height={400}
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold">{product.name}</h3>
-                    <p className="mt-2 text-muted-foreground">
-                      {product.description}
-                    </p>
-                    <div className="mt-4 flex items-center justify-between">
-                      <span className="text-lg font-bold">{product.price}</span>
-                      <Button
-                        size="sm"
-                        className="transition-transform group-hover:translate-y-0"
-                      >
-                        View Details
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 right-4 rounded-full bg-background/80 p-2 opacity-0 transition-opacity group-hover:opacity-100">
-                    <Heart className="h-4 w-4 text-muted-foreground hover:text-primary" />
-                  </div>
-                </Link>
-              ))}
+              {bestSellerProducts.map(
+                (product) =>
+                  product && (
+                    <Link
+                      key={product.id}
+                      href={`/products/${product.id}`}
+                      className="group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md"
+                    >
+                      <div className="aspect-square overflow-hidden bg-muted">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          width={400}
+                          height={400}
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold">{product.name}</h3>
+                        <p className="mt-2 text-muted-foreground">
+                          {product.description}
+                        </p>
+                        <div className="mt-4 flex items-center justify-between">
+                          <span className="text-lg font-bold">
+                            {product.price}
+                          </span>
+                          <Button
+                            size="sm"
+                            className="transition-transform group-hover:translate-y-0"
+                          >
+                            View Details
+                          </Button>
+                        </div>
+                      </div>
+                      <div className="absolute top-4 right-4 rounded-full bg-background/80 p-2 opacity-0 transition-opacity group-hover:opacity-100">
+                        <Heart className="h-4 w-4 text-muted-foreground hover:text-primary" />
+                      </div>
+                    </Link>
+                  )
+              )}
             </div>
             <div className="flex justify-center">
               <Button variant="outline" size="lg" className="gap-2">
@@ -453,6 +463,95 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* about us section*/}
+        <section
+          id="about-us"
+          className="py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50"
+        >
+          <div className="container px-4 md:px-6">
+            {/* Section Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center gap-4 text-center mb-12"
+            >
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary/10 text-primary hover:bg-primary/20">
+                Our Story
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
+                About Us 
+              </h2>
+              <p className="max-w-[700px] text-gray-600 md:text-xl">
+                Your trusted partner in holistic wellness and natural
+                products
+              </p>
+            </motion.div>
+
+            {/* Our Story */}
+            <div className="grid gap-12 lg:grid-cols-2 items-center mb-16">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <h3 className="text-2xl font-bold text-primary">Our Journey</h3>
+                <p className="text-gray-600">
+                  Founded in 2018, Givve was born from a passion to make
+                  authentic Ayurvedic wellness accessible to everyone. As the
+                  official retailer of Kayapalat, we bridge the gap between
+                  ancient wisdom and modern convenience, bringing time-tested
+                  remedies to your doorstep.
+                </p>
+                <p className="text-gray-600">
+                  Our journey began when our founder experienced the
+                  transformative benefits of Ayurveda firsthand. After
+                  struggling with chronic health issues that conventional
+                  medicine couldn't resolve, they discovered the healing power
+                  of Ayurvedic practices and products.
+                </p>
+                
+                <Button className="mt-4 bg-primary text-white hover:bg-primary/90">
+                  Learn More About us
+                </Button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative overflow-hidden rounded-xl shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-background/0 z-10"></div>
+                  <Image
+                    src="/placeholder.svg?height=500&width=600&text=Our+Journey"
+                    width={600}
+                    height={500}
+                    alt="Givve's journey in Ayurvedic wellness"
+                    className="mx-auto object-cover w-full aspect-[4/3] rounded-xl"
+                  />
+                </div>
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: [0.5, 1, 0.5],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: "reverse",
+                  }}
+                  className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-secondary/30 blur-xl"
+                ></motion.div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section
           id="contact"
@@ -554,5 +653,5 @@ export default function LandingPage() {
       {/* Footer */}
       <Footer />
     </div>
-  )
+  );
 }
