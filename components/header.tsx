@@ -20,9 +20,9 @@ export default function Header() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/products", label: "Products" },
-    { href: "/about-me", label: "About" },
-    { href: "/#testimonials", label: "Testimonials" },
     { href: "/#contact", label: "Contact" },
+    { href: "/about-us", label: "About us" },
+    { href: "/about-kayapalat", label: "About Kayapalat" },
   ]
 
   return (
