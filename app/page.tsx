@@ -104,13 +104,26 @@ export default function LandingPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
+      {/* WhatsApp Icon */}
+      <a
+        href="https://wa.me/1234567890"
+        className="fixed bottom-4 right-4 z-50 p-3 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/whatsapp_icon.png"
+          alt="whatsapp icon"
+          className="h-8 w-8 text-white"
+        />
+      </a>
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-12 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://img.freepik.com/free-vector/hand-painted-watercolor-nature-background_52683-60523.jpg?semt=ais_hybrid"
+              src="/hero_bg.webp"
               alt="Ayurvedic Background"
               layout="fill"
               objectFit="cover"

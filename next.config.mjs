@@ -9,6 +9,7 @@ try {
 const nextConfig = {
   output: "export", // Ensures static HTML export
   images: {
+    domains: ['www.kayapalatcare.com'],
     unoptimized: true, // Required if using Next.js Image component
   },
   eslint: {
