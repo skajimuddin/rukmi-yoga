@@ -1,5 +1,6 @@
 import productsData from "@/data/products.json"
 import Product from "@/components/product/Product"
+import ScrollToTopButton from "@/components/ScrollToTopButton"
 
 function getProductData(id: string) {
   return productsData.products.find((p) => p.id === id)
@@ -17,5 +18,10 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   if (!product) return <h1>Product not found</h1>
 
-  return <Product product={product} />
+  return (
+    <>
+      <Product product={product} />
+      <ScrollToTopButton />
+    </>
+  )
 }

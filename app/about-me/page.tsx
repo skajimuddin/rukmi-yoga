@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import {
   Award,
   BookOpen,
@@ -14,9 +14,10 @@ import {
   MapPin,
   Star,
   Users,
-} from "lucide-react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+} from "lucide-react"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
+import ScrollToTopButton from "@/components/ScrollToTopButton"
 
 export default function AboutMePage() {
   return (
@@ -143,7 +144,8 @@ export default function AboutMePage() {
           </div>
         </section>
         <Footer />
+        <ScrollToTopButton />
       </main>
     </div>
-  );
+  )
 }

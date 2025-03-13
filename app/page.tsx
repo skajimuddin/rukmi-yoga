@@ -15,6 +15,7 @@ import {
   MapPin,
   Phone,
   Mail,
+  ArrowRight,
   Users,
   Award,
   Clock,
@@ -31,6 +32,7 @@ import productsData from "@/data/products.json"
 export default function LandingPage() {
   const [testimonialIndex, setTestimonialIndex] = useState(0)
   const [cardsToShow, setCardsToShow] = useState(3)
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   const testimonials = [
     {
@@ -139,31 +141,18 @@ export default function LandingPage() {
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
                   <Button
                     size="lg"
-                    className="px-8 bg-primary text-white hover:bg-primary/90"
+                    className="px-8 bg-primary text-white hover:bg-secondary"
                   >
-                    Shop Now
+                    Get Consultation
                   </Button>
                   <Button
                     variant="outline"
                     size="lg"
-                    className="px-8 text-primary border-primary hover:bg-primary/10"
+                    className="px-8 text-primary border-primary hover:bg-secondary/10"
+                    asChild
                   >
-                    Learn More
+                    <Link href="/about-me">About us</Link>
                   </Button>
-                </div>
-                <div className="flex items-center gap-4 pt-4">
-                  <div className="flex -space-x-2">
-                    <motion.img
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: 0.1 }}
-                      className="inline-block h-8 w-8 rounded-full border-2 border-white  overflow-hidden"
-                      src="/KayapalatLogo.png"
-                    ></motion.img>
-                  </div>
-                  <div className="text-sm text-gray-600 font-bold">
-                    <a> Official Retailer of Kayapalat</a>
-                  </div>
                 </div>
               </motion.div>
               <motion.div
@@ -225,8 +214,8 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary/10 text-primary hover:bg-primary/20">
-                The Kayapalat Difference
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-primary hover:bg-primary/20">
+                Our Commitment to Excellence
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
                 Why Choose Us?
@@ -289,7 +278,7 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary/10 text-primary hover:bg-primary/20">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-primary hover:bg-primary/20">
                 Featured Products
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -299,8 +288,27 @@ export default function LandingPage() {
                 Discover our most popular Ayurvedic products loved by our
                 customers.
               </p>
+
+              {/* Added the "Official Retailer" section here with adaptation */}
+              <div className="flex items-center gap-4 pt-2">
+                <div className="flex -space-x-2">
+                  <motion.img
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="inline-block h-10 w-10 rounded-full border-2 border-white overflow-hidden"
+                    src="/KayapalatLogo.png"
+                    alt="Kayapalat Logo"
+                  />
+                </div>
+                <div className="text-sm text-gray-600 font-medium">
+                  Exclusive Official partner of Kayapalat Products
+                </div>
+              </div>
             </motion.div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> */}
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 lg:mx-8 lg:mt-12">
               {bestSellerProducts.map(
                 (product) =>
                   product && (
@@ -319,12 +327,16 @@ export default function LandingPage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
                       </div>
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold">{product.name}</h3>
+                      {/* <div className="p-6"> */}
+                      <div className="p-2 md:p-6">
+                        {/* <h3 className="text-xl font-bold"> */}
+                        <h3 className="text-base text-center md:text-left md:text-xl h-24 flex items-center justify-center md:justify-start">
+                          {product.name}
+                        </h3>
                         {/* <p className="mt-2 text-muted-foreground">
                           {product.description}
                         </p> */}
-                        <div className="mt-4 flex items-center justify-between">
+                        {/* <div className="mt-4 flex items-center justify-between">
                           <span className="text-lg font-bold">
                             {product.price}
                           </span>
@@ -333,6 +345,18 @@ export default function LandingPage() {
                             className="transition-transform group-hover:translate-y-0"
                           >
                             View Details
+                          </Button>
+                        </div> */}
+                        <div className="mt-4 flex flex-col items-center space-y-2 md:justify-between md:items-start md:flex-row md:space-y-0 md:space-x-4">
+                          <span className="text-lg font-bold">
+                            {product.price}
+                          </span>
+                          <Button
+                            size="sm"
+                            className="transition-transform group-hover:translate-y-0 hover:bg-secondary"
+                          >
+                            View Details
+                            <ArrowRight className="h-4 w-4" />
                           </Button>
                         </div>
                       </div>
@@ -344,7 +368,11 @@ export default function LandingPage() {
               )}
             </div>
             <div className="flex justify-center">
-              <Button variant="outline" size="lg" className="gap-2">
+              <Button
+                variant="outline"
+                size="lg"
+                className="gap-2 hover:bg-secondary/10"
+              >
                 <Link href="/products">View All Products</Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -375,7 +403,7 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary/10 text-primary hover:bg-primary/20">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-primary hover:bg-primary/20">
                 Customer Love
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -417,7 +445,7 @@ export default function LandingPage() {
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className="h-4 w-4 fill-primary text-primary"
+                              className="h-4 w-4 fill-secondary text-secondary"
                             />
                           ))}
                         </div>
@@ -449,11 +477,21 @@ export default function LandingPage() {
                 </motion.div>
               </div>
               <div className="flex justify-center mt-8 gap-4">
-                <Button variant="outline" size="icon" onClick={prevTestimonial}>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={prevTestimonial}
+                  className="hover:bg-secondary/10"
+                >
                   <ChevronLeft className="h-4 w-4" />
                   <span className="sr-only">Previous testimonial</span>
                 </Button>
-                <Button variant="outline" size="icon" onClick={nextTestimonial}>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={nextTestimonial}
+                  className="hover:bg-secondary/10"
+                >
                   <ChevronRight className="h-4 w-4" />
                   <span className="sr-only">Next testimonial</span>
                 </Button>
@@ -467,7 +505,7 @@ export default function LandingPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
-                <div className="inline-block px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">
+                <div className="inline-block px-3 py-1 text-sm text-primary bg-secondary/10 rounded-full">
                   About Us
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -485,7 +523,7 @@ export default function LandingPage() {
                   medicine couldn't resolve
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
-                  <Button asChild>
+                  <Button asChild className="hover:bg-secondary">
                     <Link href="/about">Learn more</Link>
                   </Button>
                   {/* <Button variant="outline" asChild>
@@ -524,12 +562,12 @@ export default function LandingPage() {
               >
                 <div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                    Get in Touch
+                    Inquire for Distributors
                   </h2>
                   <p className="mt-4 text-muted-foreground md:text-lg">
-                    Have questions about our products or need assistance? We're
-                    here to help. Reach out to us and we'll get back to you as
-                    soon as possible.
+                    Interested in becoming a distributor for our products? Fill
+                    out the form below and we will get back to you with more
+                    information.
                   </p>
                 </div>
                 <ul className="space-y-4">
@@ -547,21 +585,13 @@ export default function LandingPage() {
                   </li>
                 </ul>
                 <form className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="first-name">First name</Label>
-                      <Input
-                        id="first-name"
-                        placeholder="Enter your first name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="last-name">Last name</Label>
-                      <Input
-                        id="last-name"
-                        placeholder="Enter your last name"
-                      />
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="full-name">Full Name</Label>
+                    <Input
+                      id="full-name"
+                      placeholder="Enter your full name"
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
@@ -569,6 +599,15 @@ export default function LandingPage() {
                       id="email"
                       type="email"
                       placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="company">Company Name</Label>
+                    <Input
+                      id="company"
+                      placeholder="Enter your company name"
+                      required
                     />
                   </div>
                   <div className="space-y-2">
@@ -577,10 +616,11 @@ export default function LandingPage() {
                       id="message"
                       placeholder="Enter your message"
                       rows={4}
+                      required
                     />
                   </div>
-                  <Button type="submit" className="w-full">
-                    Send Message
+                  <Button type="submit" className="w-full hover:bg-secondary">
+                    Send Inquiry
                   </Button>
                 </form>
               </motion.div>

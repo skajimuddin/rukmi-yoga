@@ -22,6 +22,7 @@ import {
 
 import Hader from "@/components/header"
 import Footer from "@/components/footer"
+import ScrollToTopButton from "@/components/ScrollToTopButton"
 
 export default function AboutPage() {
   return (
@@ -95,7 +96,11 @@ export default function AboutPage() {
                   Our Mission
                 </h2>
                 <p className="text-muted-foreground md:text-lg">
-                To provide 100% Natural Laboratory Tested Health and Beauty Products that suit almost all Human Bodies. We are committed to sustainability, ethical sourcing, and preserving the rich heritage of Ayurvedic traditions while embracing modern scientific advancements.
+                  To provide 100% Natural Laboratory Tested Health and Beauty
+                  Products that suit almost all Human Bodies. We are committed
+                  to sustainability, ethical sourcing, and preserving the rich
+                  heritage of Ayurvedic traditions while embracing modern
+                  scientific advancements.
                 </p>
               </div>
             </div>
@@ -110,7 +115,12 @@ export default function AboutPage() {
                   Our Vission
                 </h2>
                 <p className="text-muted-foreground md:text-lg">
-                We serve families who want to improve their health and wellness by using natural therapies and lifestyle changes. We uphold the principles of naturopathic medicine by respecting the healing power of nature, identifying and treating the causes of disease, educating and empowering our patients, and preventing illness.
+                  We serve families who want to improve their health and
+                  wellness by using natural therapies and lifestyle changes. We
+                  uphold the principles of naturopathic medicine by respecting
+                  the healing power of nature, identifying and treating the
+                  causes of disease, educating and empowering our patients, and
+                  preventing illness.
                 </p>
               </div>
               <div className="relative h-[400px] overflow-hidden rounded-xl shadow-lg order-2">
@@ -136,9 +146,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
-            >
-
-            </motion.div>
+            ></motion.div>
             <div className="flex flex-col sm:flex-row gap-6 flex-wrap">
               {[
                 {
@@ -193,21 +201,20 @@ export default function AboutPage() {
                 YOGA's Kayapalat Care products.
               </p>
               <div className="flex space-x-4">
-               <Button size="lg" asChild>
-                 <Link href="/products">Explore Our Products</Link>
-               </Button>
-               <Button size="lg" asChild>
-                 <Link href="/contact">Contact Us</Link>
-               </Button>
-             </div>
+                <Button size="lg" asChild>
+                  <Link href="/products">Explore Our Products</Link>
+                </Button>
+                <Button size="lg" asChild>
+                  <Link href="/contact">Contact Us</Link>
+                </Button>
+              </div>
             </div>
           </div>
-
-
         </section>
-
       </main>
       <Footer />
+
+      <ScrollToTopButton />
     </div>
   )
 }
