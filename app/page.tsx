@@ -28,6 +28,7 @@ import { motion } from "framer-motion"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import productsData from "@/data/products.json"
+import ConsultationPopup from "@/components/ConsultationPopup"
 
 export default function LandingPage() {
   const [testimonialIndex, setTestimonialIndex] = useState(0)
@@ -142,6 +143,7 @@ export default function LandingPage() {
                   <Button
                     size="lg"
                     className="px-8 bg-primary text-white hover:bg-secondary"
+                    onClick={() => setIsPopupOpen(true)}
                   >
                     Get Consultation
                   </Button>
@@ -154,6 +156,10 @@ export default function LandingPage() {
                     <Link href="/about-me">About us</Link>
                   </Button>
                 </div>
+                <ConsultationPopup
+                  isOpen={isPopupOpen}
+                  onClose={() => setIsPopupOpen(false)}
+                />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -500,15 +506,15 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* about us section*/}
-        <section id="who-we-are" className="py-16">
+        {/* About Us Section */}
+        <section id="who-we-are" className="py-16 bg-gray-50">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
                 <div className="inline-block px-3 py-1 text-sm text-primary bg-secondary/10 rounded-full">
                   About Us
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
                   Who We Are
                 </h2>
                 <p className="text-muted-foreground md:text-xl">
@@ -524,11 +530,8 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
                   <Button asChild className="hover:bg-secondary">
-                    <Link href="/about">Learn more</Link>
+                    <Link href="/about-me">Learn more</Link>
                   </Button>
-                  {/* <Button variant="outline" asChild>
-                <Link href="/about">Meet The Team</Link>
-              </Button> */}
                 </div>
               </div>
               <div className="flex justify-center lg:justify-end">

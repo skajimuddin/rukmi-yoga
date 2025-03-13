@@ -1,0 +1,47 @@
+import React from "react"
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+
+interface ConsultationPopupProps {
+  isOpen: boolean
+  onClose: () => void
+}
+
+const ConsultationPopup: React.FC<ConsultationPopupProps> = ({ isOpen, onClose }) => {
+  if (!isOpen) return null
+
+  return (
+    <div className={cn("fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50")}>
+      <div className={cn("bg-white p-6 rounded-lg shadow-lg w-full max-w-md")}>
+        <h2 className="text-2xl font-bold mb-4">Get Consultation</h2>
+        <form className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="full-name">Full Name</Label>
+            <Input id="full-name" placeholder="Enter your full name" required />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="email">Email</Label>
+            <Input id="email" type="email" placeholder="Enter your email" required />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="message">Message</Label>
+            <Textarea id="message" placeholder="Enter your message" rows={4} required />
+          </div>
+          <div className="flex justify-end space-x-2">
+            <Button type="button" variant="outline" onClick={onClose}>
+              Cancel
+            </Button>
+            <Button type="submit" className="hover:bg-secondary">
+              Submit
+            </Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
+
+export default ConsultationPopup
