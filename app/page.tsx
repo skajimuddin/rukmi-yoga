@@ -143,12 +143,14 @@ export default function LandingPage() {
                 </div> */}
                 <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
                   {/* Discover Holistic Wellness with */}
-                  Welcome to the Path of Holistic Well-being
-                                  </h1>
+                  Embrace Balance, Elevate Life
+                </h1>
                 <p className="text-center md:text-left max-w-[600px] text-gray-600 md:text-xl">
                   {/* Premium Ayurvedic products designed to restore balance and
                   promote natural healing for mind, body, and spirit. */}
-                  Embrace balance, harmony, and vitality with the ancient wisdom of Yoga and Ayurveda. Explore our curated collection of authentic Ayurvedic products designed to nourish your mind, body, and soul.
+                  Discover the transformative power of yoga. Unwind, strengthen,
+                  and connect with yourself in a space that nurtures both body
+                  and soul. Your journey to wellness begins here.
                 </p>
                 <div className="flex flex-col w-full justify-center md:justify-normal gap-2 min-[400px]:flex-row pt-4">
                   <Button
@@ -178,7 +180,7 @@ export default function LandingPage() {
                     ></motion.img>
                   </div>
                   <div className="text-sm text-gray-600 font-bold">
-                    <a> Official Retailer of Kayapalat</a>
+                    <a>Official partner of Kayapalat</a>
                   </div>
                 </div>
 
@@ -310,18 +312,18 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-                <div className="flex -space-x-2">
-                  <motion.img
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className="inline-block h-16 w-16 rounded-full border-2 border-white overflow-hidden"
-                    src="/KayapalatLogo.png"
-                    alt="Kayapalat Logo"
-                  />
-                </div>
-        <div className="flex items-center gap-4 pt-2">
+              <div className="flex -space-x-2">
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="inline-block h-16 w-16 rounded-full border-2 border-white overflow-hidden"
+                  src="/KayapalatLogo.png"
+                  alt="Kayapalat Logo"
+                />
+              </div>
+              <div className="flex items-center gap-4 pt-2">
                 <div className="md:text-2xl text-lg text-gray-600 font-medium">
                   Official partner of Kayapalat Products
                 </div>
@@ -338,7 +340,6 @@ export default function LandingPage() {
               </p>
 
               {/* Added the "Official Retailer" section here with adaptation */}
-          
             </motion.div>
             {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 lg:mx-8 lg:mt-12">
@@ -557,16 +558,16 @@ export default function LandingPage() {
                   struggling with chronic health issues that conventional
                   medicine couldn't resolve
                 </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
+                <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4 items-center md:items-start">
                   <Button asChild className="hover:bg-secondary">
-                    <Link href="/about-us">Learn more</Link>
+                  <Link href="/about-us">Learn more</Link>
                   </Button>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
                   <img
-                    src="/placeholder.svg?height=500&width=600"
+                    src="/yoga_img_03.webp"
                     alt="Our team working together"
                     className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
                     width={600}
@@ -594,39 +595,37 @@ export default function LandingPage() {
               >
                 <div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                    Enquire for Distributors
+                    Get in Touch
                   </h2>
                   <p className="mt-4 text-muted-foreground md:text-lg">
-                    Interested in becoming a distributor for our products? Fill
-                    out the form below and we will get back to you with more
-                    information.
+                    Start your wellness journey with us. Whether you're
+                    interested in yoga classes, personal training, or have
+                    questions about our services, we're here to help.
                   </p>
                 </div>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    <span>123 Wellness Street, Mumbai, India</span>
+                    <span>
+                      Studio Location: Rukmi Yoga Center, Mumbai, India
+                    </span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Phone className="h-5 w-5 text-primary" />
-                    <span>+91 123 456 7890</span>
+                    <span>+91 98765 43210</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-primary" />
-                    <span>info@rukmiyoga.com</span>
+                    <span>contact@rukmiyoga.com</span>
                   </li>
                 </ul>
                 <form className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="full-name">Full Name</Label>
-                    <Input
-                      id="full-name"
-                      placeholder="Enter your full name"
-                      required
-                    />
+                    <Label htmlFor="name">Your Name</Label>
+                    <Input id="name" placeholder="Enter your name" required />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">Email Address</Label>
                     <Input
                       id="email"
                       type="email"
@@ -635,24 +634,16 @@ export default function LandingPage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company Name</Label>
-                    <Input
-                      id="company"
-                      placeholder="Enter your company name"
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">Your Message</Label>
                     <Textarea
                       id="message"
-                      placeholder="Enter your message"
+                      placeholder="Tell us how we can help you..."
                       rows={4}
                       required
                     />
                   </div>
                   <Button type="submit" className="w-full hover:bg-secondary">
-                    Send Inquiry
+                    Send Message
                   </Button>
                 </form>
               </motion.div>

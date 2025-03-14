@@ -33,7 +33,7 @@ export default function AboutPage() {
         <section className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-primary/5 to-background relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/ayurvedic_pattern.webp" 
+              src="/yoga_img_01.webp"
               alt="Ayurvedic Pattern"
               fill
               className="object-cover opacity-5"
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 className="relative h-[450px] overflow-hidden rounded-2xl shadow-lg"
               >
                 <Image
-                  src="/about_story.webp"
+                  src="/yoga_img_01.webp"
                   alt="Our Story"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 className="relative h-[450px] overflow-hidden rounded-2xl shadow-lg order-2 lg:order-1"
               >
                 <Image
-                  src="/about_mission.webp"
+                  src="/yoga_img_03.webp"
                   alt="Our Mission"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
@@ -232,7 +232,7 @@ export default function AboutPage() {
                 className="relative h-[450px] overflow-hidden rounded-2xl shadow-lg order-2"
               >
                 <Image
-                  src="/about_vision.webp"
+                  src="/yoga_img_02.webp"
                   alt="Our Vision"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"

@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Home } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 
 export default function FooterMinimal() {
   return (
@@ -12,7 +12,7 @@ export default function FooterMinimal() {
             href="/"
             className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors"
           >
-            <Home className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4" />
             <span className="text-sm">Go to Home</span>
           </Link>
           <p className="text-sm text-gray-600">

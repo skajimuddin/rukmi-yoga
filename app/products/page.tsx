@@ -1,41 +1,50 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Heart, ArrowRight, ChevronUp, Check, ChevronDown } from "lucide-react";
-import Link from "next/link";
-import productsData from "@/data/products.json";
-import { useState, useEffect } from "react";
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Heart, ArrowRight, ChevronUp, Check, ChevronDown } from "lucide-react"
+import Link from "next/link"
+import productsData from "@/data/products.json"
+import { useState, useEffect } from "react"
 
-import Header from "@/components/header";
-import Footer from "@/components/footer-minimal";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Header from "@/components/header"
+import Footer from "@/components/footer-minimal"
+import ScrollToTopButton from "@/components/ScrollToTopButton"
 
-
-type categoriesType = "Skin Care" | "Personal Care" | "Mud Make-Up" | "Health care" | "Hair Care" ;
+type categoriesType =
+  | "Skin Care"
+  | "Personal Care"
+  | "Mud Make-Up"
+  | "Health care"
+  | "Hair Care"
 
 export default function ProductsPage() {
-  const { products } = productsData;
-  const [showTopButton, setShowTopButton] = useState(false);
-  const [category, setCategory] = useState<categoriesType>("Skin Care");
+  const { products } = productsData
+  const [showTopButton, setShowTopButton] = useState(false)
+  const [category, setCategory] = useState<categoriesType>("Skin Care")
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
-        setShowTopButton(true);
+        setShowTopButton(true)
       } else {
-        setShowTopButton(false);
+        setShowTopButton(false)
       }
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -54,16 +63,22 @@ export default function ProductsPage() {
                 <Button variant="outline" className="hover:bg-secondary">
                   Search
                 </Button> */}
-                <DropDownCategory category={category} setCategory={setCategory}></DropDownCategory>
-                
+                <div className="border border-muted-foreground rounded-lg">
+                  <DropDownCategory
+                    category={category}
+                    setCategory={setCategory}
+                  ></DropDownCategory>
+                </div>
               </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 lg:mx-8 lg:mt-12">
               {products.map((product) => {
                 if (product.categories === category) {
-                  return <PrductCard key={product.id} product={product}></PrductCard>;
+                  return (
+                    <PrductCard key={product.id} product={product}></PrductCard>
+                  )
                 } else {
-                  return null;
+                  return null
                 }
               })}
             </div>
@@ -73,7 +88,7 @@ export default function ProductsPage() {
       <Footer />
       <ScrollToTopButton />
     </div>
-  );
+  )
 }
 
 function PrductCard({ product }: any) {
@@ -116,32 +131,43 @@ function PrductCard({ product }: any) {
         <Heart className="h-4 w-4 text-muted-foreground hover:text-primary" />
       </div>
     </Link>
-  );
+  )
 }
 
-function DropDownCategory({ category, setCategory }: { category: categoriesType, setCategory: React.Dispatch<React.SetStateAction<categoriesType>> }){
-  const categories: categoriesType[] = ["Skin Care", "Personal Care", "Mud Make-Up", "Health care", "Hair Care"];
-  return(
+function DropDownCategory({
+  category,
+  setCategory,
+}: {
+  category: categoriesType
+  setCategory: React.Dispatch<React.SetStateAction<categoriesType>>
+}) {
+  const categories: categoriesType[] = [
+    "Skin Care",
+    "Personal Care",
+    "Mud Make-Up",
+    "Health care",
+    "Hair Care",
+  ]
+  return (
     <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant={null} className="flex items-center gap-2">
-            {category || "Category"}
-            <ChevronDown className="h-4 w-4" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-[200px]">
-          {categories.map((cat) => (
-            <DropdownMenuItem
-              key={cat}
-              className="flex items-center justify-between cursor-pointer"
-              onClick={() => setCategory(cat)}
-            >
-              {cat}
-              {category === cat && <Check className="h-4 w-4 ml-2" />}
-            </DropdownMenuItem>
-          ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
-  
+      <DropdownMenuTrigger asChild>
+        <Button variant={null} className="flex items-center gap-2">
+          {category || "Category"}
+          <ChevronDown className="h-4 w-4" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-[200px]">
+        {categories.map((cat) => (
+          <DropdownMenuItem
+            key={cat}
+            className="flex items-center justify-between cursor-pointer"
+            onClick={() => setCategory(cat)}
+          >
+            {cat}
+            {category === cat && <Check className="h-4 w-4 ml-2" />}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }

@@ -10,7 +10,10 @@ interface ConsultationPopupProps {
   onClose: () => void
 }
 
-const ConsultationPopup: React.FC<ConsultationPopupProps> = ({ isOpen, onClose }) => {
+const ConsultationPopup: React.FC<ConsultationPopupProps> = ({
+  isOpen,
+  onClose,
+}) => {
   if (!isOpen) return null
 
   return (
@@ -20,38 +23,42 @@ const ConsultationPopup: React.FC<ConsultationPopupProps> = ({ isOpen, onClose }
       )}
     >
       <div className={cn("bg-white p-6 rounded-lg shadow-lg w-full max-w-md")}>
-        <h2 className="text-2xl font-bold mb-4">Get Consultation</h2>
+        <h2 className="text-2xl font-bold mb-4">Request Distribution</h2>
         <p className="mb-4 text-gray-600">
-          Fill out the form below to get a consultation from our experts.
+          Complete this form to request our products for your business.
         </p>
         <form className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="full-name">Full Name</Label>
-            <Input id="full-name" placeholder="Enter your full name" required />
+            <Label htmlFor="full-name">Business Name</Label>
+            <Input
+              id="full-name"
+              placeholder="Enter your business name"
+              required
+            />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">Business Email</Label>
             <Input
               id="email"
               type="email"
-              placeholder="Enter your email"
+              placeholder="Enter your business email"
               required
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="phone">Company Name</Label>
+            <Label htmlFor="phone">Contact Number</Label>
             <Input
               id="phone"
               type="tel"
-              placeholder="Enter your Company's Name"
+              placeholder="Enter your contact number"
               required
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
+            <Label htmlFor="message">Products Interested In</Label>
             <Textarea
               id="message"
-              placeholder="Enter your message"
+              placeholder="List which products you're interested in distributing"
               rows={4}
               required
             />
@@ -61,7 +68,7 @@ const ConsultationPopup: React.FC<ConsultationPopupProps> = ({ isOpen, onClose }
               Cancel
             </Button>
             <Button type="submit" className="hover:bg-secondary">
-              Send inquiry
+              Submit Request
             </Button>
           </div>
         </form>

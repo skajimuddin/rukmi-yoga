@@ -80,9 +80,9 @@ export default function AboutMePage() {
                   </div>
                 </div>
               </div>
-              <div className="relative h-[400px] overflow-hidden rounded-xl shadow-lg order-1 lg:order-2">
+              <div className="relative h-[430px] overflow-hidden rounded-xl shadow-lg order-1 lg:order-2">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Ayurvedic+Consultation"
+                  src="/yoga_img_01.webp"
                   alt="Dr. Rukmi providing consultation"
                   fill
                   className="object-cover"
