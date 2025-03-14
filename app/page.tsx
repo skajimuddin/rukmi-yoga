@@ -156,7 +156,7 @@ export default function LandingPage() {
                     className="px-8 bg-primary text-white hover:bg-secondary"
                     onClick={() => setIsPopupOpen(true)}
                   >
-                    Distribution
+                    For Distribution
                   </Button>
                   <Button
                     variant="outline"
