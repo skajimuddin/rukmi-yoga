@@ -167,6 +167,21 @@ export default function LandingPage() {
                     <Link href="/about-me">About us</Link>
                   </Button>
                 </div>
+                <div className="flex items-center gap-4 pt-4">
+                  <div className="flex -space-x-2">
+                    <motion.img
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                      className="inline-block h-8 w-8 rounded-full border-2 border-white  overflow-hidden"
+                      src="/KayapalatLogo.png"
+                    ></motion.img>
+                  </div>
+                  <div className="text-sm text-gray-600 font-bold">
+                    <a> Official Retailer of Kayapalat</a>
+                  </div>
+                </div>
+
                 <ConsultationPopup
                   isOpen={isPopupOpen}
                   onClose={() => setIsPopupOpen(false)}
