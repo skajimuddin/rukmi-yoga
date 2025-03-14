@@ -158,7 +158,7 @@ export default function LandingPage() {
                     className="px-8 bg-primary text-white hover:bg-secondary"
                     onClick={() => setIsPopupOpen(true)}
                   >
-                    Get Consultation
+                    Distribution
                   </Button>
                   <Button
                     variant="outline"
@@ -297,9 +297,25 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-primary hover:bg-primary/20">
-                Featured Products
+                <div className="flex -space-x-2">
+                  <motion.img
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="inline-block h-16 w-16 rounded-full border-2 border-white overflow-hidden"
+                    src="/KayapalatLogo.png"
+                    alt="Kayapalat Logo"
+                  />
+                </div>
+        <div className="flex items-center gap-4 pt-2">
+                <div className="md:text-2xl text-lg text-gray-600 font-medium">
+                  Official partner of Kayapalat Products
+                </div>
               </div>
+              {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-primary hover:bg-primary/20">
+                Featured Products
+              </div> */}
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
                 Explore Products
               </h2>
@@ -309,22 +325,7 @@ export default function LandingPage() {
               </p>
 
               {/* Added the "Official Retailer" section here with adaptation */}
-              <div className="flex items-center gap-4 pt-2">
-                <div className="flex -space-x-2">
-                  <motion.img
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className="inline-block h-10 w-10 rounded-full border-2 border-white overflow-hidden"
-                    src="/KayapalatLogo.png"
-                    alt="Kayapalat Logo"
-                  />
-                </div>
-                <div className="text-sm text-gray-600 font-medium">
-                  Exclusive Official partner of Kayapalat Products
-                </div>
-              </div>
+          
             </motion.div>
             {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 lg:mx-8 lg:mt-12">

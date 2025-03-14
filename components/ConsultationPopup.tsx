@@ -39,11 +39,11 @@ const ConsultationPopup: React.FC<ConsultationPopupProps> = ({ isOpen, onClose }
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="phone">Phone Number</Label>
+            <Label htmlFor="phone">Company Name</Label>
             <Input
               id="phone"
               type="tel"
-              placeholder="Enter your phone number"
+              placeholder="Enter your Company's Name"
               required
             />
           </div>
@@ -61,7 +61,7 @@ const ConsultationPopup: React.FC<ConsultationPopupProps> = ({ isOpen, onClose }
               Cancel
             </Button>
             <Button type="submit" className="hover:bg-secondary">
-              Submit
+              Send inquiry
             </Button>
           </div>
         </form>

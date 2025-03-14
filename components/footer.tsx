@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="border-t bg-gray-100">
       <div className="container py-8 md:py-12">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Leaf className="h-5 w-5 text-primary" />
@@ -43,7 +43,8 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="space-y-4">
+         <div className="grid md:gap-8 gap-5  grid-rows-2 grid-cols-2 sm:grid-cols-3 md:grid-rows-1 md:grid-cols-3">
+         <div className="md:space-y-4 space-y-1">
             <h3 className="text-sm font-medium">Shop</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
@@ -80,7 +81,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="space-y-4">
+          <div className="md:space-y-4 space-y-1">
             <h3 className="text-sm font-medium">Company</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
@@ -117,7 +118,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="space-y-4">
+          <div className="md:space-y-4 space-y-1">
             <h3 className="text-sm font-medium">Help</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
@@ -154,6 +155,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+         </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-gray-600">
           <p>© {new Date().getFullYear()} RUKMI YOGA. All rights reserved.</p>
