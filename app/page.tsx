@@ -143,14 +143,12 @@ export default function LandingPage() {
                 </div> */}
                 <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
                   {/* Discover Holistic Wellness with */}
-                  Welcome to The Gateway to Holistic Wellness
-                </h1>
+                  Welcome to the Path of Holistic Well-being
+                                  </h1>
                 <p className="text-center md:text-left max-w-[600px] text-gray-600 md:text-xl">
                   {/* Premium Ayurvedic products designed to restore balance and
                   promote natural healing for mind, body, and spirit. */}
-                  we bring you the wisdom of Ayurveda blended with modern
-                  convenience. Our platform offers a curated selection of
-                  authentic Ayurvedic products,
+                  Embrace balance, harmony, and vitality with the ancient wisdom of Yoga and Ayurveda. Explore our curated collection of authentic Ayurvedic products designed to nourish your mind, body, and soul.
                 </p>
                 <div className="flex flex-col w-full justify-center md:justify-normal gap-2 min-[400px]:flex-row pt-4">
                   <Button
