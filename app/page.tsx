@@ -143,7 +143,7 @@ export default function LandingPage() {
                 </div> */}
                 <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
                   {/* Discover Holistic Wellness with */}
-                  Embrace Balance, Elevate Life
+                  Embrace Balance, Elevate Your Life with Yoga
                 </h1>
                 <p className="text-center md:text-left max-w-[600px] text-gray-600 md:text-xl">
                   {/* Premium Ayurvedic products designed to restore balance and
@@ -560,7 +560,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4 items-center md:items-start">
                   <Button asChild className="hover:bg-secondary">
-                  <Link href="/about-us">Learn more</Link>
+                    <Link href="/about-us">Learn more</Link>
                   </Button>
                 </div>
               </div>
