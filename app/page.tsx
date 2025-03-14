@@ -152,7 +152,7 @@ export default function LandingPage() {
                   convenience. Our platform offers a curated selection of
                   authentic Ayurvedic products,
                 </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
+                <div className="flex flex-col w-full justify-center md:justify-normal gap-2 min-[400px]:flex-row pt-4">
                   <Button
                     size="lg"
                     className="px-8 bg-primary text-white hover:bg-secondary"
@@ -301,7 +301,7 @@ export default function LandingPage() {
                 Featured Products
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                Our Best Sellers
+                Explore Products
               </h2>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
                 Discover our most popular Ayurvedic products loved by our
@@ -524,18 +524,20 @@ export default function LandingPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
-                <div className="inline-block px-3 py-1 text-sm text-primary bg-secondary/10 rounded-full">
-                  About Us
+                <div className="w-full flex justify-center items-center md:block">
+                  <div className="inline-block px-3 py-1 text-sm text-primary bg-secondary/10 rounded-full">
+                    About Us
+                  </div>
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary text-center md:text-left">
                   Who We Are
                 </h2>
-                <p className="text-muted-foreground md:text-xl">
+                <p className="text-muted-foreground md:text-xl text-center md:text-left">
                   Founded in 2018, Givve was born from a passion to make
                   authentic Ayurvedic wellness accessible to everyone. As the
                   official retailer of Kayapalat,
                 </p>
-                <p className="text-muted-foreground md:text-xl">
+                <p className="text-muted-foreground md:text-xl text-center md:text-left">
                   Our journey began when our founder experienced the
                   transformative benefits of Ayurveda firsthand. After
                   struggling with chronic health issues that conventional
@@ -543,7 +545,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
                   <Button asChild className="hover:bg-secondary">
-                    <Link href="/about-me">Learn more</Link>
+                    <Link href="/about-us">Learn more</Link>
                   </Button>
                 </div>
               </div>
@@ -578,7 +580,7 @@ export default function LandingPage() {
               >
                 <div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                    Inquire for Distributors
+                    Enquire for Distributors
                   </h2>
                   <p className="mt-4 text-muted-foreground md:text-lg">
                     Interested in becoming a distributor for our products? Fill
