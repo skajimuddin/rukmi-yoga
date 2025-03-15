@@ -62,24 +62,7 @@ export default function AboutMePage() {
                   meditation, our sessions are designed for all levels, ensuring
                   a space for growth, healing, and self-discovery.
                 </p>
-                <div className="grid grid-cols-2 gap-4 pt-4">
-                  <div className="flex items-center gap-2">
-                    <Award className="h-5 w-5 text-primary" />
-                    <span>Certified Naturopathic Doctor</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <BookOpen className="h-5 w-5 text-primary" />
-                    <span>Ayurvedic Consultant</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users className="h-5 w-5 text-primary" />
-                    <span>Wellness Coach</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5 text-primary" />
-                    <span>Decades of Experience</span>
-                  </div>
-                </div>
+               
               </div>
               <div className="relative h-[430px] overflow-hidden rounded-xl shadow-lg order-1 lg:order-2">
                 <Image
@@ -97,7 +80,7 @@ export default function AboutMePage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
-                My Philosophy
+                Our Philosophy
               </h2>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                 The core principles that guide my practice and product
