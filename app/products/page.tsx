@@ -19,6 +19,7 @@ import Footer from "@/components/footer-minimal"
 import ScrollToTopButton from "@/components/ScrollToTopButton"
 
 type categoriesType =
+  | "All"
   | "Skin Care"
   | "Personal Care"
   | "Mud Make-Up"
@@ -28,7 +29,7 @@ type categoriesType =
 export default function ProductsPage() {
   const { products } = productsData
   const [showTopButton, setShowTopButton] = useState(false)
-  const [category, setCategory] = useState<categoriesType>("Skin Care")
+  const [category, setCategory] = useState<categoriesType>("All")
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -73,7 +74,12 @@ export default function ProductsPage() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 lg:mx-8 lg:mt-12">
               {products.map((product) => {
-                if (product.categories === category) {
+                if(category === "All"){
+                  return (
+                    <PrductCard key={product.id} product={product}></PrductCard>
+                  )
+                }
+                else if (product.categories === category) {
                   return (
                     <PrductCard key={product.id} product={product}></PrductCard>
                   )
@@ -96,7 +102,7 @@ function PrductCard({ product }: any) {
     <Link
       href={`/products/${product.id}`}
       key={product.id}
-      className="group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md"
+      className="group relative overflow-hidden rounded-lg border bg-background transition-All hover:shadow-md"
     >
       <div className="aspect-square overflow-hidden">
         <Image
@@ -134,25 +140,29 @@ function PrductCard({ product }: any) {
   )
 }
 
+
+
 function DropDownCategory({
   category,
   setCategory,
 }: {
-  category: categoriesType
-  setCategory: React.Dispatch<React.SetStateAction<categoriesType>>
+  category: categoriesType;
+  setCategory: React.Dispatch<React.SetStateAction<categoriesType>>;
 }) {
   const categories: categoriesType[] = [
+    "All",
     "Skin Care",
     "Personal Care",
     "Mud Make-Up",
     "Health care",
     "Hair Care",
-  ]
+  ];
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant={null} className="flex items-center gap-2">
-          {category || "Category"}
+        <Button variant={null} className="flex items-center gap-2 ">
+          {category === "All" ? "Select Category" : category}
           <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
@@ -169,5 +179,5 @@ function DropDownCategory({
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
