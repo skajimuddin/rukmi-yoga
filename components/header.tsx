@@ -38,7 +38,7 @@ export default function Header() {
             <span className="text-xl font-semibold tracking-tight text-primary">
               RUKMI YOGA
             </span>
-            <Leaf className="h-6 w-6 text-primary" />
+            <Leaf className="h-6 w-6 text-secondary" />
           </Link>
         </motion.div>
 

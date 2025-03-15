@@ -1,48 +1,45 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { Leaf, Instagram, Facebook, Twitter, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Link from "next/link"
+import { Leaf, Instagram, Facebook, Twitter, Phone } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-gray-100">
+    <footer className="border-t bg-secondary">
       <div className="container py-8 md:py-12">
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Leaf className="h-5 w-5 text-primary" />
-              <span className="text-lg font-semibold text-primary">
+              <span className="text-lg font-semibold text-white">
                 RUKMI YOGA
               </span>
+              <Leaf className="h-5 w-5 text-white" />
             </div>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-white">
               Premium Ayurvedic products for holistic wellness and natural
               healing.
             </p>
             <div className="flex gap-4 flex-col">
-            <div className="hidden md:flex">
+              <div className="hidden md:flex">
                 <form className="flex w-full max-w-sm items-center gap-2">
                   <input
                     type="email"
                     className="flex-grow rounded-md border border-gray-300  bg-white text-xs text-gray-900  px-4 py-2  lg:h-11 h-11"
                     placeholder="Subscribe to Our Newsletter"
                   />
-                 <Button className="text-xs">
-                    Subscribe
-                 </Button>
+                  <Button className="text-xs">Subscribe</Button>
                 </form>
               </div>
               <div>
                 <Button>Contact for Distribution</Button>
               </div>
-              
             </div>
           </div>
           <div className="grid md:gap-8 gap-5  grid-rows-2 grid-cols-2 sm:grid-cols-3 md:grid-rows-1 md:grid-cols-4">
             <div className="md:space-y-4 space-y-1">
-              <h3 className="text-sm font-medium">Shop</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h3 className="text-sm font-medium text-white">Shop</h3>
+              <ul className="space-y-2 text-sm text-white">
                 <li>
                   <Link
                     href="/products"
@@ -78,8 +75,8 @@ export default function Footer() {
               </ul>
             </div>
             <div className="md:space-y-4 space-y-1">
-              <h3 className="text-sm font-medium">Company</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h3 className="text-sm font-medium text-white">Company</h3>
+              <ul className="space-y-2 text-sm text-white">
                 <li>
                   <Link
                     href="/about"
@@ -115,8 +112,8 @@ export default function Footer() {
               </ul>
             </div>
             <div className="md:space-y-4 space-y-1">
-              <h3 className="text-sm font-medium">Help</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h3 className="text-sm font-medium text-white">Help</h3>
+              <ul className="space-y-2 text-sm text-white">
                 <li>
                   <Link
                     href="#"
@@ -152,8 +149,8 @@ export default function Footer() {
               </ul>
             </div>
             <div className="md:space-y-4 space-y-1">
-              <h3 className="text-sm font-medium  pb-2">Social</h3>
-              <ul className="space-y-4  text-sm text-muted-foreground">
+              <h3 className="text-sm font-medium pb-2 text-white">Social</h3>
+              <ul className="space-y-4  text-sm text-white">
                 <li className="flex gap-4 items-center">
                   {/* <div className="text-xs h-5 w-5">
                     <Instagram />
@@ -191,28 +188,26 @@ export default function Footer() {
             </div>
           </div>
           <div className="md:hidden">
-                <form className="flex w-full max-w-sm items-center gap-2">
-                  <input
-                    type="email"
-                    className="flex-grow rounded-md border border-gray-300  bg-white text-xs text-gray-900  px-4 py-2  lg:h-11 h-11"
-                    placeholder="Subscribe to Our Newsletter"
-                  />
-                 <Button className="text-xs">
-                    Subscribe
-                 </Button>
-                </form>
-              </div>
+            <form className="flex w-full max-w-sm items-center gap-2">
+              <input
+                type="email"
+                className="flex-grow rounded-md border border-gray-300  bg-white text-xs text-gray-900  px-4 py-2  lg:h-11 h-11"
+                placeholder="Subscribe to Our Newsletter"
+              />
+              <Button className="text-xs">Subscribe</Button>
+            </form>
+          </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-gray-600">
+        <div className="mt-8 border-t pt-8 text-center text-sm text-white">
           <p>© {new Date().getFullYear()} RUKMI YOGA. All rights reserved.</p>
           <p>
             Designed and Developed by{" "}
-            <span className="font-bold underline text-blue-500">
+            <span className="font-medium underline text-white">
               astucreatives.com
             </span>
           </p>
         </div>
       </div>
     </footer>
-  );
+  )
 }

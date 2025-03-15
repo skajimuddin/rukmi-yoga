@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
 import {
   Heart,
   Leaf,
@@ -21,20 +21,20 @@ import {
   Clock,
   Shield,
   Target,
-} from "lucide-react";
-import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { useIsMobile } from "@/hooks/use-mobile";
+} from "lucide-react"
+import { useState, useEffect, useRef } from "react"
+import { motion } from "framer-motion"
+import { useIsMobile } from "@/hooks/use-mobile"
 
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import productsData from "@/data/products.json";
-import ConsultationPopup from "@/components/ConsultationPopup";
+import Header from "@/components/header"
+import Footer from "@/components/footer"
+import productsData from "@/data/products.json"
+import ConsultationPopup from "@/components/ConsultationPopup"
 
 export default function LandingPage() {
-  const [testimonialIndex, setTestimonialIndex] = useState(0);
-  const [cardsToShow, setCardsToShow] = useState(3);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [testimonialIndex, setTestimonialIndex] = useState(0)
+  const [cardsToShow, setCardsToShow] = useState(3)
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   const testimonials = [
     {
@@ -67,76 +67,76 @@ export default function LandingPage() {
       quote:
         "I've incorporated Kayapalat Care into my therapy sessions, and the results have been remarkable. My clients love the natural approach to wellness.",
     },
-  ];
+  ]
 
-  const maxIndex = Math.max(0, testimonials.length - cardsToShow);
-  const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const isMobile = useIsMobile();
+  const maxIndex = Math.max(0, testimonials.length - cardsToShow)
+  const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null)
+  const isMobile = useIsMobile()
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setCardsToShow(3);
+        setCardsToShow(3)
       } else if (window.innerWidth >= 640) {
-        setCardsToShow(2);
+        setCardsToShow(2)
       } else {
-        setCardsToShow(1);
+        setCardsToShow(1)
       }
-    };
+    }
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   useEffect(() => {
     // Only auto-scroll on mobile devices
     if (isMobile) {
       // Clear any existing interval when component mounts or dependencies change
       if (autoScrollIntervalRef.current) {
-        clearInterval(autoScrollIntervalRef.current);
+        clearInterval(autoScrollIntervalRef.current)
       }
 
       // Set up auto-scrolling
       autoScrollIntervalRef.current = setInterval(() => {
         setTestimonialIndex((prevIndex) =>
           prevIndex >= maxIndex ? 0 : prevIndex + 1
-        );
-      }, 5000); // Scroll every 5 seconds
+        )
+      }, 5000) // Scroll every 5 seconds
     } else {
       // Clear interval if not on mobile
       if (autoScrollIntervalRef.current) {
-        clearInterval(autoScrollIntervalRef.current);
-        autoScrollIntervalRef.current = null;
+        clearInterval(autoScrollIntervalRef.current)
+        autoScrollIntervalRef.current = null
       }
     }
 
     // Clean up interval on component unmount
     return () => {
       if (autoScrollIntervalRef.current) {
-        clearInterval(autoScrollIntervalRef.current);
+        clearInterval(autoScrollIntervalRef.current)
       }
-    };
-  }, [isMobile, maxIndex]);
+    }
+  }, [isMobile, maxIndex])
 
   const nextTestimonial = () => {
     // Reset auto-scroll timer when manually navigating
     if (autoScrollIntervalRef.current) {
-      clearInterval(autoScrollIntervalRef.current);
+      clearInterval(autoScrollIntervalRef.current)
 
       if (isMobile) {
         autoScrollIntervalRef.current = setInterval(() => {
           setTestimonialIndex((prevIndex) =>
             prevIndex >= maxIndex ? 0 : prevIndex + 1
-          );
-        }, 5000);
+          )
+        }, 5000)
       }
     }
 
     setTestimonialIndex((prevIndex) =>
       prevIndex >= maxIndex ? 0 : prevIndex + 1
-    );
-  };
+    )
+  }
 
   // const nextTestimonial = () => {
   //   setTestimonialIndex(
@@ -155,25 +155,25 @@ export default function LandingPage() {
   const prevTestimonial = () => {
     // Reset auto-scroll timer when manually navigating
     if (autoScrollIntervalRef.current) {
-      clearInterval(autoScrollIntervalRef.current);
+      clearInterval(autoScrollIntervalRef.current)
 
       if (isMobile) {
         autoScrollIntervalRef.current = setInterval(() => {
           setTestimonialIndex((prevIndex) =>
             prevIndex >= maxIndex ? 0 : prevIndex + 1
-          );
-        }, 5000);
+          )
+        }, 5000)
       }
     }
 
     setTestimonialIndex((prevIndex) =>
       prevIndex <= 0 ? maxIndex : prevIndex - 1
-    );
-  };
+    )
+  }
 
   const bestSellerProducts = productsData.bestSellers
     .map((id) => productsData.products.find((p) => p.id === id))
-    .filter(Boolean);
+    .filter(Boolean)
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -214,9 +214,12 @@ export default function LandingPage() {
                 {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-white hover:bg-primary/80 w-fit">
                   New Collection
                 </div> */}
-                <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
+                <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-black">
                   {/* Discover Holistic Wellness with */}
-                  Embrace Balance, Elevate Your Life with Yoga
+                  <span className="text-primary">
+                    Embrace Balance, Elevate{" "}
+                  </span>{" "}
+                  Your Life with Yoga
                 </h1>
                 <p className="text-center md:text-left max-w-[600px] text-gray-600 md:text-xl">
                   {/* Premium Ayurvedic products designed to restore balance and
@@ -228,7 +231,7 @@ export default function LandingPage() {
                 <div className="flex flex-col w-full justify-center md:justify-normal gap-2 min-[400px]:flex-row pt-4">
                   <Button
                     size="lg"
-                    className="px-8 bg-primary text-white hover:bg-secondary"
+                    className="px-8 bg-secondary text-white hover:bg-secondary"
                     onClick={() => setIsPopupOpen(true)}
                   >
                     For Distribution
@@ -318,7 +321,7 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-primary hover:bg-primary/20">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-secondary hover:bg-primary/20">
                 Our Commitment to Excellence
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -359,10 +362,10 @@ export default function LandingPage() {
                   className="group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md flex-1 min-w-[300px]"
                 >
                   <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/10 blur-xl"></div>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/20">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-secondary/20">
                     <benefit.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="mt-4 text-xl font-bold text-primary">
+                  <h3 className="mt-4 text-xl font-bold text-secondary">
                     {benefit.title}
                   </h3>
                   <p className="mt-2 text-gray-600">{benefit.description}</p>
@@ -506,7 +509,7 @@ export default function LandingPage() {
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-x-12  lg:gap-y-0 items-center">
               <div className="space-y-4">
                 <div className="w-full flex justify-center items-center md:block">
-                  <div className="inline-block px-3 py-1 text-sm text-primary bg-secondary/10 rounded-full">
+                  <div className="inline-block px-3 py-1 text-sm text-secondary bg-secondary/10 rounded-full">
                     About Us
                   </div>
                 </div>
@@ -528,12 +531,12 @@ export default function LandingPage() {
                   profound healing and balance.
                 </p>
                 <div className=" hidden lg:flex flex-col gap-2 min-[400px]:flex-row lg:items-start justify-start   ">
-                <Button asChild className="hover:bg-secondary">
-                  <Link href="/about-us">Learn more</Link>
-                </Button>
+                  <Button asChild className="hover:bg-primary bg-secondary">
+                    <Link href="/about-us">Learn more</Link>
+                  </Button>
+                </div>
               </div>
-              </div>
-              
+
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
                   <img
@@ -546,7 +549,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="lg:hidden flex flex-col gap-2 min-[400px]:flex-row justify-center items-center ">
-                <Button asChild className="hover:bg-secondary">
+                <Button asChild className="hover:bg-primary bg-secondary">
                   <Link href="/about-us">Learn more</Link>
                 </Button>
               </div>
@@ -567,7 +570,7 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-primary hover:bg-primary/20">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-secondary hover:bg-primary/20">
                 Customer Love
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -680,12 +683,10 @@ export default function LandingPage() {
               >
                 <div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                    Get in Touch
+                  Request Distribution
                   </h2>
                   <p className="mt-4 text-muted-foreground md:text-lg">
-                    Start your wellness journey with us. Whether you're
-                    interested in yoga classes, personal training, or have
-                    questions about our services, we're here to help.
+                  Complete this form to request our products for your business.
                   </p>
                 </div>
                 <ul className="space-y-4">
@@ -757,5 +758,5 @@ export default function LandingPage() {
       {/* Footer */}
       <Footer />
     </div>
-  );
+  )
 }
