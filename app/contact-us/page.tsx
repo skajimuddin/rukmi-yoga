@@ -1,7 +1,7 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+"use client"
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import {
   Mail,
   Phone,
@@ -11,32 +11,44 @@ import {
   Instagram,
   Facebook,
   Twitter,
-} from "lucide-react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { motion } from "framer-motion";
-import { Label } from "@/components/ui/label";
+} from "lucide-react"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
+import ScrollToTopButton from "@/components/ScrollToTopButton"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { motion } from "framer-motion"
+import { Label } from "@/components/ui/label"
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         <Header />
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Contact Us
-                </h1>
-                <p className="mx-auto max-w-[770px] text-muted-foreground md:text-xl">
-                  We're here to help you on your wellness journey
-                </p>
-              </div>
-            </div>
+        <section className="relative py-10 md:py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/hero_bg.webp"
+              alt="Ayurvedic Background"
+              layout="fill"
+              objectFit="cover"
+              className="opacity-60"
+            />
+          </div>
+          <div className="container relative z-10 px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col items-center space-y-4 text-center"
+            >
+                <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium border-primary/20 bg-secondary/10 text-secondary">
+                Get in Touch
+                </div>
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
+                Contact US
+              </h1>
+            </motion.div>
           </div>
         </section>
 

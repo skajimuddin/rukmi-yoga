@@ -215,12 +215,9 @@ export default function LandingPage() {
                 {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-white hover:bg-primary/80 w-fit">
                   New Collection
                 </div> */}
-                <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-black">
+                <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
                   {/* Discover Holistic Wellness with */}
-                  <span className="text-primary">
-                    Embrace Balance, Elevate{" "}
-                  </span>{" "}
-                  Your Life with Yoga
+                  Embrace Balance, Elevate Your Life with Yoga
                 </h1>
                 <p className="text-center md:text-left max-w-[600px] text-gray-600 md:text-xl">
                   {/* Premium Ayurvedic products designed to restore balance and
@@ -520,8 +517,8 @@ export default function LandingPage() {
                 <p className="text-muted-foreground md:text-xl text-center md:text-left">
                   Founded in 2018, Givve was born from a passion to make
                   authentic Ayurvedic and yogic wellness accessible to everyone.
-                  As the official retailer of Kayapalat, we believe in the power
-                  of holistic healing to nurture the body, mind, and spirit.
+                  we believe in the power of holistic healing to nurture the
+                  body, mind, and spirit.
                 </p>
                 <p className="text-muted-foreground md:text-xl text-center md:text-left">
                   Our journey began when our founder personally experienced the

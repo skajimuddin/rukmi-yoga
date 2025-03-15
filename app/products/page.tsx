@@ -54,7 +54,7 @@ export default function ProductsPage() {
         <section className="w-full py-10 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex justify-between items-center mb-8  md:px-8">
-              <h2 className="text-2xl md:text-3xl font-bold">All Products</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-primary">Products</h2>
               <div className="flex items-center space-x-2">
                 {/* <Input
                   type="search"
@@ -64,7 +64,7 @@ export default function ProductsPage() {
                 <Button variant="outline" className="hover:bg-secondary">
                   Search
                 </Button> */}
-                <div className="border border-muted-foreground rounded-lg">
+                <div className="border border-muted-foreground rounded-lg bg-secondary text-white">
                   <DropDownCategory
                     category={category}
                     setCategory={setCategory}
@@ -74,12 +74,11 @@ export default function ProductsPage() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 lg:mx-8 lg:mt-12">
               {products.map((product) => {
-                if(category === "All"){
+                if (category === "All") {
                   return (
                     <PrductCard key={product.id} product={product}></PrductCard>
                   )
-                }
-                else if (product.categories === category) {
+                } else if (product.categories === category) {
                   return (
                     <PrductCard key={product.id} product={product}></PrductCard>
                   )
@@ -140,14 +139,12 @@ function PrductCard({ product }: any) {
   )
 }
 
-
-
 function DropDownCategory({
   category,
   setCategory,
 }: {
-  category: categoriesType;
-  setCategory: React.Dispatch<React.SetStateAction<categoriesType>>;
+  category: categoriesType
+  setCategory: React.Dispatch<React.SetStateAction<categoriesType>>
 }) {
   const categories: categoriesType[] = [
     "All",
@@ -156,7 +153,7 @@ function DropDownCategory({
     "Mud Make-Up",
     "Health care",
     "Hair Care",
-  ];
+  ]
 
   return (
     <DropdownMenu>
@@ -179,5 +176,5 @@ function DropDownCategory({
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

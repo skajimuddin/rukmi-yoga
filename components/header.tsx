@@ -35,10 +35,10 @@ export default function Header() {
           className="flex items-center gap-2"
         >
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-semibold tracking-tight text-primary">
+            <span className="text-xl font-semibold tracking-tight text-secondary">
               RUKMI YOGA
             </span>
-            <Leaf className="h-6 w-6 text-secondary" />
+            <Leaf className="h-6 w-6 text-primary" />
           </Link>
         </motion.div>
 
@@ -53,7 +53,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-colors text-primary hover:text-secondary"
             >
               {link.label}
             </Link>
