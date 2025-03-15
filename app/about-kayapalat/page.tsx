@@ -19,7 +19,7 @@ export default function AboutPage() {
               alt="Ayurvedic Background"
               layout="fill"
               objectFit="cover"
-              className="opacity-60"
+              className="opacity-20"
             />
           </div>
           <div className="container px-4 md:px-6 relative z-10">

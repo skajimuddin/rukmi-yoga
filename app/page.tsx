@@ -201,7 +201,7 @@ export default function LandingPage() {
               alt="Ayurvedic Background"
               layout="fill"
               objectFit="cover"
-              className="opacity-60"
+              className="opacity-50"
             />
           </div>
           <div className="container relative z-10 px-4 md:px-6">

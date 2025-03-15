@@ -32,7 +32,7 @@ export default function AboutMePage() {
               alt="Ayurvedic Background"
               layout="fill"
               objectFit="cover"
-              className="opacity-60"
+              className="opacity-20"
             />
           </div>
           <div className="container relative z-10 px-4 md:px-6">
