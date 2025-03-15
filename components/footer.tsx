@@ -3,8 +3,12 @@
 import Link from "next/link"
 import { Leaf, Instagram, Facebook, Twitter, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
+import ConsultationPopup from "./ConsultationPopup"
 
 export default function Footer() {
+  const [isPopupOpen,setIsPopupOpen] = useState(false);
+
   return (
     <footer className="border-t bg-secondary">
       <div className="container py-8 md:py-12">
@@ -32,7 +36,13 @@ export default function Footer() {
                 </form>
               </div>
               <div>
-                <Button>Contact for Distribution</Button>
+                <Button
+                     onClick={() => setIsPopupOpen(true)}
+                >Contact for Distribution</Button>
+                 <ConsultationPopup
+                  isOpen={isPopupOpen}
+                  onClose={() => setIsPopupOpen(false)}
+                />
               </div>
             </div>
           </div>

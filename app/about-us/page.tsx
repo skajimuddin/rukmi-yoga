@@ -48,19 +48,19 @@ export default function AboutMePage() {
                   Our Approach to Wellness
                 </h2>
                 <p className="text-muted-foreground md:text-lg">
-                  We believe that true health is achieved by harmonizing the
-                  mind, body, and spirit. Our approach integrates the ancient
-                  wisdom of Ayurveda and Yoga with modern wellness practices to
-                  create holistic healing experiences. Rather than just
-                  addressing symptoms, we focus on the root causes of imbalance
-                  to restore overall well-being.
+                  Yoga is more than just movement—it's a path to balance,
+                  strength, and inner peace. Rooted in ancient wisdom, yoga
+                  harmonizes the body, mind, and soul through breath,
+                  meditation, and mindful postures. Whether you're seeking
+                  flexibility, stress relief, or spiritual growth, yoga offers a
+                  transformative journey tailored to your needs.
                 </p>
                 <p className="text-muted-foreground md:text-lg">
-                  Through RUKMI YOGA and our Kayapalat Care product line, we
-                  have guided thousands on their journey to inner balance and
-                  vitality. Each session and product is inspired by time-honored
-                  Ayurvedic traditions, using the purest natural ingredients and
-                  yogic techniques to rejuvenate the body and awaken the spirit.
+                  At RUKMI YOGA , we guide you through traditional and
+                  modern yoga practices, helping you cultivate mindfulness and
+                  well-being. From Hatha and Vinyasa flows to deep Pranayama and
+                  meditation, our sessions are designed for all levels, ensuring
+                  a space for growth, healing, and self-discovery.
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-4">
                   <div className="flex items-center gap-2">
