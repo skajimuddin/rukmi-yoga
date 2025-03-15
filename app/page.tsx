@@ -16,6 +16,7 @@ import {
   Phone,
   Mail,
   ArrowRight,
+  Send,
   Users,
   Award,
   Clock,
@@ -667,89 +668,135 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section
-          id="contact"
-          className="py-12 md:py-24 lg:py-32 bg-gradient-to-b"
-        >
+        <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-10 lg:grid-cols-2 items-start">
+            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="flex flex-col justify-center space-y-8"
+                className="space-y-6"
               >
-                <div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                    Request Distribution
-                  </h2>
-                  <p className="mt-4 text-muted-foreground md:text-lg">
-                    Complete this form to request our products for your
-                    business.
-                  </p>
-                </div>
-                <ul className="space-y-4">
-                  <li className="flex items-center gap-2">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <span>
-                      Studio Location: Rukmi Yoga Center, Mumbai, India
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Phone className="h-5 w-5 text-primary" />
-                    <span>+91 98765 43210</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Mail className="h-5 w-5 text-primary" />
-                    <span>contact@rukmiyoga.com</span>
-                  </li>
-                </ul>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
+                  Request Distribution
+                </h2>
+                <p className="text-muted-foreground md:text-lg">
+                  Complete this form to request our products for your business.
+                </p>
                 <form className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Your Name</Label>
-                    <Input id="name" placeholder="Enter your name" required />
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="businessName"
+                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        Business Name
+                      </label>
+                      <Input
+                        id="businessName"
+                        placeholder="Enter your business name"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="email"
+                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        Business Email
+                      </label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="Enter your business email"
+                      />
+                    </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
+                    <label
+                      htmlFor="phone"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Contact Number
+                    </label>
                     <Input
-                      id="email"
-                      type="email"
-                      placeholder="Enter your email"
-                      required
+                      id="phone"
+                      type="tel"
+                      placeholder="Enter your contact number"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message">Your Message</Label>
+                    <label
+                      htmlFor="message"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Message
+                    </label>
                     <Textarea
                       id="message"
-                      placeholder="Tell us how we can help you..."
-                      rows={4}
-                      required
+                      placeholder="Tell us about your business and distribution requirements"
+                      className="min-h-[150px]"
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-secondary hover:bg-primary">
-                    Send Message
+                  <Button type="submit" className="w-full sm:w-auto">
+                    <Send className="mr-2 h-4 w-4" />
+                    Submit Request
                   </Button>
                 </form>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="relative h-[400px] lg:h-[600px] rounded-lg overflow-hidden"
+                initial={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-8"
               >
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1655969611207!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <motion.div
+                  initial={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="relative h-[300px] overflow-hidden rounded-xl shadow-lg"
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1655969611207!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </motion.div>
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-primary">
+                    Contact Information
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="h-5 w-5 text-primary mt-1" />
+                      <div>
+                        <h4 className="font-medium">Visit Us</h4>
+                        <p className="text-muted-foreground">
+                          123 Wellness Way, Serenity Gardens, Bangalore 560001
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Phone className="h-5 w-5 text-primary mt-1" />
+                      <div>
+                        <h4 className="font-medium">Call Us</h4>
+                        <p className="text-muted-foreground">+91 98765 43210</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Mail className="h-5 w-5 text-primary mt-1" />
+                      <div>
+                        <h4 className="font-medium">Email Us</h4>
+                        <p className="text-muted-foreground">
+                          info@rukmiyoga.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>

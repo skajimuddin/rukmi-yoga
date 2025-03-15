@@ -55,10 +55,10 @@ const ConsultationPopup: React.FC<ConsultationPopupProps> = ({
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">Products Interested In</Label>
+            <Label htmlFor="message">Message</Label>
             <Textarea
               id="message"
-              placeholder="List which products you're interested in distributing"
+              placeholder="Tell us about your business and distribution requirements"
               rows={4}
               required
             />
