@@ -193,14 +193,14 @@ export default function LandingPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-12 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
+        <section className="relative py-10 md:py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="/hero_bg.webp"
               alt="Ayurvedic Background"
               layout="fill"
               objectFit="cover"
-              className="opacity-10"
+              className="opacity-60"
             />
           </div>
           <div className="container relative z-10 px-4 md:px-6">
@@ -683,10 +683,11 @@ export default function LandingPage() {
               >
                 <div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                  Request Distribution
+                    Request Distribution
                   </h2>
                   <p className="mt-4 text-muted-foreground md:text-lg">
-                  Complete this form to request our products for your business.
+                    Complete this form to request our products for your
+                    business.
                   </p>
                 </div>
                 <ul className="space-y-4">
@@ -728,7 +729,7 @@ export default function LandingPage() {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full hover:bg-secondary">
+                  <Button type="submit" className="w-full bg-secondary hover:bg-primary">
                     Send Message
                   </Button>
                 </form>
