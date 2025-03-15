@@ -50,7 +50,7 @@ export default function AboutPage() {
                 className="space-y-6"
               >
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
-                  Kayapalat Story
+                  Our Story
                 </h2>
                 <p className="text-muted-foreground md:text-lg leading-relaxed">
                   Here is Rajkot, Gujarat’s brave woman{" "}
@@ -81,7 +81,7 @@ export default function AboutPage() {
                 className="relative h-[450px] overflow-hidden rounded-lg shadow-lg"
               >
                 <Image
-                  src="/yoga_img_01.webp"
+                  src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13.jpg?v=1715082497"
                   alt="Our Story"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"

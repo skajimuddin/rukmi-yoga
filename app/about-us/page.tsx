@@ -63,7 +63,7 @@ export default function AboutMePage() {
                 className="space-y-6 order-2 lg:order-1"
               >
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
-                  Our Approach to Wellness
+                  Our story
                 </h2>
                 <p className="text-muted-foreground md:text-lg">
                   Yoga is more than just movement—it's a path to balance,
