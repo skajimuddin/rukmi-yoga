@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
   Award,
   BookOpen,
@@ -14,10 +14,10 @@ import {
   MapPin,
   Star,
   Users,
-} from "lucide-react"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ScrollToTopButton from "@/components/ScrollToTopButton"
+} from "lucide-react";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function AboutMePage() {
   return (
@@ -29,12 +29,12 @@ export default function AboutMePage() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Meet Dr. Rukmi
+                  About Rukmi Yoga
                 </h1>
-                <p className="mx-auto max-w-[770px] text-muted-foreground md:text-xl">
+                {/* <p className="mx-auto max-w-[770px] text-muted-foreground md:text-xl">
                   Naturopathic Doctor, Ayurvedic Consultant, Yoga Trainer, and
                   Founder of RUKMI YOGA
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
@@ -45,21 +45,22 @@ export default function AboutMePage() {
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-6 order-2 lg:order-1">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
-                  My Approach to Wellness
+                  Our Approach to Wellness
                 </h2>
                 <p className="text-muted-foreground md:text-lg">
-                  I believe that true health comes from balancing mind, body,
-                  and spirit. My approach combines traditional Ayurvedic
-                  principles with modern naturopathic practices to create
-                  personalized wellness plans that address the root causes of
-                  health issues, not just the symptoms.
+                  We believe that true health is achieved by harmonizing the
+                  mind, body, and spirit. Our approach integrates the ancient
+                  wisdom of Ayurveda and Yoga with modern wellness practices to
+                  create holistic healing experiences. Rather than just
+                  addressing symptoms, we focus on the root causes of imbalance
+                  to restore overall well-being.
                 </p>
                 <p className="text-muted-foreground md:text-lg">
-                  Through RUKMI YOGA and our Kayapalat Care product line, I've
-                  helped thousands of clients achieve balance and wellness in
-                  their daily lives. Each product is carefully formulated based
-                  on ancient Ayurvedic recipes, using only the purest
-                  ingredients sourced from trusted suppliers across India.
+                  Through RUKMI YOGA and our Kayapalat Care product line, we
+                  have guided thousands on their journey to inner balance and
+                  vitality. Each session and product is inspired by time-honored
+                  Ayurvedic traditions, using the purest natural ingredients and
+                  yogic techniques to rejuvenate the body and awaken the spirit.
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-4">
                   <div className="flex items-center gap-2">
@@ -147,5 +148,5 @@ export default function AboutMePage() {
         <ScrollToTopButton />
       </main>
     </div>
-  )
+  );
 }

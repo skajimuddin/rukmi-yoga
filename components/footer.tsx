@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Leaf, Instagram, Facebook, Twitter } from "lucide-react"
+import Link from "next/link";
+import { Leaf, Instagram, Facebook, Twitter, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
@@ -19,148 +20,199 @@ export default function Footer() {
               Premium Ayurvedic products for holistic wellness and natural
               healing.
             </p>
-            <div className="flex gap-4">
-              <Link
-                href="#"
-                className="text-gray-600 hover:text-primary transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 hover:text-primary transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 hover:text-primary transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
+            <div className="flex gap-4 flex-col">
+            <div className="hidden md:flex">
+                <form className="flex w-full max-w-sm items-center gap-2">
+                  <input
+                    type="email"
+                    className="flex-grow rounded-md border border-gray-300  bg-white text-xs text-gray-900  px-4 py-2  lg:h-11 h-11"
+                    placeholder="Subscribe to Our Newsletter"
+                  />
+                 <Button className="text-xs">
+                    Subscribe
+                 </Button>
+                </form>
+              </div>
+              <div>
+                <Button>Contact for Distribution</Button>
+              </div>
+              
             </div>
           </div>
-         <div className="grid md:gap-8 gap-5  grid-rows-2 grid-cols-2 sm:grid-cols-3 md:grid-rows-1 md:grid-cols-3">
-         <div className="md:space-y-4 space-y-1">
-            <h3 className="text-sm font-medium">Shop</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <Link
-                  href="/products"
-                  className="hover:text-foreground transition-colors"
-                >
-                  All Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Essential Oils
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Supplements
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Wellness Kits
-                </Link>
-              </li>
-            </ul>
+          <div className="grid md:gap-8 gap-5  grid-rows-2 grid-cols-2 sm:grid-cols-3 md:grid-rows-1 md:grid-cols-4">
+            <div className="md:space-y-4 space-y-1">
+              <h3 className="text-sm font-medium">Shop</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link
+                    href="/products"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    All Products
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Essential Oils
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Supplements
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Wellness Kits
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="md:space-y-4 space-y-1">
+              <h3 className="text-sm font-medium">Company</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link
+                    href="/about"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Careers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#contact"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="md:space-y-4 space-y-1">
+              <h3 className="text-sm font-medium">Help</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Shipping & Returns
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Terms of Service
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="md:space-y-4 space-y-1">
+              <h3 className="text-sm font-medium  pb-2">Social</h3>
+              <ul className="space-y-4  text-sm text-muted-foreground">
+                <li className="flex gap-4 items-center">
+                  {/* <div className="text-xs h-5 w-5">
+                    <Instagram />
+                  </div> */}
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Instagram
+                  </Link>
+                </li>
+                <li className="flex gap-4 items-center">
+                  {/* <div className="text-xs h-5 w-5">
+                    <Facebook />
+                  </div> */}
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Facebook
+                  </Link>
+                </li>
+                <li className="flex gap-4 items-center">
+                  {/* <div className="text-xs h-5 w-5">
+                    <Phone />
+                  </div> */}
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Whatsapp
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="md:space-y-4 space-y-1">
-            <h3 className="text-sm font-medium">Company</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <Link
-                  href="/about"
-                  className="hover:text-foreground transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#contact"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="md:space-y-4 space-y-1">
-            <h3 className="text-sm font-medium">Help</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Shipping & Returns
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-foreground transition-colors"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </div>
-         </div>
+          <div className="md:hidden">
+                <form className="flex w-full max-w-sm items-center gap-2">
+                  <input
+                    type="email"
+                    className="flex-grow rounded-md border border-gray-300  bg-white text-xs text-gray-900  px-4 py-2  lg:h-11 h-11"
+                    placeholder="Subscribe to Our Newsletter"
+                  />
+                 <Button className="text-xs">
+                    Subscribe
+                 </Button>
+                </form>
+              </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-gray-600">
           <p>© {new Date().getFullYear()} RUKMI YOGA. All rights reserved.</p>
+          <p>
+            Designed and Developed by{" "}
+            <span className="font-bold underline text-blue-500">
+              astucreatives.com
+            </span>
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import {
   Heart,
   Leaf,
@@ -21,19 +21,20 @@ import {
   Clock,
   Shield,
   Target,
-} from "lucide-react"
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+} from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import productsData from "@/data/products.json"
-import ConsultationPopup from "@/components/ConsultationPopup"
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import productsData from "@/data/products.json";
+import ConsultationPopup from "@/components/ConsultationPopup";
 
 export default function LandingPage() {
-  const [testimonialIndex, setTestimonialIndex] = useState(0)
-  const [cardsToShow, setCardsToShow] = useState(3)
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(3);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const testimonials = [
     {
@@ -66,41 +67,113 @@ export default function LandingPage() {
       quote:
         "I've incorporated Kayapalat Care into my therapy sessions, and the results have been remarkable. My clients love the natural approach to wellness.",
     },
-  ]
+  ];
+
+  const maxIndex = Math.max(0, testimonials.length - cardsToShow);
+  const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setCardsToShow(3)
+        setCardsToShow(3);
       } else if (window.innerWidth >= 640) {
-        setCardsToShow(2)
+        setCardsToShow(2);
       } else {
-        setCardsToShow(1)
+        setCardsToShow(1);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    // Only auto-scroll on mobile devices
+    if (isMobile) {
+      // Clear any existing interval when component mounts or dependencies change
+      if (autoScrollIntervalRef.current) {
+        clearInterval(autoScrollIntervalRef.current);
+      }
+
+      // Set up auto-scrolling
+      autoScrollIntervalRef.current = setInterval(() => {
+        setTestimonialIndex((prevIndex) =>
+          prevIndex >= maxIndex ? 0 : prevIndex + 1
+        );
+      }, 5000); // Scroll every 5 seconds
+    } else {
+      // Clear interval if not on mobile
+      if (autoScrollIntervalRef.current) {
+        clearInterval(autoScrollIntervalRef.current);
+        autoScrollIntervalRef.current = null;
       }
     }
 
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    // Clean up interval on component unmount
+    return () => {
+      if (autoScrollIntervalRef.current) {
+        clearInterval(autoScrollIntervalRef.current);
+      }
+    };
+  }, [isMobile, maxIndex]);
 
   const nextTestimonial = () => {
-    setTestimonialIndex(
-      (prevIndex) => (prevIndex + 1) % (testimonials.length - cardsToShow + 1)
-    )
-  }
+    // Reset auto-scroll timer when manually navigating
+    if (autoScrollIntervalRef.current) {
+      clearInterval(autoScrollIntervalRef.current);
+
+      if (isMobile) {
+        autoScrollIntervalRef.current = setInterval(() => {
+          setTestimonialIndex((prevIndex) =>
+            prevIndex >= maxIndex ? 0 : prevIndex + 1
+          );
+        }, 5000);
+      }
+    }
+
+    setTestimonialIndex((prevIndex) =>
+      prevIndex >= maxIndex ? 0 : prevIndex + 1
+    );
+  };
+
+  // const nextTestimonial = () => {
+  //   setTestimonialIndex(
+  //     (prevIndex) => (prevIndex + 1) % (testimonials.length - cardsToShow + 1)
+  //   )
+  // }
+
+  // const prevTestimonial = () => {
+  //   setTestimonialIndex(
+  //     (prevIndex) =>
+  //       (prevIndex - 1 + testimonials.length - cardsToShow + 1) %
+  //       (testimonials.length - cardsToShow + 1)
+  //   )
+  // }
 
   const prevTestimonial = () => {
-    setTestimonialIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + testimonials.length - cardsToShow + 1) %
-        (testimonials.length - cardsToShow + 1)
-    )
-  }
+    // Reset auto-scroll timer when manually navigating
+    if (autoScrollIntervalRef.current) {
+      clearInterval(autoScrollIntervalRef.current);
+
+      if (isMobile) {
+        autoScrollIntervalRef.current = setInterval(() => {
+          setTestimonialIndex((prevIndex) =>
+            prevIndex >= maxIndex ? 0 : prevIndex + 1
+          );
+        }, 5000);
+      }
+    }
+
+    setTestimonialIndex((prevIndex) =>
+      prevIndex <= 0 ? maxIndex : prevIndex - 1
+    );
+  };
 
   const bestSellerProducts = productsData.bestSellers
     .map((id) => productsData.products.find((p) => p.id === id))
-    .filter(Boolean)
+    .filter(Boolean);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -236,10 +309,7 @@ export default function LandingPage() {
         </section>
 
         {/* Benefits Section */}
-        <section
-          id="benefits"
-          className="bg-gray-100 py-12 md:py-24 lg:py-32 border-y"
-        >
+        <section id="benefits" className=" py-12 md:py-24 lg:py-32 border-y">
           <div className="container space-y-12 px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -303,7 +373,10 @@ export default function LandingPage() {
         </section>
 
         {/* Featured Products Section */}
-        <section id="featured-products" className="py-12 md:py-24 lg:py-32">
+        <section
+          id="featured-products"
+          className="py-12 bg-gray-100 md:py-24 lg:py-32"
+        >
           <div className="container space-y-12 px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -427,8 +500,65 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* About Us Section */}
+        <section id="who-we-are" className="py-16 ">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-12 lg:grid-cols-2 lg:gap-x-12  lg:gap-y-0 items-center">
+              <div className="space-y-4">
+                <div className="w-full flex justify-center items-center md:block">
+                  <div className="inline-block px-3 py-1 text-sm text-primary bg-secondary/10 rounded-full">
+                    About Us
+                  </div>
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary text-center md:text-left">
+                  Who We Are ?
+                </h2>
+                <p className="text-muted-foreground md:text-xl text-center md:text-left">
+                  Founded in 2018, Givve was born from a passion to make
+                  authentic Ayurvedic and yogic wellness accessible to everyone.
+                  As the official retailer of Kayapalat, we believe in the power
+                  of holistic healing to nurture the body, mind, and spirit.
+                </p>
+                <p className="text-muted-foreground md:text-xl text-center md:text-left">
+                  Our journey began when our founder personally experienced the
+                  transformative benefits of Ayurveda and Yoga. After struggling
+                  with chronic health issues that conventional medicine couldn’t
+                  resolve, they discovered the ancient wisdom of yogic
+                  practices, breathwork, and herbal remedies, which led to
+                  profound healing and balance.
+                </p>
+                <div className=" hidden lg:flex flex-col gap-2 min-[400px]:flex-row lg:items-start justify-start   ">
+                <Button asChild className="hover:bg-secondary">
+                  <Link href="/about-us">Learn more</Link>
+                </Button>
+              </div>
+              </div>
+              
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <img
+                    src="/yoga_img_03.webp"
+                    alt="Our team working together"
+                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                    width={600}
+                    height={500}
+                  />
+                </div>
+              </div>
+              <div className="lg:hidden flex flex-col gap-2 min-[400px]:flex-row justify-center items-center ">
+                <Button asChild className="hover:bg-secondary">
+                  <Link href="/about-us">Learn more</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Testimonials Section */}
-        <section id="testimonials" className="py-12 md:py-24 lg:py-32 bg-muted">
+        <section
+          id="testimonials"
+          className=" bg-gray-100 py-12 md:py-24 lg:py-32 bg-muted"
+        >
           <div className="container space-y-12 px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -534,51 +664,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* About Us Section */}
-        <section id="who-we-are" className="py-16 bg-gray-50">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-              <div className="space-y-4">
-                <div className="w-full flex justify-center items-center md:block">
-                  <div className="inline-block px-3 py-1 text-sm text-primary bg-secondary/10 rounded-full">
-                    About Us
-                  </div>
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary text-center md:text-left">
-                  Who We Are
-                </h2>
-                <p className="text-muted-foreground md:text-xl text-center md:text-left">
-                  Founded in 2018, Givve was born from a passion to make
-                  authentic Ayurvedic wellness accessible to everyone. As the
-                  official retailer of Kayapalat,
-                </p>
-                <p className="text-muted-foreground md:text-xl text-center md:text-left">
-                  Our journey began when our founder experienced the
-                  transformative benefits of Ayurveda firsthand. After
-                  struggling with chronic health issues that conventional
-                  medicine couldn't resolve
-                </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4 items-center md:items-start">
-                  <Button asChild className="hover:bg-secondary">
-                    <Link href="/about-us">Learn more</Link>
-                  </Button>
-                </div>
-              </div>
-              <div className="flex justify-center lg:justify-end">
-                <div className="relative">
-                  <img
-                    src="/yoga_img_03.webp"
-                    alt="Our team working together"
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                    width={600}
-                    height={500}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Contact Section */}
         <section
           id="contact"
@@ -672,5 +757,5 @@ export default function LandingPage() {
       {/* Footer */}
       <Footer />
     </div>
-  )
+  );
 }
