@@ -269,13 +269,13 @@ export default function LandingPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="relative lg:ml-auto order-1 lg:order-2"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden hero-img">
                   <Image
                     src="/hero_img.webp"
                     width={600}
                     height={550}
-                    alt="Kayapalat Care Products"
-                    className="mx-auto object-contain w-full max-h-[550px] lg:h-[550px] aspect-square md:aspect-[4/3] lg:aspect-[3/2] rounded-xl"
+                    alt="hero img"
+                    className="mx-auto object-contain w-full max-h-[550px] lg:h-[550px] aspect-square md:aspect-[4/3] lg:aspect-[3/2] rounded-lg"
                     priority
                   />
                 </div>
