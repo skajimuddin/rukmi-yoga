@@ -254,7 +254,7 @@ export default function LandingPage() {
                     ></motion.img>
                   </div>
                   <div className="text-sm text-gray-600 font-bold">
-                    <a>Official partner of Kayapalat</a>
+                    <a>Official Partner Of Kayapalat</a>
                   </div>
                 </div>
 
@@ -399,7 +399,7 @@ export default function LandingPage() {
               </div>
               <div className="flex items-center gap-4 pt-2">
                 <div className="md:text-2xl text-lg text-gray-600 font-medium">
-                  Official partner of Kayapalat Products
+                  Official Partner Of Kayapalat Products
                 </div>
               </div>
               {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-primary hover:bg-primary/20">
@@ -772,7 +772,7 @@ export default function LandingPage() {
                       <div>
                         <h4 className="font-medium">Visit Us</h4>
                         <p className="text-muted-foreground">
-                          123 Wellness Way, Serenity Gardens, Bangalore 560001
+                          SB road, opp pavilion mall, pune-411016.
                         </p>
                       </div>
                     </div>
@@ -780,7 +780,7 @@ export default function LandingPage() {
                       <Phone className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h4 className="font-medium">Call Us</h4>
-                        <p className="text-muted-foreground">+91 98765 43210</p>
+                        <p className="text-muted-foreground">+91 1234567890</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -788,7 +788,7 @@ export default function LandingPage() {
                       <div>
                         <h4 className="font-medium">Email Us</h4>
                         <p className="text-muted-foreground">
-                          info@rukmiyoga.com
+                          info@rukhaminiyoga.com
                         </p>
                       </div>
                     </div>

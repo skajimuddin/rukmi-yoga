@@ -42,9 +42,9 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               className="flex flex-col items-center space-y-4 text-center"
             >
-                <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium border-primary/20  bg-secondary/5 text-secondary">
+              <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium border-primary/20  bg-secondary/5 text-secondary">
                 Get in Touch
-                </div>
+              </div>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
                 Contact US
               </h1>
@@ -150,7 +150,7 @@ export default function ContactPage() {
                       <div>
                         <h4 className="font-medium">Visit Us</h4>
                         <p className="text-muted-foreground">
-                          123 Wellness Way, Serenity Gardens, Bangalore 560001
+                          SB road, opp pavilion mall, pune-411016.
                         </p>
                       </div>
                     </div>
@@ -158,7 +158,7 @@ export default function ContactPage() {
                       <Phone className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h4 className="font-medium">Call Us</h4>
-                        <p className="text-muted-foreground">+91 98765 43210</p>
+                        <p className="text-muted-foreground">+91 1234567890</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -166,7 +166,7 @@ export default function ContactPage() {
                       <div>
                         <h4 className="font-medium">Email Us</h4>
                         <p className="text-muted-foreground">
-                          info@rukmiyoga.com
+                          info@rukhaminiyoga.com
                         </p>
                       </div>
                     </div>

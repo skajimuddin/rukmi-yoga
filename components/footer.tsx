@@ -15,7 +15,11 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img className="h-16 bg-white rounded-sm px-3" src="logo.svg" alt="logo" />
+              <img
+                className="h-16 bg-white rounded-sm px-3"
+                src="logo.svg"
+                alt="logo"
+              />
             </div>
             <p className="text-sm text-white">
               Premium Ayurvedic products for holistic wellness and natural
@@ -206,12 +210,15 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-white">
-          <p>© {new Date().getFullYear()} RUKMI YOGA. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} SRI RUKHAMINI. All rights reserved.</p>
           <p>
             Designed and Developed by{" "}
-            <span className="font-medium underline text-white">
+            <a
+              href="https://www.astucreatives.com/"
+              className="font-medium underline text-white"
+            >
               astucreatives.com
-            </span>
+            </a>
           </p>
         </div>
       </div>
