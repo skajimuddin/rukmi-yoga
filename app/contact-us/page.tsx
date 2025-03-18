@@ -42,7 +42,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               className="flex flex-col items-center space-y-4 text-center"
             >
-                <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium border-primary/20 bg-secondary/10 text-secondary">
+                <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium border-primary/20  bg-secondary/5 text-secondary">
                 Get in Touch
                 </div>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">

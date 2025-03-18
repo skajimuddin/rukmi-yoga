@@ -237,7 +237,7 @@ export default function LandingPage() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="px-8 text-primary border-primary hover:bg-secondary/10"
+                    className="px-8 text-primary border-primary hover: bg-secondary/5"
                     asChild
                   >
                     <Link href="/about-me">About us</Link>
@@ -319,7 +319,7 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-secondary hover:bg-primary/20">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-secondary hover:bg-primary/20">
                 Our Commitment to Excellence
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -357,9 +357,9 @@ export default function LandingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md flex-1 min-w-[300px]"
+                  className="card group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md flex-1 min-w-[300px]"
                 >
-                  <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/10 blur-xl"></div>
+                  <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/5 blur-xl"></div>
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-secondary/20">
                     <benefit.icon className="h-6 w-6 text-primary" />
                   </div>
@@ -402,7 +402,7 @@ export default function LandingPage() {
                   Official partner of Kayapalat Products
                 </div>
               </div>
-              {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-primary hover:bg-primary/20">
+              {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-primary hover:bg-primary/20">
                 Featured Products
               </div> */}
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -423,7 +423,7 @@ export default function LandingPage() {
                     <Link
                       key={product.id}
                       href={`/products/${product.id}`}
-                      className="group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md"
+                      className="card group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md"
                     >
                       <div className="aspect-square overflow-hidden">
                         <Image
@@ -479,7 +479,7 @@ export default function LandingPage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="gap-2 hover:bg-secondary/10"
+                className="gap-2 hover: bg-secondary/5"
               >
                 <Link href="/products">View All Products</Link>
                 <svg
@@ -507,7 +507,7 @@ export default function LandingPage() {
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-x-12  lg:gap-y-0 items-center">
               <div className="space-y-4">
                 <div className="w-full flex justify-center items-center md:block">
-                  <div className="inline-block px-3 py-1 text-sm text-secondary bg-secondary/10 rounded-full">
+                  <div className="inline-block px-3 py-1 text-sm text-secondary  bg-secondary/5 rounded-full">
                     About Us
                   </div>
                 </div>
@@ -568,7 +568,7 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-secondary hover:bg-primary/20">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-secondary hover:bg-primary/20">
                 Customer Love
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -593,7 +593,7 @@ export default function LandingPage() {
                         cardsToShow > 1 ? "sm:w-1/2" : ""
                       } ${cardsToShow > 2 ? "lg:w-1/3" : ""}`}
                     >
-                      <div className="h-full group relative overflow-hidden rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow-md">
+                      <div className="card h-full group relative overflow-hidden rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow-md">
                         <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-primary/5 blur-xl"></div>
                         <svg
                           className="h-10 w-10 text-primary/20"
@@ -646,7 +646,7 @@ export default function LandingPage() {
                   variant="outline"
                   size="icon"
                   onClick={prevTestimonial}
-                  className="hover:bg-secondary/10"
+                  className="hover: bg-secondary/5"
                 >
                   <ChevronLeft className="h-4 w-4" />
                   <span className="sr-only">Previous testimonial</span>
@@ -655,7 +655,7 @@ export default function LandingPage() {
                   variant="outline"
                   size="icon"
                   onClick={nextTestimonial}
-                  className="hover:bg-secondary/10"
+                  className="hover: bg-secondary/5"
                 >
                   <ChevronRight className="h-4 w-4" />
                   <span className="sr-only">Next testimonial</span>

@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-20 items-center justify-between">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -35,10 +35,7 @@ export default function Header() {
           className="flex items-center gap-2"
         >
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-semibold tracking-tight text-secondary">
-              RUKMI YOGA
-            </span>
-            <Leaf className="h-6 w-6 text-primary" />
+            <img className="h-20 p-3" src="logo.svg" alt="logo" />
           </Link>
         </motion.div>
 

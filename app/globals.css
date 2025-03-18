@@ -200,3 +200,22 @@
 .markdown a[href^="#"] {
   @apply scroll-smooth;
 }
+
+section {
+  /* background-color: #fcf5eda1 !important; */
+}
+
+.card,
+input,
+textarea {
+  /* background-color: #cdf7d094 !important; */
+}
+
+input::placeholder,
+textarea::placeholder {
+  /* color: rgb(75, 75, 75) !important; */
+}
+
+.bg-gray-100 {
+  background-color: #fcf5eda1 !important;
+}

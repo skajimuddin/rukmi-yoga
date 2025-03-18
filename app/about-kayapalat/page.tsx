@@ -29,7 +29,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="flex flex-col items-center space-y-4 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium border-primary/20 bg-secondary/10 text-secondary">
+              <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium border-primary/20  bg-secondary/5 text-secondary">
                 Brand Story
               </div>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
@@ -125,9 +125,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
+                className="card group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
               >
-                <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/10 blur-xl"></div>
+                <div className="absolute top-0 right-0 h-24 w-24 rounded-full  bg-secondary/5 blur-xl"></div>
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-secondary/20">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -160,9 +160,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
+                className="card group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
               >
-                <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/10 blur-xl"></div>
+                <div className="absolute top-0 right-0 h-24 w-24 rounded-full  bg-secondary/5 blur-xl"></div>
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-secondary/20">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +205,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center mb-12"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-secondary">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-secondary">
                 Our Events
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -318,7 +318,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center mb-12"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/10 text-secondary">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-secondary">
                 Before & After
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -433,9 +433,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
+                className="card group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
               >
-                <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/10 blur-xl"></div>
+                <div className="absolute top-0 right-0 h-24 w-24 rounded-full  bg-secondary/5 blur-xl"></div>
                 <h3 className="text-3xl font-bold text-primary">34K</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Happy Customer
@@ -447,9 +447,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
+                className="card group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
               >
-                <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/10 blur-xl"></div>
+                <div className="absolute top-0 right-0 h-24 w-24 rounded-full  bg-secondary/5 blur-xl"></div>
                 <h3 className="text-3xl font-bold text-primary">11,000</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Products Sold Worldwide
@@ -461,9 +461,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
+                className="card group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
               >
-                <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/10 blur-xl"></div>
+                <div className="absolute top-0 right-0 h-24 w-24 rounded-full  bg-secondary/5 blur-xl"></div>
                 <h3 className="text-3xl font-bold text-primary">100%</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Our Satisfaction Ratio

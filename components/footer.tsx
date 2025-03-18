@@ -7,7 +7,7 @@ import { useState } from "react"
 import ConsultationPopup from "./ConsultationPopup"
 
 export default function Footer() {
-  const [isPopupOpen,setIsPopupOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   return (
     <footer className="border-t bg-secondary">
@@ -15,10 +15,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <span className="text-lg font-semibold text-white">
-                RUKMI YOGA
-              </span>
-              <Leaf className="h-5 w-5 text-white" />
+              <img className="h-16 bg-white rounded-sm px-3" src="logo.svg" alt="logo" />
             </div>
             <p className="text-sm text-white">
               Premium Ayurvedic products for holistic wellness and natural
@@ -36,10 +33,10 @@ export default function Footer() {
                 </form>
               </div>
               <div>
-                <Button
-                     onClick={() => setIsPopupOpen(true)}
-                >Contact for Distribution</Button>
-                 <ConsultationPopup
+                <Button onClick={() => setIsPopupOpen(true)}>
+                  Contact for Distribution
+                </Button>
+                <ConsultationPopup
                   isOpen={isPopupOpen}
                   onClose={() => setIsPopupOpen(false)}
                 />

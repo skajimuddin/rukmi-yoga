@@ -54,7 +54,9 @@ export default function ProductsPage() {
         <section className="w-full py-10 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex justify-between items-center mb-8  md:px-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary">Products</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-primary">
+                Products
+              </h2>
               <div className="flex items-center space-x-2">
                 {/* <Input
                   type="search"
@@ -101,7 +103,7 @@ function PrductCard({ product }: any) {
     <Link
       href={`/products/${product.id}`}
       key={product.id}
-      className="group relative overflow-hidden rounded-lg border bg-background transition-All hover:shadow-md"
+      className="card group relative overflow-hidden rounded-lg border bg-background transition-All hover:shadow-md"
     >
       <div className="aspect-square overflow-hidden">
         <Image
