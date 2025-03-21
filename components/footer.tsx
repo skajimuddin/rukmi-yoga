@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img className="h-16 px-3" src="logo2.svg" alt="logo" />
+              <img className="h-16 px-3 bg-white rounded-md" src="logo.svg" alt="logo" />
             </div>
             <p className="text-sm text-white">
               Premium Ayurvedic products for holistic wellness and natural

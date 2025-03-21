@@ -202,11 +202,11 @@
 }
 
 section {
-  background-color: #fcf5ed !important;
+  /* background-color: #fcf5ed !important; */
 }
 
 .card {
-  background-color: #cdf7d0c3 !important;
+  /* background-color: #cdf7d0c3 !important; */
 }
 
 input::placeholder,
@@ -215,5 +215,5 @@ textarea::placeholder {
 }
 
 .bg-gray-100 {
-  /* background-color: #fcf5eda1 !important; */
+  background-color: #fcf5eda1 !important;
 }
