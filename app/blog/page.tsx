@@ -217,12 +217,12 @@ export default function BlogPage() {
                         <span>{featuredPost.category}</span>
                       </div>
                       <h2 className="text-2xl font-bold leading-tight md:text-3xl text-primary">
-                        <Link href={`/blog/${featuredPost.slug}`} className="hover:underline">
+                        <Link href={`/blog/blog-1`} className="hover:underline">
                           {featuredPost.title}
                         </Link>
                       </h2>
                     </div>
-                    <p className="text-muted-foreground">{featuredPost.excerpt}</p>
+                    <p className="text-muted-foreground ">{featuredPost.excerpt}</p>
                     <div className="flex items-center gap-2">
                       <div className="h-10 w-10 overflow-hidden rounded-full bg-muted">
                         <Image
@@ -239,7 +239,7 @@ export default function BlogPage() {
                   </div>
                   <div className="mt-6">
                     <Button className="bg-secondary hover:bg-secondary/90 text-white" asChild>
-                      <Link href={`/blog/${featuredPost.slug}`}>Read Article</Link>
+                      <Link href={`/blog/blog-1`}>Read Article</Link>
                     </Button>
                   </div>
                 </div>
@@ -296,7 +296,7 @@ export default function BlogPage() {
                         <span>{post.category}</span>
                       </div>
                       <h3 className="text-xl font-bold leading-tight text-primary">
-                        <Link href={`/blog/${post.slug}`} className="hover:underline">
+                        <Link href={`/blog/blog-${post.id}`} className="hover:underline">
                           {post.title}
                         </Link>
                       </h3>

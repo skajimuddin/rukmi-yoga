@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import {
   Heart,
   Leaf,
@@ -22,20 +22,20 @@ import {
   Clock,
   Shield,
   Target,
-} from "lucide-react"
-import { useState, useEffect, useRef } from "react"
-import { motion } from "framer-motion"
-import { useIsMobile } from "@/hooks/use-mobile"
+} from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import productsData from "@/data/products.json"
-import ConsultationPopup from "@/components/ConsultationPopup"
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import productsData from "@/data/products.json";
+import ConsultationPopup from "@/components/ConsultationPopup";
 
 export default function LandingPage() {
-  const [testimonialIndex, setTestimonialIndex] = useState(0)
-  const [cardsToShow, setCardsToShow] = useState(3)
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(3);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const testimonials = [
     {
@@ -68,76 +68,112 @@ export default function LandingPage() {
       quote:
         "I've incorporated Kayapalat Care into my therapy sessions, and the results have been remarkable. My clients love the natural approach to wellness.",
     },
-  ]
+  ];
 
-  const maxIndex = Math.max(0, testimonials.length - cardsToShow)
-  const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null)
-  const isMobile = useIsMobile()
+  const relatedPosts = [
+    {
+      id: 2,
+      title: "5 Pranayama Techniques for Beginners",
+      excerpt:
+        "Learn these simple yet powerful breathing exercises that can help calm your mind, increase energy levels, and improve focus in your daily life.",
+      date: "March 10, 2025",
+      author: "Rahul Mehta",
+      category: "Breathing Techniques",
+      image: "/placeholder.svg?height=400&width=600",
+      slug: "pranayama-techniques-beginners",
+    },
+    {
+      id: 7,
+      title: "The Science Behind Meditation Benefits",
+      excerpt:
+        "Exploring the latest scientific research on how meditation affects the brain, immune system, and overall physical and mental health.",
+      date: "February 10, 2025",
+      author: "Dr. Neha Sharma",
+      category: "Meditation",
+      image: "/placeholder.svg?height=400&width=600",
+      slug: "science-meditation-benefits",
+    },
+    {
+      id: 5,
+      title: "Understanding the Seven Chakras",
+      excerpt:
+        "A comprehensive guide to the seven energy centers in the body, their significance, and how to balance them through yoga and meditation.",
+      date: "February 20, 2025",
+      author: "Meera Rajput",
+      category: "Spiritual Growth",
+      image: "/placeholder.svg?height=400&width=600",
+      slug: "understanding-seven-chakras",
+    },
+  ];
+
+  const maxIndex = Math.max(0, testimonials.length - cardsToShow);
+  const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setCardsToShow(3)
+        setCardsToShow(3);
       } else if (window.innerWidth >= 640) {
-        setCardsToShow(2)
+        setCardsToShow(2);
       } else {
-        setCardsToShow(1)
+        setCardsToShow(1);
       }
-    }
+    };
 
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     // Only auto-scroll on mobile devices
     if (isMobile) {
       // Clear any existing interval when component mounts or dependencies change
       if (autoScrollIntervalRef.current) {
-        clearInterval(autoScrollIntervalRef.current)
+        clearInterval(autoScrollIntervalRef.current);
       }
 
       // Set up auto-scrolling
       autoScrollIntervalRef.current = setInterval(() => {
         setTestimonialIndex((prevIndex) =>
           prevIndex >= maxIndex ? 0 : prevIndex + 1
-        )
-      }, 5000) // Scroll every 5 seconds
+        );
+      }, 5000); // Scroll every 5 seconds
     } else {
       // Clear interval if not on mobile
       if (autoScrollIntervalRef.current) {
-        clearInterval(autoScrollIntervalRef.current)
-        autoScrollIntervalRef.current = null
+        clearInterval(autoScrollIntervalRef.current);
+        autoScrollIntervalRef.current = null;
       }
     }
 
     // Clean up interval on component unmount
     return () => {
       if (autoScrollIntervalRef.current) {
-        clearInterval(autoScrollIntervalRef.current)
+        clearInterval(autoScrollIntervalRef.current);
       }
-    }
-  }, [isMobile, maxIndex])
+    };
+  }, [isMobile, maxIndex]);
 
   const nextTestimonial = () => {
     // Reset auto-scroll timer when manually navigating
     if (autoScrollIntervalRef.current) {
-      clearInterval(autoScrollIntervalRef.current)
+      clearInterval(autoScrollIntervalRef.current);
 
       if (isMobile) {
         autoScrollIntervalRef.current = setInterval(() => {
           setTestimonialIndex((prevIndex) =>
             prevIndex >= maxIndex ? 0 : prevIndex + 1
-          )
-        }, 5000)
+          );
+        }, 5000);
       }
     }
 
     setTestimonialIndex((prevIndex) =>
       prevIndex >= maxIndex ? 0 : prevIndex + 1
-    )
-  }
+    );
+  };
 
   // const nextTestimonial = () => {
   //   setTestimonialIndex(
@@ -156,25 +192,25 @@ export default function LandingPage() {
   const prevTestimonial = () => {
     // Reset auto-scroll timer when manually navigating
     if (autoScrollIntervalRef.current) {
-      clearInterval(autoScrollIntervalRef.current)
+      clearInterval(autoScrollIntervalRef.current);
 
       if (isMobile) {
         autoScrollIntervalRef.current = setInterval(() => {
           setTestimonialIndex((prevIndex) =>
             prevIndex >= maxIndex ? 0 : prevIndex + 1
-          )
-        }, 5000)
+          );
+        }, 5000);
       }
     }
 
     setTestimonialIndex((prevIndex) =>
       prevIndex <= 0 ? maxIndex : prevIndex - 1
-    )
-  }
+    );
+  };
 
   const bestSellerProducts = productsData.bestSellers
     .map((id) => productsData.products.find((p) => p.id === id))
-    .filter(Boolean)
+    .filter(Boolean);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -386,94 +422,68 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="flex -space-x-2">
-                <motion.img
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  className="inline-block h-16 w-16 rounded-full border-2 border-white overflow-hidden"
-                  src="/KayapalatLogo.png"
-                  alt="Kayapalat Logo"
-                />
-              </div>
-              <div className="flex items-center gap-4 pt-2">
-                <div className="md:text-2xl text-lg text-gray-600 font-medium">
-                  Official Partner Of Kayapalat Products
-                </div>
-              </div>
               {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-primary hover:bg-primary/20">
                 Featured Products
               </div> */}
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                Explore Products
+                Explore Blogs
               </h2>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                Discover our most popular Ayurvedic products loved by our
-                customers.
+                Explore Our Most Popular Yoga Practices Loved by Our Community
               </p>
 
               {/* Added the "Official Retailer" section here with adaptation */}
             </motion.div>
             {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> */}
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 lg:mx-8 lg:mt-12">
-              {bestSellerProducts.map(
-                (product) =>
-                  product && (
-                    <Link
-                      key={product.id}
-                      href={`/products/${product.id}`}
-                      className="card group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md"
-                    >
-                      <div className="aspect-square overflow-hidden">
-                        <Image
-                          src={product.image || "/placeholder.svg"}
-                          alt={product.name}
-                          width={400}
-                          height={400}
-                          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+              {relatedPosts.map((relatedPost, index) => (
+                <motion.div
+                  key={relatedPost.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
+                >
+                  <div className="aspect-video overflow-hidden">
+                    <Image
+                      src={relatedPost.image || "/placeholder.svg"}
+                      alt={relatedPost.title}
+                      width={400}
+                      height={225}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col justify-between p-6 bg-white">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <span>{relatedPost.category}</span>
+                        <span>•</span>
+                        <span>{relatedPost.date}</span>
                       </div>
-                      {/* <div className="p-6"> */}
-                      <div className="p-2 md:p-6">
-                        {/* <h3 className="text-xl font-bold"> */}
-                        <h3 className="text-base text-center md:text-left md:text-xl h-24 flex items-center justify-center md:justify-start">
-                          {product.name}
-                        </h3>
-                        {/* <p className="mt-2 text-muted-foreground">
-                          {product.description}
-                        </p> */}
-                        {/* <div className="mt-4 flex items-center justify-between">
-                          <span className="text-lg font-bold">
-                            {product.price}
-                          </span>
-                          <Button
-                            size="sm"
-                            className="transition-transform group-hover:translate-y-0"
-                          >
-                            View Details
-                          </Button>
-                        </div> */}
-                        <div className="mt-4 flex flex-col items-center space-y-2 md:justify-between md:items-start md:flex-row md:space-y-0 md:space-x-4">
-                          <span className="text-lg font-bold">
-                            {product.price}
-                          </span>
-                          <Button
-                            size="sm"
-                            className="transition-transform group-hover:translate-y-0 hover:bg-secondary"
-                          >
-                            View Details
-                            <ArrowRight className="h-4 w-4" />
-                          </Button>
-                        </div>
-                      </div>
-                      <div className="absolute top-4 right-4 rounded-full bg-background/80 p-2 opacity-0 transition-opacity group-hover:opacity-100">
-                        <Heart className="h-4 w-4 text-muted-foreground hover:text-primary" />
-                      </div>
-                    </Link>
-                  )
-              )}
+                      <h3 className="font-bold leading-tight text-primary">
+                        <Link
+                          href={`/blog/blog-${relatedPost.id}`}
+                          className="hover:underline"
+                        >
+                          {relatedPost.title}
+                        </Link>
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        {relatedPost.excerpt}
+                      </p>
+                    </div>
+                    <div className="pt-4">
+                      <Link
+                        href={`/blog/blog-${relatedPost.id}`}
+                        className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
+                      >
+                        Read more <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
             <div className="flex justify-center">
               <Button
@@ -481,7 +491,7 @@ export default function LandingPage() {
                 size="lg"
                 className="gap-2 hover: bg-secondary/5"
               >
-                <Link href="/products">View All Products</Link>
+                <Link href="/blog">View All Blogs</Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -803,5 +813,5 @@ export default function LandingPage() {
       {/* Footer */}
       <Footer />
     </div>
-  )
+  );
 }
