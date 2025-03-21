@@ -316,7 +316,7 @@ export default function BlogPage() {
                       <span className="text-sm">{post.author}</span>
                     </div>
                     <Link
-                      href={`/blog/${post.slug}`}
+                      href={`/blog/blog-${post.id}`}
                       className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
                     >
                       Read more <ArrowRight className="h-4 w-4" />
