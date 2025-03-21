@@ -11,6 +11,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { useIsMobile } from "@/hooks/use-mobile"
 
+
 interface BlogPost {
   id: number
   title: string
@@ -37,7 +38,7 @@ export default function BlogPage() {
       date: "March 15, 2025",
       author: "Priya Sharma",
       category: "Yoga Practices",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image1.jpeg",
       slug: "transformative-power-yoga-nidra",
       featured: true,
     },
@@ -49,7 +50,7 @@ export default function BlogPage() {
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
       featured: true,
     },
@@ -61,7 +62,7 @@ export default function BlogPage() {
       date: "March 5, 2025",
       author: "Ananya Kumar",
       category: "Ayurveda",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image3.jpeg",
       slug: "ayurvedic-principles-modern-living",
       featured: true,
     },
@@ -73,7 +74,7 @@ export default function BlogPage() {
       date: "February 28, 2025",
       author: "Dr. Vikram Patel",
       category: "Wellness",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image4.jpeg",
       slug: "yoga-mental-health-connection",
     },
     {
@@ -84,7 +85,7 @@ export default function BlogPage() {
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
     {
@@ -95,7 +96,7 @@ export default function BlogPage() {
       date: "February 15, 2025",
       author: "Arjun Singh",
       category: "Yoga Practices",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image6.jpeg",
       slug: "yoga-office-workers-desk-poses",
     },
     {
@@ -106,7 +107,7 @@ export default function BlogPage() {
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -117,7 +118,7 @@ export default function BlogPage() {
       date: "February 5, 2025",
       author: "Kiran Joshi",
       category: "Yoga Practices",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image8.jpeg",
       slug: "seasonal-yoga-adapting-practice",
     },
     {
@@ -128,7 +129,7 @@ export default function BlogPage() {
       date: "January 30, 2025",
       author: "Dr. Sanjay Gupta",
       category: "Wellness",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image9.jpeg",
       slug: "yoga-pain-management",
     },
   ]

@@ -79,7 +79,7 @@ export default function LandingPage() {
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -90,7 +90,7 @@ export default function LandingPage() {
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -101,10 +101,10 @@ export default function LandingPage() {
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
-  ];
+  ]
 
   const maxIndex = Math.max(0, testimonials.length - cardsToShow);
   const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);

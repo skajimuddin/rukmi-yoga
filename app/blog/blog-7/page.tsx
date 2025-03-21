@@ -64,7 +64,7 @@ export default function BlogPostPage() {
     authorBio: "Dr. Sharma is a neuroscientist and meditation researcher at the National Institute of Mind Sciences. TEDx speaker on contemplative neuroscience.",
     authorImage: "/placeholder.svg?height=100&width=100&text=NS",
     category: "Meditation",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/blog-images/image7.jpeg",
     readTime: "16 min read",
     slug: "science-meditation-benefits",
     tags: ["Meditation Science", "Neuroscience", "Research", "Brain Health", "Immune System", "Biofeedback"],
@@ -101,7 +101,7 @@ Scientific evidence continues to support the vast benefits of meditation, provin
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -112,7 +112,7 @@ Scientific evidence continues to support the vast benefits of meditation, provin
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -123,7 +123,7 @@ Scientific evidence continues to support the vast benefits of meditation, provin
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
   ]

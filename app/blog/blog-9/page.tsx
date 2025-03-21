@@ -64,7 +64,7 @@ export default function BlogPostPage() {
     authorBio: "Dr. Gupta is a pain management specialist and yoga therapist, integrating Western medicine with Eastern healing modalities at his Mumbai clinic.",
     authorImage: "/placeholder.svg?height=100&width=100&text=SG",
     category: "Wellness",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/blog-images/image9.jpeg",
     readTime: "13 min read",
     slug: "yoga-pain-management",
     tags: ["Pain Management", "Chronic Pain", "Therapy", "Mindfulness", "Rehabilitation", "Integrative Medicine"],
@@ -92,7 +92,7 @@ By integrating yoga into daily life, individuals can experience significant impr
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -103,7 +103,7 @@ By integrating yoga into daily life, individuals can experience significant impr
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -114,11 +114,10 @@ By integrating yoga into daily life, individuals can experience significant impr
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
   ]
-
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },

@@ -64,7 +64,7 @@ export default function BlogPostPage() {
     authorBio: "Ananya is an Ayurvedic practitioner and nutritionist blending 5,000-year-old Vedic wisdom with evidence-based nutrition science. Founder of Prakriti Wellness Center.",
     authorImage: "/placeholder.svg?height=100&width=100&text=AK",
     category: "Ayurveda",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "//blog-images/image3.jpeg",
     readTime: "15 min read",
     slug: "ayurvedic-principles-modern-living",
     tags: ["Ayurveda", "Doshas", "Daily Routine", "Mind-Body", "Nutrition", "Detox"],
@@ -86,7 +86,7 @@ The synergy between Ayurveda and Yoga further enhances well-being, with seasonal
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -97,7 +97,7 @@ The synergy between Ayurveda and Yoga further enhances well-being, with seasonal
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -108,7 +108,7 @@ The synergy between Ayurveda and Yoga further enhances well-being, with seasonal
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
   ]

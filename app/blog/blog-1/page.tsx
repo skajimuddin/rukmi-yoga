@@ -66,7 +66,7 @@ export default function BlogPostPage() {
       "Priya is a certified yoga instructor with over 10 years of experience specializing in restorative yoga and meditation. She has trained in traditional ashrams across India and brings authentic practices to modern practitioners.",
     authorImage: "/placeholder.svg?height=100&width=100&text=PS",
     category: "Yoga Practices",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/blog-images/image1.jpeg",
     readTime: "10 min read",
     slug: "transformative-power-yoga-nidra",
     tags: ["Yoga Nidra", "Meditation", "Stress Relief", "Sleep", "Relaxation", "Mindfulness"],
@@ -110,7 +110,7 @@ As you continue your Yoga Nidra journey, remember that each session is unique. S
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -121,7 +121,7 @@ As you continue your Yoga Nidra journey, remember that each session is unique. S
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -132,7 +132,7 @@ As you continue your Yoga Nidra journey, remember that each session is unique. S
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
   ]

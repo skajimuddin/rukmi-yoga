@@ -64,7 +64,7 @@ export default function BlogPostPage() {
     authorBio: "Kiran is an Ayurvedic yoga teacher and seasonal wellness expert, conducting retreats that sync practices with natural cycles since 2015.",
     authorImage: "/placeholder.svg?height=100&width=100&text=KJ",
     category: "Yoga Practices",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/blog-images/image8.jpeg",
     readTime: "11 min read",
     slug: "seasonal-yoga-adapting-practice",
     tags: ["Seasonal Yoga", "Ayurveda", "Nature Cycles", "Adaptation", "Balance", "Retreats"],
@@ -109,7 +109,7 @@ By adapting yoga practices to the seasons, individuals can sustain resilience, b
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -120,7 +120,7 @@ By adapting yoga practices to the seasons, individuals can sustain resilience, b
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -131,11 +131,10 @@ By adapting yoga practices to the seasons, individuals can sustain resilience, b
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
   ]
-
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },

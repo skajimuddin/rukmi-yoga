@@ -64,7 +64,7 @@ export default function BlogPostPage() {
     authorBio: "Meera is a spiritual teacher and energy healer with 15 years experience in chakra therapy. Creator of the Chakra Alignment System®.",
     authorImage: "/placeholder.svg?height=100&width=100&text=MR",
     category: "Spiritual Growth",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/blog-images/image5.jpeg",
     readTime: "18 min read",
     slug: "understanding-seven-chakras",
     tags: ["Chakras", "Energy Healing", "Meditation", "Spirituality", "Balance", "Alignment"],
@@ -86,7 +86,7 @@ Balancing the seven chakras is essential for overall well-being, promoting physi
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -97,7 +97,7 @@ Balancing the seven chakras is essential for overall well-being, promoting physi
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -108,7 +108,7 @@ Balancing the seven chakras is essential for overall well-being, promoting physi
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
   ]

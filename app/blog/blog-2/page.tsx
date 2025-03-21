@@ -64,7 +64,7 @@ export default function BlogPostPage() {
     authorBio: "Rahul is a senior yoga therapist specializing in respiratory health and breathwork. With 8 years of teaching experience, he integrates traditional pranayama techniques with modern breathing science.",
     authorImage: "/placeholder.svg?height=100&width=100&text=RM",
     category: "Breathing Techniques",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/blog-images/image2.jpeg",
     readTime: "12 min read",
     slug: "pranayama-techniques-beginners",
     tags: ["Pranayama", "Breathwork", "Stress Relief", "Energy", "Focus", "Beginners"],
@@ -96,7 +96,7 @@ By incorporating these techniques into daily life, individuals can experience si
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -107,7 +107,7 @@ By incorporating these techniques into daily life, individuals can experience si
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -118,7 +118,7 @@ By incorporating these techniques into daily life, individuals can experience si
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
   ]

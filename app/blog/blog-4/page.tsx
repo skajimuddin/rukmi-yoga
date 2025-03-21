@@ -64,7 +64,7 @@ export default function BlogPostPage() {
     authorBio: "Dr. Patel is a clinical psychologist and yoga researcher focusing on mind-body interventions for mental health disorders. Author of 'Neuroscience of Yoga'.",
     authorImage: "/placeholder.svg?height=100&width=100&text=VP",
     category: "Wellness",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/blog-images/image4.jpeg",
     readTime: "14 min read",
     slug: "yoga-mental-health-connection",
     tags: ["Mental Health", "Anxiety", "Depression", "Neuroscience", "Therapy", "Mind-Body"],
@@ -89,7 +89,7 @@ Overall, yoga enhances mental health by regulating the nervous system, promoting
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -100,7 +100,7 @@ Overall, yoga enhances mental health by regulating the nervous system, promoting
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -111,7 +111,7 @@ Overall, yoga enhances mental health by regulating the nervous system, promoting
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
   ]

@@ -64,7 +64,7 @@ export default function BlogPostPage() {
     authorBio: "Arjun is a corporate wellness specialist and ergonomic yoga expert, helping companies implement workplace wellness programs since 2018.",
     authorImage: "/placeholder.svg?height=100&width=100&text=AS",
     category: "Yoga Practices",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/blog-images/image6.jpeg",
     readTime: "9 min read",
     slug: "yoga-office-workers-desk-poses",
     tags: ["Office Yoga", "Posture", "Ergonomics", "Desk Exercises", "Stretching", "Workplace Wellness"],
@@ -94,7 +94,7 @@ Regularly practicing these desk-friendly yoga poses can transform the workday by
       date: "March 10, 2025",
       author: "Rahul Mehta",
       category: "Breathing Techniques",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image2.jpeg",
       slug: "pranayama-techniques-beginners",
     },
     {
@@ -105,7 +105,7 @@ Regularly practicing these desk-friendly yoga poses can transform the workday by
       date: "February 10, 2025",
       author: "Dr. Neha Sharma",
       category: "Meditation",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image7.jpeg",
       slug: "science-meditation-benefits",
     },
     {
@@ -116,7 +116,7 @@ Regularly practicing these desk-friendly yoga poses can transform the workday by
       date: "February 20, 2025",
       author: "Meera Rajput",
       category: "Spiritual Growth",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
   ]
