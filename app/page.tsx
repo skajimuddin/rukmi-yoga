@@ -772,61 +772,68 @@ export default function LandingPage() {
                   className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-secondary/20 blur-xl"
                 ></motion.div>
                 </motion.div>
-              <motion.div
+                <motion.div
                 initial={{ opacity: 1, x: 0 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 className="space-y-8"
-              >
+                >
                 <motion.div
                   initial={{ opacity: 1, x: 0 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="relative h-[300px] overflow-hidden rounded-xl shadow-lg"
+                  className="relative h-[300px] overflow-hidden rounded-xl shadow-lg border border-gray-200"
                 >
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1655969611207!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1655969611207!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-xl"
                   ></iframe>
                 </motion.div>
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-primary">
-                    Contact Information
+                  <h3 className="text-2xl font-bold text-primary text-center">
+                  Contact Information
                   </h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 text-primary mt-1" />
-                      <div>
-                        <h4 className="font-medium">Visit Us</h4>
-                        <p className="text-muted-foreground">
-                          SB road, opp pavilion mall, pune-411016.
-                        </p>
-                      </div>
+                  <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
+                    <MapPin className="h-6 w-6 text-primary" />
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Phone className="h-5 w-5 text-primary mt-1" />
-                      <div>
-                        <h4 className="font-medium">Call Us</h4>
-                        <p className="text-muted-foreground">+91 1234567890</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Mail className="h-5 w-5 text-primary mt-1" />
-                      <div>
-                        <h4 className="font-medium">Email Us</h4>
-                        <p className="text-muted-foreground">
-                          info@rukhaminiyoga.com
-                        </p>
-                      </div>
+                    <div>
+                    <h4 className="font-semibold text-primary">Visit Us</h4>
+                    <p className="text-gray-600">
+                      SB road, opp pavilion mall, Pune-411016.
+                    </p>
                     </div>
                   </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
+                    <Phone className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                    <h4 className="font-semibold text-primary">Call Us</h4>
+                    <p className="text-gray-600">+91 1234567890</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
+                    <Mail className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                    <h4 className="font-semibold text-primary">Email Us</h4>
+                    <p className="text-gray-600">
+                      info@rukhaminiyoga.com
+                    </p>
+                    </div>
+                  </div>
+                  </div>
                 </div>
-              </motion.div>
+                </motion.div>
             </div>
           </div>
         </section>

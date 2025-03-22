@@ -22,7 +22,7 @@ export default function Header() {
     { href: "/products", label: "Products" },
     { href: "/contact-us", label: "Contact" },
     { href: "/about-us", label: "About us" },
-    { href: "/about-kayapalat", label: "About Kayapalat" },
+    // { href: "/about-kayapalat", label: "About Kayapalat" },
   ]
 
   return (
