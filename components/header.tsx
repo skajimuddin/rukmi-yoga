@@ -19,7 +19,7 @@ export default function Header() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/products", label: "Products" },
+    { href: "/blog", label: "Blog" },
     { href: "/contact-us", label: "Contact" },
     { href: "/about-us", label: "About us" },
     // { href: "/about-kayapalat", label: "About Kayapalat" },
@@ -35,7 +35,7 @@ export default function Header() {
           className="flex items-center gap-2"
         >
           <Link href="/" className="flex items-center gap-2">
-            <img className="h-20 p-3" src="logo.svg" alt="logo" />
+            <img className="h-20 p-3" src="/logo.svg" alt="logo" />
           </Link>
         </motion.div>
 
