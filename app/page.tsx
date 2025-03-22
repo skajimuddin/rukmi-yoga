@@ -508,89 +508,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Featured blog Section */}
-        <section
-          id="featured-products"
-          className="py-12 bg-gray-100 md:py-20 lg:py-24"
-        >
-          <div className="container space-y-8 px-4 md:px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center gap-2 text-center"
-            >
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
-              Latest Insights
-              </h2>
-              <p className="max-w-[700px] text-muted-foreground md:text-lg">
-          Explore Our Most Popular Yoga Practices Loved by Our Community
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {relatedPosts.map((relatedPost, index) => (
-          <motion.div
-            key={relatedPost.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
-          >
-            <div className="aspect-video overflow-hidden">
-              <Image
-                src={relatedPost.image || "/placeholder.svg"}
-                alt={relatedPost.title}
-                width={400}
-                height={225}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-            <div className="flex flex-1 flex-col justify-between p-4 bg-white">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <span>{relatedPost.category}</span>
-            <span>•</span>
-            <span>{relatedPost.date}</span>
-                </div>
-                <h3 className="font-bold leading-tight text-primary">
-            <Link
-              href={`/blog/blog-${relatedPost.id}`}
-              className="hover:underline"
-            >
-              {relatedPost.title}
-            </Link>
-                </h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
-            {relatedPost.excerpt}
-                </p>
-              </div>
-              <div className="pt-4">
-                <Link
-            href={`/blog/blog-${relatedPost.id}`}
-            className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
-                >
-            Read more <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-              ))}
-            </div>
-            <div className="flex justify-center">
-              <Button
-          variant="outline"
-          size="lg"
-          className="gap-2 hover:bg-secondary/5"
-              >
-          <Link href="/blog">View All Blogs</Link>
-          <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </section>
-
         {/* Gallery Section */}
         <section id="gallery" className="py-12 md:py-20 lg:py-24 bg-gray-100">
           <div className="container space-y-8 px-4 md:px-6">
@@ -996,6 +913,89 @@ export default function LandingPage() {
                   </div>
                 </div>
                 </motion.div>
+            </div>
+          </div>
+        </section>
+
+         {/* Featured blog Section */}
+         <section
+          id="featured-products"
+          className="py-12 bg-gray-100 md:py-20 lg:py-24"
+        >
+          <div className="container space-y-8 px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center gap-2 text-center"
+            >
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
+              Latest Insights
+              </h2>
+              <p className="max-w-[700px] text-muted-foreground md:text-lg">
+          Explore Our Most Popular Yoga Practices Loved by Our Community
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              {relatedPosts.map((relatedPost, index) => (
+          <motion.div
+            key={relatedPost.id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
+          >
+            <div className="aspect-video overflow-hidden">
+              <Image
+                src={relatedPost.image || "/placeholder.svg"}
+                alt={relatedPost.title}
+                width={400}
+                height={225}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-between p-4 bg-white">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <span>{relatedPost.category}</span>
+            <span>•</span>
+            <span>{relatedPost.date}</span>
+                </div>
+                <h3 className="font-bold leading-tight text-primary">
+            <Link
+              href={`/blog/blog-${relatedPost.id}`}
+              className="hover:underline"
+            >
+              {relatedPost.title}
+            </Link>
+                </h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+            {relatedPost.excerpt}
+                </p>
+              </div>
+              <div className="pt-4">
+                <Link
+            href={`/blog/blog-${relatedPost.id}`}
+            className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
+                >
+            Read more <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+              ))}
+            </div>
+            <div className="flex justify-center">
+              <Button
+          variant="outline"
+          size="lg"
+          className="gap-2 hover:bg-secondary/5"
+              >
+          <Link href="/blog">View All Blogs</Link>
+          <ArrowRight className="h-4 w-4" />
+              </Button>
             </div>
           </div>
         </section>
