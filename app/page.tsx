@@ -668,78 +668,100 @@ export default function LandingPage() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
-              <motion.div
-                initial={{ opacity: 1, x: 0 }}
-                animate={{ opacity: 1, x: 0 }}
+                <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="space-y-6"
-              >
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
-                  Request Distribution
-                </h2>
-                <p className="text-muted-foreground md:text-lg">
-                  Complete this form to request our products for your business.
-                </p>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                viewport={{ once: true }}
+                className="relative overflow-hidden rounded-lg shadow-lg bg-white border border-gray-200 p-8"
+                >
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-primary/10 opacity-20 pointer-events-none"></div>
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="space-y-6 relative z-10"
+                >
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary text-center">
+                  Inquiry Form
+                  </h2>
+                  <p className="text-muted-foreground md:text-lg text-center">
+                  Let us know your business needs, and we’ll get back to you with the best solutions.
+                  </p>
+                  <form className="space-y-6">
+                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div className="space-y-2">
-                      <label
-                        htmlFor="businessName"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Business Name
-                      </label>
-                      <Input
-                        id="businessName"
-                        placeholder="Enter your business name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="email"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Business Email
-                      </label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="Enter your business email"
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="phone"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Contact Number
-                    </label>
+                    <Label htmlFor="businessName">Business Name</Label>
                     <Input
-                      id="phone"
-                      type="tel"
-                      placeholder="Enter your contact number"
+                      id="businessName"
+                      placeholder="Enter your business name"
+                      className="border-gray-300 focus:ring-primary focus:border-primary"
+                    />
+                    </div>
+                    <div className="space-y-2">
+                    <Label htmlFor="email">Business Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your business email"
+                      className="border-gray-300 focus:ring-primary focus:border-primary"
+                    />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Contact Number</Label>
+                    <Input
+                    id="phone"
+                    type="tel"
+                    placeholder="Enter your contact number"
+                    className="border-gray-300 focus:ring-primary focus:border-primary"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label
-                      htmlFor="message"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Message
-                    </label>
+                    <Label htmlFor="message">Message</Label>
                     <Textarea
-                      id="message"
-                      placeholder="Tell us about your business and distribution requirements"
-                      className="min-h-[150px]"
+                    id="message"
+                    placeholder="Tell us about your business and distribution requirements"
+                    className="min-h-[150px] border-gray-300 focus:ring-primary focus:border-primary"
                     />
                   </div>
-                  <Button type="submit" className="w-full sm:w-auto">
+                  <div className="flex justify-center">
+                    <Button
+                    type="submit"
+                    className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 transition-transform transform hover:scale-105"
+                    >
                     <Send className="mr-2 h-4 w-4" />
                     Submit Request
-                  </Button>
-                </form>
-              </motion.div>
+                    </Button>
+                  </div>
+                  </form>
+                </motion.div>
+                <motion.div
+                  animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.5, 1, 0.5],
+                  }}
+                  transition={{
+                  duration: 4,
+                  repeat: Number.POSITIVE_INFINITY,
+                  repeatType: "reverse",
+                  }}
+                  className="absolute -top-4 -left-4 h-24 w-24 rounded-full bg-primary/20 blur-xl"
+                ></motion.div>
+                <motion.div
+                  animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.5, 1, 0.5],
+                  }}
+                  transition={{
+                  duration: 4,
+                  repeat: Number.POSITIVE_INFINITY,
+                  repeatType: "reverse",
+                  delay: 2,
+                  }}
+                  className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-secondary/20 blur-xl"
+                ></motion.div>
+                </motion.div>
               <motion.div
                 initial={{ opacity: 1, x: 0 }}
                 animate={{ opacity: 1, x: 0 }}

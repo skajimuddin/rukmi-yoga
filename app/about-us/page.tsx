@@ -15,6 +15,7 @@ import {
   Star,
   Users,
 } from "lucide-react";
+// Removed duplicate and invalid import
 import { motion } from "framer-motion"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -123,6 +124,211 @@ export default function AboutMePage() {
             </div>
           </div>
         </section>
+
+         <section className="w-full py-12 md:py-16 lg:py-20">
+                  <div className="container px-4 md:px-6">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                      viewport={{ once: true }}
+                      className="flex flex-col items-center gap-4 text-center mb-12"
+                    >
+                      <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-secondary">
+                        Our Memories
+                      </div>
+                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
+                        Explore Our Memories
+                        </h2>
+                    </motion.div>
+                    <div className="grid gap-8 md:grid-cols-3 lg:gap-10">
+                      {/* Event 1 */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_2_1000x.jpg?v=1715083849"
+                          alt="Event 1"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+        
+                      {/* Event 2 */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_3_1000x.jpg?v=1715083894"
+                          alt="Event 2"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+        
+                      {/* Event 3 */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_4_1000x.jpg?v=1715083991"
+                          alt="Event 3"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+        
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_7_1000x.jpg?v=1715084076"
+                          alt="Event 3"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+        
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_6_1000x.jpg?v=1715084048"
+                          alt="Event 3"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+        
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_5.jpg?v=1715084015"
+                          alt="Event 3"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_5.jpg?v=1715084015"
+                          alt="Event 3"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_5.jpg?v=1715084015"
+                          alt="Event 3"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_5.jpg?v=1715084015"
+                          alt="Event 3"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_5.jpg?v=1715084015"
+                          alt="Event 3"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.6, delay: 0.6 }}
+                          viewport={{ once: true }}
+                          className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                        >
+                          <Image
+                            src="https://srirukhaminiiyoga.com/assets/photo%20gallery/TadFdXPF0F.jpg"
+                            alt="Rukmi Yoga Gallery Image"
+                            fill
+                            className="object-cover transition-transform duration-500 hover:scale-105"
+                          />
+                        </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className="relative h-[300px] overflow-hidden rounded-lg shadow-lg"
+                      >
+                        <Image
+                          src="https://www.kayapalatcare.com/cdn/shop/files/WhatsApp-Image-2023-08-14-at-13_5.jpg?v=1715084015"
+                          alt="Event 3"
+                          fill
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </motion.div>
+
+                    </div>
+                  </div>
+                </section>
+        
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
           <div className="container px-4 md:px-6">
