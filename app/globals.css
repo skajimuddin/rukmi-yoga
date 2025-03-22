@@ -217,3 +217,11 @@ textarea::placeholder {
 .bg-gray-100 {
   background-color: #fcf5eda1 !important;
 }
+
+p {
+  color: #5a3e36 !important;
+}
+
+footer p {
+  color: white !important;
+}

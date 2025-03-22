@@ -280,7 +280,7 @@ export default function LandingPage() {
                     <Link href="/about-me">About us</Link>
                   </Button>
                 </div>
-                <div className="flex items-center gap-4 pt-4">
+                {/* <div className="flex items-center gap-4 pt-4">
                   <div className="flex -space-x-2">
                     <motion.img
                       initial={{ opacity: 0, scale: 0.5 }}
@@ -293,7 +293,7 @@ export default function LandingPage() {
                   <div className="text-sm text-gray-600 font-bold">
                     <a>Official Partner Of Kayapalat</a>
                   </div>
-                </div>
+                </div> */}
 
                 <ConsultationPopup
                   isOpen={isPopupOpen}
