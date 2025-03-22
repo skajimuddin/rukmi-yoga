@@ -68,7 +68,7 @@ export default function BlogPostPage() {
     readTime: "13 min read",
     slug: "yoga-pain-management",
     tags: ["Pain Management", "Chronic Pain", "Therapy", "Mindfulness", "Rehabilitation", "Integrative Medicine"],
-    content: `### **The Role of Yoga in Pain Management**  
+    content: `The Role of Yoga in Pain Management
 
 Yoga is a powerful holistic approach to pain relief, offering both physical and mental benefits. By integrating movement, breathwork, and mindfulness, yoga helps manage chronic pain, reduce inflammation, and enhance overall well-being. It activates the parasympathetic nervous system, which promotes relaxation and reduces stress-induced pain. Mindfulness meditation in yoga alters brain activity in the prefrontal cortex, lowering pain perception. Studies show that consistent yoga practice reduces cortisol levels, minimizing inflammation-related discomfort.  
 
