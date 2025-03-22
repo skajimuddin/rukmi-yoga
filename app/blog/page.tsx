@@ -177,7 +177,7 @@ export default function BlogPage() {
                 Wisdom & Insights
               </div>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-primary">
-                Rukmi Yoga Blog
+                Rukhamini Yoga Blog
               </h1>
               <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
                 Insights, practices, and wisdom to enhance your yoga journey and holistic well-being

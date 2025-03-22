@@ -410,7 +410,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Featured Products Section */}
+        {/* Featured blog Section */}
         <section
           id="featured-products"
           className="py-12 bg-gray-100 md:py-20 lg:py-24"
@@ -424,7 +424,7 @@ export default function LandingPage() {
               className="flex flex-col items-center gap-2 text-center"
             >
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
-          Explore Blogs
+              Latest Insights
               </h2>
               <p className="max-w-[700px] text-muted-foreground md:text-lg">
           Explore Our Most Popular Yoga Practices Loved by Our Community

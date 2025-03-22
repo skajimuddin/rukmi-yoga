@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { motion } from "framer-motion"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   ArrowLeft,
   Calendar,
@@ -17,44 +17,42 @@ import {
   Linkedin,
   Instagram,
   ArrowRight,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ScrollToTopButton from "@/components/ScrollToTopButton"
-import { useIsMobile } from "@/hooks/use-mobile"
-import Markdown from 'react-markdown'
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+import { useIsMobile } from "@/hooks/use-mobile";
+import Markdown from "react-markdown";
 
 interface BlogPost {
-  id: number
-  title: string
-  excerpt: string
-  date: string
-  author: string
-  authorBio: string
-  authorImage: string
-  category: string
-  image: string
-  readTime: string
-  slug: string
-  tags: string[]
-  content: string
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  authorBio: string;
+  authorImage: string;
+  category: string;
+  image: string;
+  readTime: string;
+  slug: string;
+  tags: string[];
+  content: string;
 }
 
-
-
 export default function BlogPostPage() {
-  const [liked, setLiked] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const isMobile = useIsMobile()
+  const [liked, setLiked] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const isMobile = useIsMobile();
 
   // Simulate loading state
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 500)
-    return () => clearTimeout(timer)
-  }, [])
+      setIsLoading(false);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const post: BlogPost = {
     id: 1,
@@ -70,91 +68,122 @@ export default function BlogPostPage() {
     image: "/blog-images/image1.jpeg",
     readTime: "10 min read",
     slug: "transformative-power-yoga-nidra",
-    tags: ["Yoga Nidra", "Meditation", "Stress Relief", "Sleep", "Relaxation", "Mindfulness"],
-    content: `
-    
-# Yoga Nidra: The Art of Yogic Sleep  
+    tags: [
+      "Yoga Nidra",
+      "Meditation",
+      "Stress Relief",
+      "Sleep",
+      "Relaxation",
+      "Mindfulness",
+    ],
+    content: `# Yoga Nidra: The Art of Yogic Sleep  
 
-Yoga Nidra, often referred to as **"yogic sleep,"** is a powerful meditation technique that induces deep relaxation while maintaining awareness. Unlike traditional meditation, where you remain seated, Yoga Nidra is practiced lying down in a comfortable position, making it accessible to practitioners of all levels and abilities.  
+Yoga Nidra, often referred to as **"yogic sleep,"** is a powerful meditation technique that induces deep relaxation while maintaining awareness. Unlike traditional seated meditation, Yoga Nidra is practiced lying down in a comfortable position, making it accessible to practitioners of all levels and abilities. It allows individuals to enter a state of conscious sleep, where the body finds deep rest while the mind remains awake and aware.  
+
+In today’s fast-paced world, stress, anxiety, and sleep disorders have become increasingly common. Yoga Nidra provides a natural and effective way to counteract these challenges, promoting inner calm, mental clarity, and emotional stability.  
 
 ## Origins and Modern Recognition  
 
-The practice originated thousands of years ago in ancient India and has been passed down through generations of yogis. In recent decades, it has gained significant attention in the West due to its profound benefits for physical, mental, and emotional well-being. Modern scientific research has begun to validate what yogis have known for centuries: **Yoga Nidra can transform our relationship with stress, improve sleep quality, and enhance overall health.**  
+The origins of Yoga Nidra trace back thousands of years to the ancient yogic traditions of India. It was practiced by yogis as a way to reach a state of profound meditation and inner awareness. Over time, these techniques were systematized in tantric and Vedantic traditions.  
+
+In the 20th century, **Swami Satyananda Saraswati** played a pivotal role in bringing Yoga Nidra into mainstream awareness. He developed a structured approach to the practice, making it more accessible to modern practitioners.  
+
+In recent decades, Yoga Nidra has gained widespread recognition, particularly in psychology, neuroscience, and wellness communities. Research has shown that it has profound benefits for managing stress, improving mental health, and enhancing cognitive function. It is now used in therapy, trauma recovery, and holistic healing programs.  
 
 ## The Science Behind Yoga Nidra  
 
-During Yoga Nidra, the body enters a state of deep relaxation while the mind remains conscious and alert. This unique state activates the **parasympathetic nervous system**—our "rest and digest" mode—which counteracts the stress response and promotes healing.  
+Yoga Nidra works by guiding the practitioner through different levels of relaxation while maintaining awareness. This practice activates the **parasympathetic nervous system**, promoting relaxation and healing.  
 
-Brain wave studies have shown that Yoga Nidra practitioners experience:  
-- **Alpha waves** – associated with relaxation and creativity.  
-- **Theta waves** – connected to deep meditation and REM sleep.  
-- **Delta waves** – present in deep, dreamless sleep and healing.  
+### Brainwave Activity in Yoga Nidra  
 
-This combination of brain wave activity creates what researchers call a **"hypnagogic state"**—the threshold between wakefulness and sleep where profound transformation can occur. In this state, the mind becomes highly receptive to learning and healing.  
+Scientific studies have shown that Yoga Nidra shifts brainwave patterns, leading to different states of consciousness:  
+
+- **Beta Waves (Active Mind):** Before relaxation, the brain operates in an alert state, often characterized by stress and problem-solving.  
+- **Alpha Waves (Relaxation & Creativity):** As relaxation deepens, the mind shifts into a more creative and introspective state.  
+- **Theta Waves (Deep Meditation & Emotional Healing):** This state is linked to deep meditation, emotional processing, and subconscious reprogramming.  
+- **Delta Waves (Deep Sleep & Healing):** These waves are associated with deep, restorative sleep, where the body undergoes significant repair.  
+
+By consciously entering these states, practitioners can experience **mental clarity, emotional healing, and physical rejuvenation** without losing awareness.  
 
 ## The Eight Stages of Yoga Nidra  
 
-A traditional Yoga Nidra practice follows a **systematic approach** with eight distinct stages:  
+A traditional Yoga Nidra session follows a structured sequence designed to guide the practitioner into a deep meditative state. Each stage contributes to overall relaxation and self-exploration.  
 
-1. **Preparation** – Lying in *Savasana* (corpse pose) with eyes closed.  
-2. **Setting an Intention (Sankalpa)** – A short, positive statement in the present tense representing one's deepest desire or aspiration. The practitioner mentally repeats this intention three times with conviction.  
-3. **Body Scan** – Awareness is systematically guided through different parts of the body, releasing physical tension and calming the nervous system.  
-4. **Breath Awareness** – Observing natural breath patterns deepens relaxation and stills the mind.  
-5. **Opposing Sensations** – Experiencing pairs of sensations (e.g., heaviness/lightness, heat/cold) to develop *witness consciousness* and detachment from physical experiences.  
-6. **Guided Imagery** – Visualization to evoke emotional responses, release suppressed feelings, and rewire neural pathways.  
-7. **Repetition of Sankalpa** – The personal intention is reaffirmed, allowing it to be absorbed by the subconscious mind.  
-8. **Gradual Return to Awareness** – Bringing the benefits of the session into waking consciousness.  
+1. **Preparation:** The practitioner lies in *Savasana* (corpse pose) with eyes closed, ensuring a comfortable and distraction-free environment.  
+2. **Setting an Intention (Sankalpa):** A positive affirmation or goal is mentally repeated three times, helping to align the subconscious with personal aspirations.  
+3. **Body Scan:** Awareness is systematically guided through different parts of the body, releasing tension and promoting relaxation.  
+4. **Breath Awareness:** Observing natural breath patterns helps deepen relaxation and create a bridge between the body and mind.  
+5. **Opposing Sensations:** Experiencing contrasting sensations (e.g., warmth/cold, heaviness/lightness) helps train the mind to detach from physical experiences.  
+6. **Guided Imagery:** Visualization exercises evoke emotional responses, enhance creativity, and facilitate subconscious transformation.  
+7. **Repetition of Sankalpa:** The personal intention is reaffirmed, reinforcing positive changes in the subconscious mind.  
+8. **Gradual Return to Awareness:** The practitioner slowly reawakens, bringing the benefits of the practice into waking life.  
 
 ## Benefits of Regular Yoga Nidra Practice  
 
-### **Physical Benefits**  
+### Physical Benefits  
+
 - Reduces muscle tension and chronic pain.  
-- Improves sleep quality and fights insomnia.  
-- Lowers blood pressure and balances hormones.  
-- Strengthens the immune system.  
+- Enhances sleep quality and helps treat insomnia.  
+- Lowers blood pressure and improves heart health.  
+- Strengthens the immune system and promotes faster healing.  
 
-### **Mental & Emotional Benefits**  
-- Reduces anxiety, stress, and depression.  
-- Enhances focus, creativity, and emotional resilience.  
-- Develops greater self-awareness.  
+### Mental & Emotional Benefits  
 
-### **Spiritual Benefits**  
-- Deepens meditation practice.  
-- Facilitates connection with inner wisdom.  
-- Promotes a sense of **wholeness and self-transformation**.  
+- Alleviates anxiety, depression, and PTSD symptoms.  
+- Enhances focus, memory, and cognitive function.  
+- Promotes emotional resilience and stress management.  
+- Encourages deep self-awareness and mindfulness.  
+
+### Spiritual Benefits  
+
+- Deepens meditation practice and self-exploration.  
+- Facilitates a connection to higher consciousness.  
+- Fosters inner peace and a sense of unity with the universe.  
+- Cultivates self-acceptance and detachment from material concerns.  
 
 ## How to Practice Yoga Nidra  
 
-Yoga Nidra is accessible to everyone. You don’t need special equipment, flexibility, or prior yoga experience. Even **15-20 minutes** can provide significant benefits, though a **30-45 minute** session offers an optimal balance of depth and practicality.  
+Yoga Nidra can be practiced anywhere, requiring only a quiet space and a comfortable position. Sessions can range from **15-45 minutes**, depending on the level of depth desired.  
 
-### **Best Times to Practice**  
-- **Morning** – Sets a calm, centered tone for the day.  
-- **Afternoon** – Provides rejuvenation (20 minutes equals ~2 hours of sleep).  
-- **Evening** – Helps transition to restful sleep (but may not be ideal right before bed for insomniacs).  
+### Best Times to Practice  
 
-### **Tips for a Better Experience**  
-- Choose a **quiet space** where you won’t be disturbed.  
-- Use **comfortable props** like blankets and bolsters.  
-- Keep the **room warm**, dim the lights, and silence notifications.  
+- **Morning:** Energizes and sets a peaceful tone for the day.  
+- **Afternoon:** Acts as a reset, improving focus and productivity.  
+- **Evening:** Promotes relaxation and prepares the body for restful sleep.  
+
+### Tips for a Better Experience  
+
+- Find a **quiet space** where you won’t be disturbed.  
+- Use **comfortable props** like pillows and blankets to support your body.  
+- Keep the **room warm**, dim the lights, and silence electronic distractions.  
+- Allow yourself to fully surrender to the practice without judgment.  
+
+## Yoga Nidra and Modern Applications  
+
+Beyond traditional yoga settings, Yoga Nidra is now being integrated into various fields:  
+
+- **Healthcare & Therapy:** Used for managing chronic pain, trauma, and PTSD.  
+- **Corporate Wellness:** Helps professionals manage workplace stress and burnout.  
+- **Education & Learning:** Enhances concentration and creativity in students.  
+- **Sports & Performance:** Used by athletes for relaxation and mental conditioning.  
 
 ## Common Challenges and Solutions  
 
-- **Falling Asleep:** While sleeping still offers benefits, staying conscious allows for deeper transformation. Try practicing when alert, sitting up slightly, or setting an intention to remain aware.  
-- **Restlessness:** Adjust body position, acknowledge sensations without judgment, and focus on breath awareness.  
-- **Discomfort:** Use additional props or start with shorter sessions, gradually increasing duration.  
+- **Falling Asleep:** While some drowsiness is normal, staying conscious maximizes the benefits. Try practicing when more alert or elevating your upper body.  
+- **Restlessness:** Acknowledge discomfort without resistance and bring attention back to breath awareness.  
+- **Discomfort:** Adjust body position, use support props, and gradually increase practice duration.  
 
-## Embracing the Power of Yoga Nidra  
+## The Transformative Power of Yoga Nidra  
 
-Yoga Nidra offers a **sanctuary of peace** in our busy lives. Whether your goal is better sleep, stress reduction, emotional healing, or spiritual growth, this ancient practice holds profound possibilities.  
+Yoga Nidra is more than just relaxation—it is a gateway to self-discovery and transformation. Whether your goal is better sleep, stress relief, emotional healing, or spiritual growth, this practice provides a **sanctuary of peace** amidst life’s chaos.  
 
-Every session is unique—some may feel deeply transformative, while others may seem ordinary. Trust the process, as the benefits often accumulate subtly over time. The beauty of Yoga Nidra lies in its **simplicity and depth**. By simply showing up and surrendering to the practice, you activate your body’s innate healing abilities and access deeper levels of consciousness.  
+Every session is unique, and the effects often accumulate over time. Some sessions may feel deeply transformative, while others may seem uneventful. The key is to trust the process and remain consistent in your practice.  
 
-In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound truth:  
-> **Sometimes, the most powerful thing we can do is nothing at all.**  
+In our **achievement-driven** world, Yoga Nidra teaches us an essential truth:  
 
-
-    `,
-  }
+> **Sometimes, the most powerful thing we can do is simply let go.**  
+`,
+  };
 
   const relatedPosts = [
     {
@@ -190,7 +219,7 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
       image: "/blog-images/image5.jpeg",
       slug: "understanding-seven-chakras",
     },
-  ]
+  ];
 
   // Animation variants
   const fadeIn = {
@@ -200,7 +229,7 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
       y: 0,
       transition: { duration: 0.6 },
     },
-  }
+  };
 
   const staggerContainer = {
     hidden: { opacity: 0 },
@@ -210,11 +239,10 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   return (
     <>
-
       <div className="flex min-h-screen flex-col ">
         {/* WhatsApp Icon */}
         <a
@@ -223,7 +251,11 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/whatsapp_icon.png" alt="whatsapp icon" className="h-8 w-8 text-white" />
+          <img
+            src="/whatsapp_icon.png"
+            alt="whatsapp icon"
+            className="h-8 w-8 text-white"
+          />
         </a>
         <Header></Header>
 
@@ -234,7 +266,11 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
                 <motion.div
                   className="absolute top-0 left-0 w-full h-full rounded-full border-4 border-t-primary border-r-transparent border-b-transparent border-l-transparent"
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 0.5, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                  transition={{
+                    duration: 0.5,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "linear",
+                  }}
                 />
               </div>
             </div>
@@ -243,8 +279,18 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
               <div className="py-10">
                 <div className="container px-4 md:px-6">
                   {/* Back to blog link */}
-                  <motion.div initial="hidden" animate="visible" variants={fadeIn} className="mb-8">
-                    <Button variant="ghost" size="sm" asChild className="gap-1 text-primary hover:bg-primary/5">
+                  <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeIn}
+                    className="mb-8"
+                  >
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      asChild
+                      className="gap-1 text-primary hover:bg-primary/5"
+                    >
                       <Link href="/blog">
                         <ArrowLeft className="h-4 w-4" /> Back to Blog
                       </Link>
@@ -287,7 +333,7 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="my-8"
+                    className="my-8 mx-auto max-w-3xl"
                   >
                     <div className="relative overflow-hidden rounded-lg">
                       <Image
@@ -295,17 +341,22 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
                         alt={post.title}
                         width={1200}
                         height={600}
-                        className="mx-auto aspect-video rounded-lg object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full aspect-video rounded-lg object-cover transition-transform duration-500 hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity hover:opacity-100"></div>
                     </div>
                   </motion.div>
 
                   {/* Article content */}
-                  <motion.div initial="hidden" animate="visible" variants={fadeIn} className="mx-auto max-w-3xl">
+                  <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeIn}
+                    className="mx-auto max-w-3xl"
+                  >
                     <div
                       className="prose prose-lg max-w-none dark:prose-invert prose-headings:text-primary prose-a:text-secondary prose-a:no-underline hover:prose-a:underline prose-strong:text-primary/90"
-                    // dangerouslySetInnerHTML={{ __html: post.content }}
+                      // dangerouslySetInnerHTML={{ __html: post.content }}
                     />
                     <div className="markdown">
                       <Markdown>{post.content}</Markdown>
@@ -331,19 +382,34 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
                     </motion.div>
 
                     {/* Share buttons */}
-                    <motion.div initial="hidden" animate="visible" variants={fadeIn} className="mt-8 border-t pt-8">
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      variants={fadeIn}
+                      className="mt-8 border-t pt-8"
+                    >
                       <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div className="flex items-center gap-3">
                           <Button
                             variant="outline"
                             size="sm"
-                            className={`gap-2 rounded-full ${liked ? "bg-red-50 text-red-500 border-red-200" : "hover:bg-primary/5 text-primary border-primary/20"}`}
+                            className={`gap-2 rounded-full ${
+                              liked
+                                ? "bg-red-50 text-red-500 border-red-200"
+                                : "hover:bg-primary/5 text-primary border-primary/20"
+                            }`}
                             onClick={() => setLiked(!liked)}
                           >
-                            <Heart className={`h-4 w-4 ${liked ? "fill-red-500" : ""}`} />
+                            <Heart
+                              className={`h-4 w-4 ${
+                                liked ? "fill-red-500" : ""
+                              }`}
+                            />
                             {liked ? "Liked" : "Like"}
                           </Button>
-                          <div className="text-sm font-medium">Share this article:</div>
+                          <div className="text-sm font-medium">
+                            Share this article:
+                          </div>
                         </div>
                         <div className="flex gap-2">
                           <Button
@@ -399,11 +465,20 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
                     >
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                         <div className="h-16 w-16 overflow-hidden rounded-full bg-muted border-2 border-secondary/20">
-                          <Image src={post.authorImage || "/placeholder.svg"} alt={post.author} width={64} height={64} />
+                          <Image
+                            src={post.authorImage || "/placeholder.svg"}
+                            alt={post.author}
+                            width={64}
+                            height={64}
+                          />
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-lg font-bold text-primary">{post.author}</h3>
-                          <p className="text-muted-foreground">{post.authorBio}</p>
+                          <h3 className="text-lg font-bold text-primary">
+                            {post.author}
+                          </h3>
+                          <p className="text-muted-foreground">
+                            {post.authorBio}
+                          </p>
                         </div>
                       </div>
                     </motion.div>
@@ -417,7 +492,9 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
                     viewport={{ once: true }}
                     className="mt-16"
                   >
-                    <h2 className="mb-8 text-2xl font-bold text-center text-primary">Related Articles</h2>
+                    <h2 className="mb-8 text-2xl font-bold text-center text-primary">
+                      Related Articles
+                    </h2>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                       {relatedPosts.map((relatedPost, index) => (
                         <motion.div
@@ -445,11 +522,16 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
                                 <span>{relatedPost.date}</span>
                               </div>
                               <h3 className="font-bold leading-tight text-primary">
-                                <Link href={`/blog/blog-${relatedPost.id}`} className="hover:underline">
+                                <Link
+                                  href={`/blog/blog-${relatedPost.id}`}
+                                  className="hover:underline"
+                                >
                                   {relatedPost.title}
                                 </Link>
                               </h3>
-                              <p className="text-sm text-muted-foreground line-clamp-2">{relatedPost.excerpt}</p>
+                              <p className="text-sm text-muted-foreground line-clamp-2">
+                                {relatedPost.excerpt}
+                              </p>
                             </div>
                             <div className="pt-4">
                               <Link
@@ -475,10 +557,13 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
                   >
                     <div className="grid gap-6 md:grid-cols-2 items-center">
                       <div className="space-y-4">
-                        <h2 className="text-2xl font-bold text-primary">Subscribe to Our Newsletter</h2>
+                        <h2 className="text-2xl font-bold text-primary">
+                          Subscribe to Our Newsletter
+                        </h2>
                         <p className="text-muted-foreground">
-                          Stay updated with the latest yoga practices, wellness tips, and Ayurvedic insights from our
-                          blog. Join our community today.
+                          Stay updated with the latest yoga practices, wellness
+                          tips, and Ayurvedic insights from our blog. Join our
+                          community today.
                         </p>
                       </div>
                       <div className="flex flex-col gap-4 sm:flex-row">
@@ -487,7 +572,9 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
                           placeholder="Enter your email"
                           className="flex h-10 w-full rounded-md border border-primary/20 bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                         />
-                        <Button className="bg-secondary hover:bg-secondary/90 text-white">Subscribe</Button>
+                        <Button className="bg-secondary hover:bg-secondary/90 text-white">
+                          Subscribe
+                        </Button>
                       </div>
                     </div>
                   </motion.div>
@@ -498,9 +585,7 @@ In our **achievement-oriented** culture, Yoga Nidra reminds us of a profound tru
           <Footer />
           <ScrollToTopButton />
         </main>
-
       </div>
     </>
-  )
+  );
 }
-

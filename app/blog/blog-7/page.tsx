@@ -23,6 +23,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { useIsMobile } from "@/hooks/use-mobile";
+import Markdown from "react-markdown";
 
 interface BlogPost {
   id: number;
@@ -75,30 +76,48 @@ export default function BlogPostPage() {
       "Immune System",
       "Biofeedback",
     ],
-    content: `The Science Behind Meditation Benefits  
+    content: `# The Science Behind Meditation Benefits  
 
-Meditation is more than just a spiritual practice—it is a scientifically validated method for improving mental and physical well-being. Decades of research have revealed its significant impact on brain function, stress reduction, and overall health. Meditation affects the nervous system, enhances cognitive abilities, and even slows the aging process. Whether practiced for a few minutes daily or as part of a dedicated routine, meditation offers numerous benefits backed by science.  
+Meditation is more than just a spiritual practice—it is a scientifically validated method for improving mental and physical well-being. Extensive research has shown its significant impact on brain function, stress reduction, and overall health. Meditation affects the nervous system, enhances cognitive abilities, and even slows the aging process. Whether practiced for a few minutes daily or as part of a dedicated routine, meditation offers numerous benefits backed by science.  
 
-One of the most well-documented advantages of meditation is its ability to reduce stress and anxiety. Studies indicate that regular meditation lowers cortisol levels, the stress hormone responsible for anxiety and tension. By engaging in mindfulness practices, individuals can cultivate emotional stability and resilience, helping them cope with daily challenges more effectively. Additionally, meditation has been shown to increase gamma-aminobutyric acid (GABA), a neurotransmitter that promotes relaxation and reduces stress-induced nervous activity.  
+## Stress Reduction and Emotional Stability  
 
-Beyond emotional benefits, meditation plays a crucial role in enhancing brain function and neuroplasticity. MRI scans show that consistent meditation increases gray matter density in brain regions associated with memory, self-awareness, and learning. This structural change improves cognitive function, decision-making, and mental clarity. Long-term practitioners often exhibit slower age-related cognitive decline and improved problem-solving skills.  
+One of the most well-documented advantages of meditation is its ability to reduce stress and anxiety. Studies indicate that regular meditation lowers **cortisol** levels, the stress hormone responsible for anxiety and tension. Mindfulness practices help individuals develop emotional stability and resilience, allowing them to cope with daily challenges more effectively. Additionally, meditation has been shown to increase **gamma-aminobutyric acid (GABA)**, a neurotransmitter that promotes relaxation and reduces stress-induced nervous activity.  
 
-Another major advantage of meditation is its ability to boost emotional well-being. Research reveals that meditation stimulates the prefrontal cortex, a brain region linked to positive emotions and emotional regulation. Regular practice reduces symptoms of depression and fosters a more optimistic mindset. Loving-kindness meditation, in particular, strengthens compassion and social bonds, reducing loneliness and improving interpersonal relationships.  
+## Cognitive Enhancement and Neuroplasticity  
 
-Meditation is also a powerful tool for enhancing focus and attention. Scientific studies indicate that mindfulness meditation improves working memory and concentration, making it beneficial for students and professionals alike. Even brief meditation sessions of 10 minutes per day can significantly enhance cognitive flexibility and attention control, leading to increased productivity.  
+Beyond emotional benefits, meditation plays a crucial role in enhancing brain function and neuroplasticity. **MRI studies reveal that regular meditation enhances gray matter density** in brain regions associated with memory, self-awareness, and learning. This structural change improves cognitive function, decision-making, and mental clarity. Long-term practitioners often exhibit slower age-related cognitive decline and improved problem-solving skills.  
 
-For individuals struggling with sleep disorders, meditation provides a natural solution. By activating the parasympathetic nervous system, meditation promotes deeper relaxation and improves sleep quality. Studies show that mindfulness practices regulate melatonin production, a hormone responsible for maintaining healthy sleep cycles. Regular meditators experience fewer sleep disturbances and a lower likelihood of developing insomnia.  
+## Emotional Well-Being and Positivity  
 
-Physical health also benefits from meditation, with research linking it to lower blood pressure, improved heart function, and a stronger immune system. Meditation reduces inflammation markers in the body, helping prevent chronic diseases. By modulating gene expression, meditation boosts immunity, increasing resistance to infections and enhancing recovery rates. Some studies even suggest that meditation improves antibody response to vaccines, further strengthening overall immune defense.  
+Another major advantage of meditation is its ability to boost emotional well-being. Research reveals that meditation stimulates the **prefrontal cortex**, a brain region linked to positive emotions and emotional regulation. Regular practice reduces symptoms of depression and fosters a more optimistic mindset. **Loving-kindness meditation** strengthens compassion and social bonds, reducing loneliness and improving interpersonal relationships.  
 
-Another fascinating area of research is meditation’s role in slowing down aging. Scientific studies indicate that meditation lengthens telomeres, the protective caps on chromosomes associated with longevity. Individuals who meditate regularly tend to have a lower biological age compared to non-meditators, suggesting that mindfulness practices contribute to cellular health and prolonged vitality.  
+## Focus and Attention  
 
-In addition to health benefits, meditation fosters creativity and problem-solving. Open-monitoring meditation, where individuals observe their thoughts without judgment, has been linked to divergent thinking, an essential component of creativity. This allows meditators to approach challenges with fresh perspectives, making it an invaluable practice for artists, entrepreneurs, and professionals in innovative fields.  
+Meditation is also a powerful tool for enhancing focus and attention. Scientific studies indicate that **mindfulness meditation improves working memory and concentration**, making it beneficial for students and professionals alike. Even brief meditation sessions of 10 minutes per day can significantly enhance cognitive flexibility and attention control, leading to increased productivity.  
 
-Harnessing the Power of Meditation  
+## Better Sleep Quality  
 
-Scientific evidence continues to support the vast benefits of meditation, proving it to be a transformative tool for mental clarity, emotional stability, and physical health. Whether practiced for stress relief, cognitive enhancement, or personal growth, meditation can significantly improve overall well-being. Incorporating even a few minutes of mindfulness into daily life can lead to lasting positive changes. As ongoing research uncovers even more advantages, meditation remains an essential practice for leading a balanced, healthy, and fulfilling life.`,
+For individuals struggling with sleep disorders, meditation provides a natural solution. By activating the **parasympathetic nervous system**, meditation promotes deeper relaxation and improves sleep quality. Studies show that mindfulness practices regulate **melatonin** production, a hormone responsible for maintaining healthy sleep cycles. Regular meditators experience fewer sleep disturbances and a lower likelihood of developing insomnia.  
+
+## Physical Health Benefits  
+
+Meditation benefits physical health as well, with research linking it to **lower blood pressure, improved heart function, and a stronger immune system**. It reduces inflammation markers in the body, helping prevent chronic diseases. By modulating gene expression, meditation **boosts immunity**, increasing resistance to infections and enhancing recovery rates. Some studies even suggest that meditation improves **antibody response to vaccines**, further strengthening overall immune defense.  
+
+## Slowing Down Aging  
+
+Another fascinating area of research is meditation’s role in **slowing down aging**. Scientific studies indicate that meditation lengthens **telomeres**, the protective caps on chromosomes associated with longevity. Individuals who meditate regularly tend to have a lower biological age compared to non-meditators, suggesting that mindfulness practices contribute to cellular health and prolonged vitality.  
+
+## Creativity and Problem-Solving  
+
+In addition to health benefits, meditation fosters **creativity and problem-solving**. **Open-monitoring meditation**, where individuals observe their thoughts without judgment, has been linked to **divergent thinking**, an essential component of creativity. This allows meditators to approach challenges with fresh perspectives, making it an invaluable practice for artists, entrepreneurs, and professionals in innovative fields.  
+
+## Harnessing the Power of Meditation  
+
+Growing scientific evidence highlights meditation’s profound benefits, proving it to be a transformative tool for mental clarity, emotional stability, and physical health. Whether practiced for stress relief, cognitive enhancement, or personal growth, meditation can significantly improve overall well-being. Incorporating even a few minutes of mindfulness into daily life can lead to lasting positive changes. As ongoing research uncovers even more advantages, meditation remains an essential practice for leading a balanced, healthy, and fulfilling life.  
+`,
   };
+
   const relatedPosts = [
     {
       id: 2,
@@ -157,7 +176,7 @@ Scientific evidence continues to support the vast benefits of meditation, provin
 
   return (
     <>
-      <div className="flex min-h-screen flex-col">
+      <div className="flex min-h-screen flex-col ">
         {/* WhatsApp Icon */}
         <a
           href="https://wa.me/1234567890"
@@ -247,7 +266,7 @@ Scientific evidence continues to support the vast benefits of meditation, provin
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="my-8"
+                    className="my-8 mx-auto max-w-3xl"
                   >
                     <div className="relative overflow-hidden rounded-lg">
                       <Image
@@ -255,7 +274,7 @@ Scientific evidence continues to support the vast benefits of meditation, provin
                         alt={post.title}
                         width={1200}
                         height={600}
-                        className="mx-auto aspect-video rounded-lg object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full aspect-video rounded-lg object-cover transition-transform duration-500 hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity hover:opacity-100"></div>
                     </div>
@@ -270,8 +289,11 @@ Scientific evidence continues to support the vast benefits of meditation, provin
                   >
                     <div
                       className="prose prose-lg max-w-none dark:prose-invert prose-headings:text-primary prose-a:text-secondary prose-a:no-underline hover:prose-a:underline prose-strong:text-primary/90"
-                      dangerouslySetInnerHTML={{ __html: post.content }}
+                      // dangerouslySetInnerHTML={{ __html: post.content }}
                     />
+                    <div className="markdown">
+                      <Markdown>{post.content}</Markdown>
+                    </div>
 
                     {/* Tags */}
                     <motion.div
