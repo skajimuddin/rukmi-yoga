@@ -48,7 +48,7 @@ export default function AboutMePage() {
                 Our Philosophy
               </div>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
-                About Rukmi Yoga
+                About Rukhamini Yoga
               </h1>
             </motion.div>
           </div>

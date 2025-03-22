@@ -107,6 +107,44 @@ export default function LandingPage() {
     },
   ]
 
+
+  const articlePosts = [
+    {
+      id: 1,
+      title: "How Yoga Helps Curing Diseases",
+      excerpt:
+        "Discover how yoga can aid in curing diseases by promoting physical health, mental clarity, and emotional balance.",
+      date: "March 10, 2025",
+      author: "Rahul Mehta",
+      category: "Yoga Benefits",
+      image: "/Article/cure.jpg",
+      slug: "how-yoga-helps-curing-diseases",
+    },
+    {
+      id: 2,
+      title: "How Yoga Helps During Pregnancy",
+      excerpt:
+        "Learn how yoga can support a healthy pregnancy by reducing stress, improving flexibility, and enhancing overall well-being.",
+      date: "February 10, 2025",
+      author: "Dr. Neha Sharma",
+      category: "Prenatal Yoga",
+      image: "/Article/pregnancy.jpeg",
+      slug: "how-yoga-helps-during-pregnancy",
+    },
+    {
+      id: 3,
+      title: "How Yoga Helps Maintaining Lifestyle",
+      excerpt:
+        "Explore how yoga can help you maintain a balanced and healthy lifestyle through mindfulness and physical well-being.",
+      date: "February 20, 2025",
+      author: "Meera Rajput",
+      category: "Lifestyle",
+      image: "/Article/healthylifestyle.jpeg",
+      slug: "how-yoga-helps-maintaining-lifestyle",
+    },
+  ];
+
+
   const maxIndex = Math.max(0, testimonials.length - cardsToShow);
   const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const isMobile = useIsMobile();
@@ -266,7 +304,7 @@ export default function LandingPage() {
                 <div className="flex flex-col w-full justify-center md:justify-normal gap-2 min-[400px]:flex-row pt-4">
                   <Button
                     size="lg"
-                    className="px-8 bg-secondary text-white hover:bg-secondary"
+                    className="px-8 text-white bg-secondary hover:bg-secondary/80"
                     onClick={() => setIsPopupOpen(true)}
                   >
                     For Distribution
@@ -274,26 +312,12 @@ export default function LandingPage() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="px-8 text-primary border-primary hover: bg-secondary/5"
+                    className="px-8 text-white bg-secondary hover:bg-secondary/80"
                     asChild
                   >
-                    <Link href="/about-me">About us</Link>
+                    <Link href="/about-us">About us</Link>
                   </Button>
                 </div>
-                {/* <div className="flex items-center gap-4 pt-4">
-                  <div className="flex -space-x-2">
-                    <motion.img
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: 0.1 }}
-                      className="inline-block h-8 w-8 rounded-full border-2 border-white  overflow-hidden"
-                      src="/KayapalatLogo.png"
-                    ></motion.img>
-                  </div>
-                  <div className="text-sm text-gray-600 font-bold">
-                    <a>Official Partner Of Kayapalat</a>
-                  </div>
-                </div> */}
 
                 <ConsultationPopup
                   isOpen={isPopupOpen}
@@ -345,6 +369,80 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/* Article */}
+        <section
+          id="featured-products"
+          className="py-12 bg-gray-100 md:py-20 lg:py-24"
+        >
+          <div className="container space-y-8 px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center gap-2 text-center"
+            >
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
+                Certified Experts
+                </h2>
+                <p className="max-w-[700px] text-muted-foreground md:text-lg">
+                Trusted and Certified Professionals
+                </p>
+            </motion.div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              {articlePosts.map((articlePosts, index) => (
+          <motion.div
+            key={articlePosts.id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
+          >
+            <div className="aspect-video overflow-hidden">
+              <Image
+                src={articlePosts.image || "/placeholder.svg"}
+                alt={articlePosts.title}
+                width={400}
+                height={225}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-between p-4 bg-white">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <span>{articlePosts.category}</span>
+            <span>•</span>
+            <span>{articlePosts.date}</span>
+                </div>
+                <h3 className="font-bold leading-tight text-primary">
+            <Link
+              href={`/article/article-${articlePosts.id}`}
+              className="hover:underline"
+            >
+              {articlePosts.title}
+            </Link>
+                </h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+            {articlePosts.excerpt}
+                </p>
+              </div>
+              <div className="pt-4">
+                <Link
+            href={`/article/article-${articlePosts.id}`}
+            className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
+                >
+            Read more <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
 
         {/* Benefits Section */}
         <section id="benefits" className=" py-12 md:py-24 lg:py-32 border-y">
