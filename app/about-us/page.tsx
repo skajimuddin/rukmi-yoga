@@ -9,19 +9,21 @@ import {
   Calendar,
   Clock,
   Globe,
-  Heart,
+  Heart as LucideHeart,
   Leaf,
   MapPin,
   Star,
   Users,
 } from "lucide-react";
-// Removed duplicate and invalid import
-import { motion } from "framer-motion"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ScrollToTopButton from "@/components/ScrollToTopButton"
+// Removed duplicate import of 'lucide-react' icons and an invalid import to avoid redundancy and errors
+import { motion } from "framer-motion";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+import { useState } from "react";
 
 export default function AboutMePage() {
+  const [isAnimationEnabled, setIsAnimationEnabled] = useState(true);
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
@@ -32,8 +34,7 @@ export default function AboutMePage() {
               src="/hero_bg.webp"
               alt="Ayurvedic Background"
               fill
-              className="object-cover"
-              className="opacity-20"
+              className="object-cover opacity-20"
             />
           </div>
           <div className="container relative z-10 px-4 md:px-6">
@@ -66,20 +67,35 @@ export default function AboutMePage() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
                   Our story
                 </h2>
-                <p className="text-muted-foreground md:text-lg">
-                  Yoga is more than just movement—it's a path to balance,
-                  strength, and inner peace. Rooted in ancient wisdom, yoga
-                  harmonizes the body, mind, and soul through breath,
-                  meditation, and mindful postures. Whether you're seeking
-                  flexibility, stress relief, or spiritual growth, yoga offers a
-                  transformative journey tailored to your needs.
+                <p className="text-customBrown md:text-lg">
+                  At Sri RukhaminiiYoga Gurukul, magical and soulful Yoga
+                  Training is provided which connects the body, breath, and
+                  mind. Yogic practice uses physical postures, breathing
+                  exercises, and meditation to improve overall health. As we all
+                  know, Yoga is an ancient Indian discipline designed to bring
+                  balance and health to the physical, mental, emotional, and
+                  spiritual dimensions of the individual. The purpose of yoga is
+                  to build strength, awareness and harmony in both the mind and
+                  body.
                 </p>
-                <p className="text-muted-foreground md:text-lg">
-                  At RUKMI YOGA , we guide you through traditional and modern
-                  yoga practices, helping you cultivate mindfulness and
-                  well-being. From Hatha and Vinyasa flows to deep Pranayama and
-                  meditation, our sessions are designed for all levels, ensuring
-                  a space for growth, healing, and self-discovery.
+                <p className="text-[color:#5A3E36] md:text-lg">
+                  At Sri Rukhaminii Yoga Gurukul, along with Yoga, Meditation
+                  and Pranayama have been seen to improve mental well-being.
+                  Regular yoga practice has created mental clarity and calmness,
+                  increased body awareness, relieved chronic stress patterns,
+                  relaxed the mind, improved attention and sharpened
+                  concentration of every individual who has arrived and been
+                  blessed at Sri Rukhaminii Yoga Gurukul. Body and Self
+                  Awareness have particularly benefitted with early detection of
+                  physical and mental problems and helped in early preventive
+                  action. Thousands of years ago yoga originated in India, and
+                  in the present era, an alarming awareness has been observed in
+                  health and natural remedies among people due to yoga and
+                  pranayama, which has been proven an effective method for
+                  improving health in addition to prevention and management of
+                  diseases. With Sri Rukhamini’s scientific approach towards
+                  research in yoga, its therapeutic aspects are also being
+                  explored successfully to lead a healthy and happy life.
                 </p>
               </motion.div>
               <motion.div
@@ -102,7 +118,7 @@ export default function AboutMePage() {
                   }}
                   transition={{
                     duration: 4,
-                    repeat: Number.POSITIVE_INFINITY,
+                    repeat: isAnimationEnabled ? Number.POSITIVE_INFINITY : 0,
                     repeatType: "reverse",
                   }}
                   className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-secondary/30 blur-xl"
@@ -125,100 +141,75 @@ export default function AboutMePage() {
           </div>
         </section>
 
-        <section className="w-full py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-gray-100">
+        <section className="w-full py-12 md:py-24 bg-white">
           <div className="container px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center gap-6 text-center mb-12"
+              className="flex flex-col items-center space-y-4 text-center mb-12"
             >
-              <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm font-semibold bg-secondary/10 text-secondary border-secondary/20">
-                Cherished Moments
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-secondary/5 text-secondary">
+                Our Goals
               </div>
-              <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-primary">
-                Relive Our Memories
-              </h2>
-              <p className="max-w-2xl text-muted-foreground md:text-lg">
-                A glimpse into the moments that define our journey and inspire our mission.
+              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                The guiding principles that shape our journey and inspire our
+                actions.
               </p>
             </motion.div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  src: "/gallery-images/Acchivment1.jpg",
-                  alt: "Achievement ceremony photo",
-                },
-                {
-                  src: "/gallery-images/Acchivement2.jpg",
-                  alt: "Achievement ceremony showcasing yoga excellence",
-                },
-                {
-                  src: "/gallery-images/certificate1.jpg",
-                  alt: "Certificate of Achievement for Yoga Training",
-                },
-                {
-                  src: "/gallery-images/certificate2.jpg",
-                  alt: "Certificate of Achievement for Yoga Training",
-                },
-                {
-                  src: "/gallery-images/certificate3.jpg",
-                  alt: "Certificate of Achievement for Yoga Training",
-                },
-                {
-                  src: "/gallery-images/news.jpg",
-                  alt: "Rukmi Yoga News Article showcasing achievements and events",
-                },
-                {
-                  src: "/gallery-images/news2.jpg",
-                  alt: "Rukmi Yoga News",
-                },
-                {
-                  src: "/gallery-images/quotes.jpg",
-                  alt: "Inspirational quote from Rukmi Yoga's gallery",
-                },
-                {
-                  src: "/gallery-images/quotes2.jpg",
-                  alt: "Inspirational quote from Rukmi Yoga's gallery",
-                },
-                {
-                  src: "/gallery-images/quotes3.jpg",
-                  alt: "Inspirational quote from Rukmi Yoga's gallery",
-                },
-                {
-                  src: "/gallery-images/quotes4.jpg",
-                  alt: "Inspirational quote from Rukmi Yoga's gallery",
-                },
-                {
-                  src: "/gallery-images/Tshirt.jpg",
-                  alt: "Rukmi Yoga branded T-shirt displayed.",
-                },
-              ].map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group"
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <p className="text-sm font-medium">{image.alt}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="grid gap-8 sm:grid-cols-2">
+              {/* Mission Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="card group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
+              >
+                <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/5 blur-xl"></div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-secondary/20">
+                  <LucideHeart className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mt-4 text-xl font-bold text-secondary">
+                  Our Mission
+                </h3>
+                <p className="mt-2 text-gray-600">
+                  Our Mission is to create health awareness and to provide
+                  Holistic Health to the humanity all over the world. As we
+                  believe health is sum of physical, mental, emotional, socio-
+                  economical and spiritual wellbeing. Thus it can be called
+                  holistic health
+                </p>
+              </motion.div>
+              {/* Vision Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="card group relative overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md"
+              >
+                <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-secondary/5 blur-xl"></div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-secondary/20">
+                  <Star className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mt-4 text-xl font-bold text-secondary">
+                  Our Vision
+                </h3>
+                <p className="mt-2 text-gray-600">
+                  We are propagating ancient yet scientific yogic wisdom which
+                  can bring light of hope to everyone. We have a dream vision to
+                  see everyone healthy in a holistic manner and ensure wellness,
+                  wellbeing and peace for all, at global level, through Yoga,
+                  Pranayama and meditation.
+                </p>
+              </motion.div>
             </div>
           </div>
         </section>
-        
+
+        {/* Removed the "Cherished Moments" section to reduce clutter */}
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
           <div className="container px-4 md:px-6">
@@ -229,7 +220,7 @@ export default function AboutMePage() {
               viewport={{ once: true }}
               className="flex flex-col items-center space-y-4 text-center mb-12"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-secondary">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-secondary">
                 Core Values
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
@@ -260,7 +251,7 @@ export default function AboutMePage() {
                   description:
                     "Building a strong network of wellness centers and practitioners to support holistic health worldwide.",
                 },
-              ].map((item, index) => (
+              ].map(({ icon: Icon, title, description }, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -271,12 +262,12 @@ export default function AboutMePage() {
                 >
                   <div className="absolute top-0 right-0 h-24 w-24 rounded-full  bg-secondary/5 blur-xl"></div>
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-secondary/20">
-                    <item.icon className="h-6 w-6 text-primary" />
+                    <Icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="mt-4 text-xl font-bold text-secondary">
-                    {item.title}
+                    {title}
                   </h3>
-                  <p className="mt-2 text-gray-600">{item.description}</p>
+                  <p className="mt-2 text-gray-600">{description}</p>
                 </motion.div>
               ))}
             </div>
@@ -286,5 +277,5 @@ export default function AboutMePage() {
         <ScrollToTopButton />
       </main>
     </div>
-  )
+  );
 }

@@ -19,10 +19,10 @@ export default function Header() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/products", label: "Products" },
+    // { href: "/products", label: "Products" },
     { href: "/contact-us", label: "Contact" },
     { href: "/about-us", label: "About us" },
-    // { href: "/about-kayapalat", label: "About Kayapalat" },
+    { href: "/blog", label: "Blogs" },
   ]
 
   return (

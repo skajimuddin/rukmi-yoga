@@ -23,6 +23,7 @@ import {
   Shield,
   Target,
 } from "lucide-react";
+import Gallerypage from "./gallery/page";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -412,101 +413,164 @@ export default function LandingPage() {
         {/* Featured Products Section */}
         <section
           id="featured-products"
-          className="py-12 bg-gray-100 md:py-24 lg:py-32"
+          className="py-12 bg-gray-100 md:py-20 lg:py-24"
         >
-          <div className="container space-y-12 px-4 md:px-6">
+          <div className="container space-y-8 px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center gap-4 text-center"
+              className="flex flex-col items-center gap-2 text-center"
             >
-              {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  bg-secondary/5 text-primary hover:bg-primary/20">
-                Featured Products
-              </div> */}
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                Explore Blogs
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
+          Explore Blogs
               </h2>
-              <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                Explore Our Most Popular Yoga Practices Loved by Our Community
+              <p className="max-w-[700px] text-muted-foreground md:text-lg">
+          Explore Our Most Popular Yoga Practices Loved by Our Community
               </p>
-
-              {/* Added the "Official Retailer" section here with adaptation */}
             </motion.div>
-            {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> */}
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {relatedPosts.map((relatedPost, index) => (
-                <motion.div
-                  key={relatedPost.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
+          <motion.div
+            key={relatedPost.id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
+          >
+            <div className="aspect-video overflow-hidden">
+              <Image
+                src={relatedPost.image || "/placeholder.svg"}
+                alt={relatedPost.title}
+                width={400}
+                height={225}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-between p-4 bg-white">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <span>{relatedPost.category}</span>
+            <span>•</span>
+            <span>{relatedPost.date}</span>
+                </div>
+                <h3 className="font-bold leading-tight text-primary">
+            <Link
+              href={`/blog/blog-${relatedPost.id}`}
+              className="hover:underline"
+            >
+              {relatedPost.title}
+            </Link>
+                </h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+            {relatedPost.excerpt}
+                </p>
+              </div>
+              <div className="pt-4">
+                <Link
+            href={`/blog/blog-${relatedPost.id}`}
+            className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
                 >
-                  <div className="aspect-video overflow-hidden">
-                    <Image
-                      src={relatedPost.image || "/placeholder.svg"}
-                      alt={relatedPost.title}
-                      width={400}
-                      height={225}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-between p-6 bg-white">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                        <span>{relatedPost.category}</span>
-                        <span>•</span>
-                        <span>{relatedPost.date}</span>
-                      </div>
-                      <h3 className="font-bold leading-tight text-primary">
-                        <Link
-                          href={`/blog/blog-${relatedPost.id}`}
-                          className="hover:underline"
-                        >
-                          {relatedPost.title}
-                        </Link>
-                      </h3>
-                      <p className="text-sm text-muted-foreground line-clamp-2">
-                        {relatedPost.excerpt}
-                      </p>
-                    </div>
-                    <div className="pt-4">
-                      <Link
-                        href={`/blog/blog-${relatedPost.id}`}
-                        className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
-                      >
-                        Read more <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
+            Read more <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
               ))}
             </div>
             <div className="flex justify-center">
               <Button
+          variant="outline"
+          size="lg"
+          className="gap-2 hover:bg-secondary/5"
+              >
+          <Link href="/blog">View All Blogs</Link>
+          <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Section */}
+        <section id="gallery" className="py-12 md:py-20 lg:py-24 bg-gray-100">
+          <div className="container space-y-8 px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center gap-2 text-center"
+            >
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/5 text-secondary hover:bg-primary/20">
+          Our Achievements
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
+          Celebrating Excellence
+              </h2>
+              <p className="max-w-[700px] text-gray-600 md:text-lg">
+          A glimpse into our journey of achievements and milestones in the world of yoga.
+              </p>
+            </motion.div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+          {
+            src: "/gallery-images/Acchivment1.jpg",
+            alt: "Achievement ceremony photo",
+          },
+          {
+            src: "/gallery-images/Acchivement2.jpg",
+            alt: "Achievement ceremony showcasing yoga excellence",
+          },
+          {
+            src: "/gallery-images/certificate1.jpg",
+            alt: "Certificate of Achievement for Yoga Training",
+          },
+          {
+            src: "/gallery-images/certificate2.jpg",
+            alt: "Certificate of Achievement for Yoga Training",
+          },
+          {
+            src: "/gallery-images/certificate3.jpg",
+            alt: "Certificate of Achievement for Yoga Training",
+          },
+          {
+            src: "/gallery-images/news.jpg",
+            alt: "Rukmi Yoga News Article showcasing achievements and events",
+          },
+              ].map((image, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="relative h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group"
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <p className="text-sm font-medium">{image.alt}</p>
+            </div>
+          </motion.div>
+              ))}
+            </div>
+            <div className="flex justify-center pt-8">
+                <Button
                 variant="outline"
                 size="lg"
-                className="gap-2 hover: bg-secondary/5"
-              >
-                <Link href="/blog">View All Blogs</Link>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-4 w-4"
+                className="gap-2 hover:bg-secondary/5"
+                onClick={() => window.location.href = "/gallery"}
                 >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </Button>
+                View More
+                <ArrowRight className="h-4 w-4" />
+                </Button>
             </div>
           </div>
         </section>
