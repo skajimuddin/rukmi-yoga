@@ -301,7 +301,7 @@ By incorporating these **five pranayama techniques** into daily life, individual
                   {/* Back to blog link */}
                   <motion.div initial="hidden" animate="visible" variants={fadeIn} className="mb-8">
                     <Button variant="ghost" size="sm" asChild className="gap-1 text-primary hover:bg-primary/5">
-                      <Link href="/blog">
+                      <Link href="/articles">
                         <ArrowLeft className="h-4 w-4" /> Back to Blog
                       </Link>
                     </Button>

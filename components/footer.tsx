@@ -18,8 +18,7 @@ export default function Footer() {
               <img className="h-16 px-3 bg-white rounded-md" src="/logo.svg" alt="logo" />
             </div>
             <p className="text-sm text-white">
-              Premium Ayurvedic products for holistic wellness and natural
-              healing.
+              Sri RukhaminiiYoga Gurukul, magical and soulful Yoga Training
             </p>
             <div className="flex gap-4 flex-col">
               <div className="hidden md:flex">
@@ -86,34 +85,42 @@ export default function Footer() {
               <ul className="space-y-2 text-sm text-white">
                 <li>
                   <Link
-                    href="/about"
+                    href="/"
                     className="hover:text-foreground transition-colors"
                   >
-                    About Us
+                    Home
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/about"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/#contact"
+                    href="/contact-us"
                     className="hover:text-foreground transition-colors"
                   >
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about-us"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    About us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/articles"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Articles
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/gallery"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Gallery
                   </Link>
                 </li>
               </ul>
@@ -147,7 +154,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/terms-and-conditions"
                     className="hover:text-foreground transition-colors"
                   >
                     Terms of Service
@@ -163,7 +170,7 @@ export default function Footer() {
                     <Instagram />
                   </div> */}
                   <Link
-                    href="#"
+                    href="https://www.instagram.com/srirukhaminiiyoga"
                     className="hover:text-foreground transition-colors"
                   >
                     Instagram
@@ -174,7 +181,7 @@ export default function Footer() {
                     <Facebook />
                   </div> */}
                   <Link
-                    href="#"
+                    href="https://www.facebook.com/people/Ashwini-Natu/pfbid0wntjKdeYRHARiBQGr63W8GMJcU3weeVJ1S3SxG4xjBtXwuX59MStx1Y3jcK4TnSwl/?mibextid=ZbWKwL"
                     className="hover:text-foreground transition-colors"
                   >
                     Facebook
@@ -185,10 +192,10 @@ export default function Footer() {
                     <Phone />
                   </div> */}
                   <Link
-                    href="#"
+                    href="https://www.youtube.com/channel/UCrXQ07_n6uFcH-C-kQa_Tzg"
                     className="hover:text-foreground transition-colors"
                   >
-                    Whatsapp
+                    YouTube
                   </Link>
                 </li>
               </ul>

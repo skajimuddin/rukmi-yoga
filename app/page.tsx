@@ -243,7 +243,7 @@ export default function LandingPage() {
     <div className="flex min-h-screen flex-col">
       {/* WhatsApp Icon */}
       <a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/919021979841"
         className="fixed bottom-4 right-4 z-50 p-3 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors"
         target="_blank"
         rel="noopener noreferrer"
@@ -375,29 +375,28 @@ export default function LandingPage() {
                 Why Choose Us?
               </h2>
               <p className="max-w-[700px] text-gray-600 md:text-xl">
-                we provide 100% Natural Laboratory Tested Health and Beauty
-                Products that suit almost all Human Bodies.
+                At Sri Rukhamini Yoga Studio, we offer authentic, science-backed yoga that harmonizes the body, breath, and mind for complete well-being.
               </p>
             </motion.div>
             <div className="flex flex-col sm:flex-row gap-6 flex-wrap">
               {[
                 {
                   icon: Leaf,
-                  title: "100% Natural",
+                  title: "Authentic & Scientific",
                   description:
-                    "Our products are made from carefully selected, high-quality herbs, ensuring purity and effectiveness without any harmful chemicals.",
+                    "We blend ancient yogic wisdom with modern research for complete well-being.",
                 },
                 {
                   icon: Heart,
                   title: "Holistic Healing",
                   description:
-                    "Crafted using ancient Ayurvedic wisdom, our products support overall well-being and balance, enhancing your body’s natural healing process.",
+                    "Our yoga, pranayama, and meditation practices restore balance to the body and mind.",
                 },
                 {
                   icon: Star,
-                  title: "Scientifically Proven",
+                  title: "Proven Benefits",
                   description:
-                    "Thousands of satisfied customers trust us for their Ayurvedic needs, backed by expert recommendations and positive reviews.",
+                    "Enhance health, reduce stress, and boost self-awareness for a happier life.",
                 },
               ].map((benefit, index) => (
                 <motion.div
@@ -422,10 +421,53 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* About Us Section */}
+        <section id="who-we-are" className="py-16 bg-gray-100">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-12 lg:grid-cols-2 lg:gap-x-12  lg:gap-y-0 items-center">
+              <div className="space-y-4">
+                <div className="w-full flex justify-center items-center md:block">
+                  <div className="inline-block px-3 py-1 text-sm text-secondary  bg-secondary/5 rounded-full">
+                    About Us
+                  </div>
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary text-center md:text-left">
+                  Who We Are ?
+                </h2>
+                <p className="text-muted-foreground md:text-xl text-center md:text-left">
+                  At Sri RukhaminiiYoga Gurukul, magical and soulful Yoga Training is provided which connects the body, breath, and mind. Yogic practice uses physical postures, breathing exercises, and meditation to improve overall health. As we all know, Yoga is an ancient Indian discipline designed to bring balance and health to the physical, mental, emotional, and spiritual dimensions of the individual.The purpose of yoga is to build strength, awareness and harmony in both the mind and body.
+                </p>
+                <div className=" hidden lg:flex flex-col gap-2 min-[400px]:flex-row lg:items-start justify-start   ">
+                  <Button asChild className="hover:bg-primary bg-secondary">
+                    <Link href="/about-us">Learn more</Link>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <img
+                    src="/yoga_img_03.webp"
+                    alt="Our team working together"
+                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                    width={600}
+                    height={500}
+                  />
+                </div>
+              </div>
+              <div className="lg:hidden flex flex-col gap-2 min-[400px]:flex-row justify-center items-center ">
+                <Button asChild className="hover:bg-primary bg-secondary">
+                  <Link href="/about-us">Learn more</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Article */}
         <section
           id="featured-products"
-          className="py-12 bg-gray-100 md:py-20 lg:py-24"
+          className="py-12  md:py-20 lg:py-24"
         >
           <div className="container space-y-8 px-4 md:px-6">
             <motion.div
@@ -436,7 +478,7 @@ export default function LandingPage() {
               className="flex flex-col items-center gap-2 text-center"
             >
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
-                Certified Experts
+                Knowledge Section
               </h2>
               <p className="max-w-[700px] text-muted-foreground md:text-lg">
                 Trusted and Certified Professionals
@@ -491,49 +533,6 @@ export default function LandingPage() {
                   </div>
                 </motion.div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* About Us Section */}
-        <section id="who-we-are" className="py-16 ">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-x-12  lg:gap-y-0 items-center">
-              <div className="space-y-4">
-                <div className="w-full flex justify-center items-center md:block">
-                  <div className="inline-block px-3 py-1 text-sm text-secondary  bg-secondary/5 rounded-full">
-                    About Us
-                  </div>
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary text-center md:text-left">
-                  Who We Are ?
-                </h2>
-                <p className="text-muted-foreground md:text-xl text-center md:text-left">
-                  At Sri RukhaminiiYoga Gurukul, magical and soulful Yoga Training is provided which connects the body, breath, and mind. Yogic practice uses physical postures, breathing exercises, and meditation to improve overall health. As we all know, Yoga is an ancient Indian discipline designed to bring balance and health to the physical, mental, emotional, and spiritual dimensions of the individual.The purpose of yoga is to build strength, awareness and harmony in both the mind and body.
-                </p>
-                <div className=" hidden lg:flex flex-col gap-2 min-[400px]:flex-row lg:items-start justify-start   ">
-                  <Button asChild className="hover:bg-primary bg-secondary">
-                    <Link href="/about-us">Learn more</Link>
-                  </Button>
-                </div>
-              </div>
-
-              <div className="flex justify-center lg:justify-end">
-                <div className="relative">
-                  <img
-                    src="/yoga_img_03.webp"
-                    alt="Our team working together"
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                    width={600}
-                    height={500}
-                  />
-                </div>
-              </div>
-              <div className="lg:hidden flex flex-col gap-2 min-[400px]:flex-row justify-center items-center ">
-                <Button asChild className="hover:bg-primary bg-secondary">
-                  <Link href="/about-us">Learn more</Link>
-                </Button>
-              </div>
             </div>
           </div>
         </section>
@@ -920,7 +919,7 @@ export default function LandingPage() {
                   className="relative h-[300px] overflow-hidden rounded-xl shadow-lg border border-gray-200 hidden md:block"
                 >
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1655969611207!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15289.20156130783!2d73.829622!3d18.533636!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf70ab733f0d%3A0x1bcd0c30e19208a3!2sThe%20Pavilion%20Mall!5e1!3m2!1sen!2sin!4v1742887699555!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -942,7 +941,7 @@ export default function LandingPage() {
                       <div>
                         <h4 className="font-semibold text-primary">Location</h4>
                         <p className="text-gray-600">
-                          SB road, opp pavilion mall, Pune-411016.
+                          Gurukul, 26, Vishrambag Soc, Opp Pavillion Mall, Senapati Bapat Road, Pune - 411016
                         </p>
                       </div>
                     </div>
@@ -952,7 +951,7 @@ export default function LandingPage() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-primary">Contact Number</h4>
-                        <p className="text-gray-600">+91 1234567890</p>
+                        <p className="text-gray-600">9890528593, 9021979841</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -962,7 +961,7 @@ export default function LandingPage() {
                       <div>
                         <h4 className="font-semibold text-primary">Email Us</h4>
                         <p className="text-gray-600">
-                          info@rukhaminiyoga.com
+                          contact@srirukhaminiiyoga.com
                         </p>
                       </div>
                     </div>

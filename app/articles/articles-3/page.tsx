@@ -293,7 +293,7 @@ As **scientific research** continues to validate Ayurvedic principles, its relev
                       asChild
                       className="gap-1 text-primary hover:bg-primary/5"
                     >
-                      <Link href="/blog">
+                      <Link href="/articles">
                         <ArrowLeft className="h-4 w-4" /> Back to Blog
                       </Link>
                     </Button>

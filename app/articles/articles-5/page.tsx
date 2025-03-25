@@ -317,7 +317,7 @@ By tuning into our chakras, we can harness their energy to **create balance, ove
                       asChild
                       className="gap-1 text-primary hover:bg-primary/5"
                     >
-                      <Link href="/blog">
+                      <Link href="/articles">
                         <ArrowLeft className="h-4 w-4" /> Back to Blog
                       </Link>
                     </Button>

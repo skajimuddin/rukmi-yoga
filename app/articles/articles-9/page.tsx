@@ -274,7 +274,7 @@ By embracing the ancient wisdom of yoga and applying modern scientific research,
                       asChild
                       className="gap-1 text-primary hover:bg-primary/5"
                     >
-                      <Link href="/blog">
+                      <Link href="/articles">
                         <ArrowLeft className="h-4 w-4" /> Back to Blog
                       </Link>
                     </Button>
