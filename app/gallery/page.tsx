@@ -1,11 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import {
   Heart,
   Leaf,
@@ -22,9 +17,10 @@ import {
   Clock,
   Shield,
   Target,
+  X,
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 import Header from "@/components/header";
@@ -33,6 +29,73 @@ import productsData from "@/data/products.json";
 import ConsultationPopup from "@/components/ConsultationPopup";
 
 export default function Gallerypage() {
+
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  
+  // Gallery images data
+  const galleryImages = [
+    {
+      src: "/gallery-images/Acchivment1.jpg",
+      alt: "Achievement ceremony photo",
+    },
+    {
+      src: "/gallery-images/Acchivement2.jpg",
+      alt: "Achievement ceremony showcasing yoga excellence",
+    },
+    {
+      src: "/gallery-images/certificate1.jpg",
+      alt: "Certificate of Achievement for Yoga Training",
+    },
+    {
+      src: "/gallery-images/certificate2.jpg",
+      alt: "Certificate of Achievement for Yoga Training",
+    },
+    {
+      src: "/gallery-images/certificate3.jpg",
+      alt: "Certificate of Achievement for Yoga Training",
+    },
+    {
+      src: "/gallery-images/news.jpg",
+      alt: "rukhamini Yoga News Article showcasing achievements and events",
+    },
+    {
+      src: "/gallery-images/news2.jpg",
+      alt: "rukhamini Yoga News",
+    },
+    {
+      src: "/gallery-images/quotes.jpg",
+      alt: "Inspirational quote from rukhamini Yoga's gallery",
+    },
+    {
+      src: "/gallery-images/quotes2.jpg",
+      alt: "Inspirational quote from rukhamini Yoga's gallery",
+    },
+    {
+      src: "/gallery-images/quotes3.jpg",
+      alt: "Inspirational quote from rukhamini Yoga's gallery",
+    },
+    {
+      src: "/gallery-images/quotes4.jpg",
+      alt: "Inspirational quote from rukhamini Yoga's gallery",
+    },
+    {
+      src: "/gallery-images/Tshirt.jpg",
+      alt: "rukhamini Yoga branded T-shirt displayed.",
+    },
+  ];
+
+  // Function to open the lightbox with a specific image
+  const openLightbox = (image) => {
+    setSelectedImage(image);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+  };
+
+  // Function to close the lightbox
+  const closeLightbox = () => {
+    setSelectedImage(null);
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+
   return (
     <>
       <Header />
@@ -58,63 +121,15 @@ export default function Gallerypage() {
             </p>
           </motion.div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {[
-              {
-                src: "/gallery-images/Acchivment1.jpg",
-                alt: "Achievement ceremony photo",
-              },
-              {
-                src: "/gallery-images/Acchivement2.jpg",
-                alt: "Achievement ceremony showcasing yoga excellence",
-              },
-              {
-                src: "/gallery-images/certificate1.jpg",
-                alt: "Certificate of Achievement for Yoga Training",
-              },
-              {
-                src: "/gallery-images/certificate2.jpg",
-                alt: "Certificate of Achievement for Yoga Training",
-              },
-              {
-                src: "/gallery-images/certificate3.jpg",
-                alt: "Certificate of Achievement for Yoga Training",
-              },
-              {
-                src: "/gallery-images/news.jpg",
-                alt: "rukhamini Yoga News Article showcasing achievements and events",
-              },
-              {
-                src: "/gallery-images/news2.jpg",
-                alt: "rukhamini Yoga News",
-              },
-              {
-                src: "/gallery-images/quotes.jpg",
-                alt: "Inspirational quote from rukhamini Yoga's gallery",
-              },
-              {
-                src: "/gallery-images/quotes2.jpg",
-                alt: "Inspirational quote from rukhamini Yoga's gallery",
-              },
-              {
-                src: "/gallery-images/quotes3.jpg",
-                alt: "Inspirational quote from rukhamini Yoga's gallery",
-              },
-              {
-                src: "/gallery-images/quotes4.jpg",
-                alt: "Inspirational quote from rukhamini Yoga's gallery",
-              },
-              {
-                src: "/gallery-images/Tshirt.jpg",
-                alt: "rukhamini Yoga branded T-shirt displayed.",
-              },
-            ].map((image, index) => (
+            {galleryImages.map((image, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group"
+                className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group cursor-pointer"
+                onClick={() => openLightbox(image)}
               >
                 <Image
                   src={image.src}
@@ -126,11 +141,51 @@ export default function Gallerypage() {
               </motion.div>
             ))}
           </div>
-          <div className="flex justify-center pt-8">
-          </div>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+            onClick={closeLightbox}
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              className="relative max-w-full max-h-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="absolute top-4 right-4 z-10 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
+                onClick={closeLightbox}
+              >
+                <X className="h-6 w-6" />
+              </button>
+              <div className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[80vh]">
+                <Image
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="absolute bottom-4 left-0 right-0 text-center text-white text-sm px-4">
+                {selectedImage.alt}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <Footer />
-    </>
-  );
+    </>
+  );
 }

@@ -290,13 +290,13 @@ export default function LandingPage() {
                   and soul. Your journey to wellness begins here.
                 </p>
                 <div className="flex flex-col w-full justify-center md:justify-normal gap-2 min-[400px]:flex-row pt-4">
-                  <Button
+                    <Button
                     size="lg"
                     className="px-8 text-white bg-secondary hover:bg-secondary/80"
                     onClick={() => setIsPopupOpen(true)}
-                  >
-                    For Distribution
-                  </Button>
+                    >
+                    For Inquiry
+                    </Button>
                   <Button
                     variant="outline"
                     size="lg"
