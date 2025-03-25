@@ -35,8 +35,6 @@ import ConsultationPopup from "@/components/ConsultationPopup";
 export default function Gallerypage() {
   return (
     <>
-    
-
       <Header />
       {/* Gallery Section */}
       <section id="gallery" className="py-12 md:py-20 lg:py-24 bg-gray-100">
@@ -59,7 +57,7 @@ export default function Gallerypage() {
               world of yoga.
             </p>
           </motion.div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {[
               {
                 src: "/gallery-images/Acchivment1.jpg",
@@ -83,31 +81,31 @@ export default function Gallerypage() {
               },
               {
                 src: "/gallery-images/news.jpg",
-                alt: "Rukmi Yoga News Article showcasing achievements and events",
+                alt: "rukhamini Yoga News Article showcasing achievements and events",
               },
               {
                 src: "/gallery-images/news2.jpg",
-                alt: "Rukmi Yoga News",
+                alt: "rukhamini Yoga News",
               },
               {
                 src: "/gallery-images/quotes.jpg",
-                alt: "Inspirational quote from Rukmi Yoga's gallery",
+                alt: "Inspirational quote from rukhamini Yoga's gallery",
               },
               {
                 src: "/gallery-images/quotes2.jpg",
-                alt: "Inspirational quote from Rukmi Yoga's gallery",
+                alt: "Inspirational quote from rukhamini Yoga's gallery",
               },
               {
                 src: "/gallery-images/quotes3.jpg",
-                alt: "Inspirational quote from Rukmi Yoga's gallery",
+                alt: "Inspirational quote from rukhamini Yoga's gallery",
               },
               {
                 src: "/gallery-images/quotes4.jpg",
-                alt: "Inspirational quote from Rukmi Yoga's gallery",
+                alt: "Inspirational quote from rukhamini Yoga's gallery",
               },
               {
                 src: "/gallery-images/Tshirt.jpg",
-                alt: "Rukmi Yoga branded T-shirt displayed.",
+                alt: "rukhamini Yoga branded T-shirt displayed.",
               },
             ].map((image, index) => (
               <motion.div
@@ -116,7 +114,7 @@ export default function Gallerypage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group"
+                className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group"
               >
                 <Image
                   src={image.src}
@@ -125,9 +123,6 @@ export default function Gallerypage() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <p className="text-sm font-medium">{image.alt}</p>
-                </div>
               </motion.div>
             ))}
           </div>

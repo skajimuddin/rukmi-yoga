@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
               <div>
                 <Button onClick={() => setIsPopupOpen(true)}>
-                  Contact for Distribution
+                  For Inquiry
                 </Button>
                 <ConsultationPopup
                   isOpen={isPopupOpen}

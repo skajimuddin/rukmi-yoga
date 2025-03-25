@@ -40,34 +40,22 @@ export default function LandingPage() {
 
   const testimonials = [
     {
-      name: "Priya S.",
-      role: "Yoga Practitioner",
+      name: "Ms Capussini from France ( student)",
+      role: "",
       quote:
-        "The Kayapalat oils have transformed my daily wellness routine. I feel more balanced and energized than ever before.",
+        "I am extremely thankful and I am a fan of Sri Rukhaminii Yoga Techniques. Cheers on my healthy body and mind. I understood the deeper level of human beings.",
     },
     {
-      name: "Rahul M.",
-      role: "Wellness Coach",
+      name: "Mr.  Abhijit Gandhi ( Businessman) ",
+      role: "",
       quote:
-        "After trying countless products, I finally found relief with Kayapalat Care. The quality and effectiveness are unmatched.",
+        "I have experienced a very positive transformation ever since I’ve joined Sri Rukhaminii Yoga Studio. Me and my friends have always taken fitness very seriously and we have been going for long walks and treks every morning for years now. Joining a Yoga Studio was a sudden decision and a very good one, because now along with fitness, I have improved flexibility, reducing stiffness. Also practicing meditation has greatly impacted my overall mood, and especially sleep cycle leading to a more relaxed and improved sleep.",
     },
     {
-      name: "Ananya K.",
-      role: "Yoga Instructor",
+      name: "Mr Garnard from London, UK.( A student of Music )",
+      role: "",
       quote:
-        "As a yoga instructor, I recommend these products to all my students. They complement practice perfectly and enhance overall well-being.",
-    },
-    {
-      name: "Vikram P.",
-      role: "Fitness Enthusiast",
-      quote:
-        "Kayapalat Care products have become an essential part of my post-workout recovery routine. They help me stay in top form.",
-    },
-    {
-      name: "Meera R.",
-      role: "Holistic Therapist",
-      quote:
-        "I've incorporated Kayapalat Care into my therapy sessions, and the results have been remarkable. My clients love the natural approach to wellness.",
+        "A great studio with amazing teachers, andlife changing classes of Yoga, Pranayama and naturopathy.I wish to come back soon to Pune. My best wishes !!",
     },
   ];
 
@@ -370,80 +358,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Article */}
-        <section
-          id="featured-products"
-          className="py-12 bg-gray-100 md:py-20 lg:py-24"
-        >
-          <div className="container space-y-8 px-4 md:px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center gap-2 text-center"
-            >
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
-                Certified Experts
-                </h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-lg">
-                Trusted and Certified Professionals
-                </p>
-            </motion.div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {articlePosts.map((articlePosts, index) => (
-          <motion.div
-            key={articlePosts.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
-          >
-            <div className="aspect-video overflow-hidden">
-              <Image
-                src={articlePosts.image || "/placeholder.svg"}
-                alt={articlePosts.title}
-                width={400}
-                height={225}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-            <div className="flex flex-1 flex-col justify-between p-4 bg-white">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <span>{articlePosts.category}</span>
-            <span>•</span>
-            <span>{articlePosts.date}</span>
-                </div>
-                <h3 className="font-bold leading-tight text-primary">
-            <Link
-              href={`/article/article-${articlePosts.id}`}
-              className="hover:underline"
-            >
-              {articlePosts.title}
-            </Link>
-                </h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
-            {articlePosts.excerpt}
-                </p>
-              </div>
-              <div className="pt-4">
-                <Link
-            href={`/article/article-${articlePosts.id}`}
-            className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
-                >
-            Read more <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-
         {/* Benefits Section */}
         <section id="benefits" className=" py-12 md:py-24 lg:py-32 border-y">
           <div className="container space-y-12 px-4 md:px-6">
@@ -508,8 +422,11 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Gallery Section */}
-        <section id="gallery" className="py-12 md:py-20 lg:py-24 bg-gray-100">
+        {/* Article */}
+        <section
+          id="featured-products"
+          className="py-12 bg-gray-100 md:py-20 lg:py-24"
+        >
           <div className="container space-y-8 px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -518,74 +435,62 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="flex flex-col items-center gap-2 text-center"
             >
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/5 text-secondary hover:bg-primary/20">
-          Our Achievements
-              </div>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
-          Celebrating Excellence
+                Certified Experts
               </h2>
-              <p className="max-w-[700px] text-gray-600 md:text-lg">
-          A glimpse into our journey of achievements and milestones in the world of yoga.
+              <p className="max-w-[700px] text-muted-foreground md:text-lg">
+                Trusted and Certified Professionals
               </p>
             </motion.div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-          {
-            src: "/gallery-images/Acchivment1.jpg",
-            alt: "Achievement ceremony photo",
-          },
-          {
-            src: "/gallery-images/Acchivement2.jpg",
-            alt: "Achievement ceremony showcasing yoga excellence",
-          },
-          {
-            src: "/gallery-images/certificate1.jpg",
-            alt: "Certificate of Achievement for Yoga Training",
-          },
-          {
-            src: "/gallery-images/certificate2.jpg",
-            alt: "Certificate of Achievement for Yoga Training",
-          },
-          {
-            src: "/gallery-images/certificate3.jpg",
-            alt: "Certificate of Achievement for Yoga Training",
-          },
-          {
-            src: "/gallery-images/news.jpg",
-            alt: "Rukmi Yoga News Article showcasing achievements and events",
-          },
-              ].map((image, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="relative h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group"
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <p className="text-sm font-medium">{image.alt}</p>
-            </div>
-          </motion.div>
-              ))}
-            </div>
-            <div className="flex justify-center pt-8">
-                <Button
-                variant="outline"
-                size="lg"
-                className="gap-2 hover:bg-secondary/5"
-                onClick={() => window.location.href = "/gallery"}
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              {articlePosts.map((articlePosts, index) => (
+                <motion.div
+                  key={articlePosts.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
                 >
-                View More
-                <ArrowRight className="h-4 w-4" />
-                </Button>
+                  <div className="aspect-video overflow-hidden">
+                    <Image
+                      src={articlePosts.image || "/placeholder.svg"}
+                      alt={articlePosts.title}
+                      width={400}
+                      height={225}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col justify-between p-4 bg-white">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <span>{articlePosts.category}</span>
+                        <span>•</span>
+                        <span>{articlePosts.date}</span>
+                      </div>
+                      <h3 className="font-bold leading-tight text-primary">
+                        <Link
+                          href={`/article/article-${articlePosts.id}`}
+                          className="hover:underline"
+                        >
+                          {articlePosts.title}
+                        </Link>
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        {articlePosts.excerpt}
+                      </p>
+                    </div>
+                    <div className="pt-4">
+                      <Link
+                        href={`/article/article-${articlePosts.id}`}
+                        className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
+                      >
+                        Read more <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -604,18 +509,7 @@ export default function LandingPage() {
                   Who We Are ?
                 </h2>
                 <p className="text-muted-foreground md:text-xl text-center md:text-left">
-                  Founded in 2018, Givve was born from a passion to make
-                  authentic Ayurvedic and yogic wellness accessible to everyone.
-                  we believe in the power of holistic healing to nurture the
-                  body, mind, and spirit.
-                </p>
-                <p className="text-muted-foreground md:text-xl text-center md:text-left">
-                  Our journey began when our founder personally experienced the
-                  transformative benefits of Ayurveda and Yoga. After struggling
-                  with chronic health issues that conventional medicine couldn’t
-                  resolve, they discovered the ancient wisdom of yogic
-                  practices, breathwork, and herbal remedies, which led to
-                  profound healing and balance.
+                  At Sri RukhaminiiYoga Gurukul, magical and soulful Yoga Training is provided which connects the body, breath, and mind. Yogic practice uses physical postures, breathing exercises, and meditation to improve overall health. As we all know, Yoga is an ancient Indian discipline designed to bring balance and health to the physical, mental, emotional, and spiritual dimensions of the individual.The purpose of yoga is to build strength, awareness and harmony in both the mind and body.
                 </p>
                 <div className=" hidden lg:flex flex-col gap-2 min-[400px]:flex-row lg:items-start justify-start   ">
                   <Button asChild className="hover:bg-primary bg-secondary">
@@ -644,10 +538,92 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* Gallery Section */}
+        <section id="gallery" className="py-12 md:py-20 lg:py-24 bg-gray-100">
+          <div className="container space-y-8 px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center gap-2 text-center"
+            >
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary/5 text-secondary hover:bg-primary/20">
+                Our Achievements
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
+                Celebrating Excellence
+              </h2>
+              <p className="max-w-[700px] text-gray-600 md:text-lg">
+                A glimpse into our journey of achievements and milestones in the world of yoga.
+              </p>
+            </motion.div>
+            <div className="grid gap-6 grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  src: "/gallery-images/Acchivment1.jpg",
+                  alt: "Achievement ceremony photo",
+                },
+                {
+                  src: "/gallery-images/Acchivement2.jpg",
+                  alt: "Achievement ceremony showcasing yoga excellence",
+                },
+                {
+                  src: "/gallery-images/certificate1.jpg",
+                  alt: "Certificate of Achievement for Yoga Training",
+                },
+                {
+                  src: "/gallery-images/certificate2.jpg",
+                  alt: "Certificate of Achievement for Yoga Training",
+                },
+                {
+                  src: "/gallery-images/certificate3.jpg",
+                  alt: "Certificate of Achievement for Yoga Training",
+                },
+                {
+                  src: "/gallery-images/news.jpg",
+                  alt: "rukhamini Yoga News Article showcasing achievements and events",
+                },
+              ].map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="relative h-[200px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  {/* <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <p className="text-sm font-medium">{image.alt}</p>
+                  </div> */}
+                </motion.div>
+              ))}
+            </div>
+            <div className="flex justify-center pt-8">
+              <Button
+                variant="outline"
+                size="lg"
+                className="gap-2 hover:bg-secondary/5"
+                onClick={() => window.location.href = "/gallery"}
+              >
+                View More
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* Testimonials Section */}
         <section
           id="testimonials"
-          className=" bg-gray-100 py-12 md:py-24 lg:py-32 bg-muted"
+          className="py-12 md:py-24 lg:py-32 bg-muted"
         >
           <div className="container space-y-12 px-4 md:px-6">
             <motion.div
@@ -678,9 +654,8 @@ export default function LandingPage() {
                   {testimonials.map((testimonial, index) => (
                     <div
                       key={index}
-                      className={`flex-none w-full px-4 ${
-                        cardsToShow > 1 ? "sm:w-1/2" : ""
-                      } ${cardsToShow > 2 ? "lg:w-1/3" : ""}`}
+                      className={`flex-none w-full px-4 ${cardsToShow > 1 ? "sm:w-1/2" : ""
+                        } ${cardsToShow > 2 ? "lg:w-1/3" : ""}`}
                     >
                       <div className="card h-full group relative overflow-hidden rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow-md">
                         <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-primary/5 blur-xl"></div>
@@ -709,9 +684,7 @@ export default function LandingPage() {
                         <div className="mt-6 flex items-center gap-4">
                           <div className="h-10 w-10 rounded-full bg-muted overflow-hidden">
                             <Image
-                              src={`/placeholder.svg?height=40&width=40&text=${testimonial.name.charAt(
-                                0
-                              )}`}
+                              src={`/avatar.webp`}
                               alt={testimonial.name}
                               width={40}
                               height={40}
@@ -754,171 +727,8 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
-                <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="relative overflow-hidden rounded-lg shadow-lg bg-white border border-gray-200 p-8"
-                >
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-primary/10 opacity-20 pointer-events-none"></div>
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="space-y-6 relative z-10"
-                >
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary text-center">
-                  Inquiry Form
-                  </h2>
-                  <p className="text-muted-foreground md:text-lg text-center">
-                  Let us know your business needs, and we’ll get back to you with the best solutions.
-                  </p>
-                  <form className="space-y-6">
-                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                    <div className="space-y-2">
-                    <Label htmlFor="businessName">Business Name</Label>
-                    <Input
-                      id="businessName"
-                      placeholder="Enter your business name"
-                      className="border-gray-300 focus:ring-primary focus:border-primary"
-                    />
-                    </div>
-                    <div className="space-y-2">
-                    <Label htmlFor="email">Business Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="Enter your business email"
-                      className="border-gray-300 focus:ring-primary focus:border-primary"
-                    />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Contact Number</Label>
-                    <Input
-                    id="phone"
-                    type="tel"
-                    placeholder="Enter your contact number"
-                    className="border-gray-300 focus:ring-primary focus:border-primary"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                    id="message"
-                    placeholder="Tell us about your business and distribution requirements"
-                    className="min-h-[150px] border-gray-300 focus:ring-primary focus:border-primary"
-                    />
-                  </div>
-                  <div className="flex justify-center">
-                    <Button
-                    type="submit"
-                    className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 transition-transform transform hover:scale-105"
-                    >
-                    <Send className="mr-2 h-4 w-4" />
-                    Submit Request
-                    </Button>
-                  </div>
-                  </form>
-                </motion.div>
-                <motion.div
-                  animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.5, 1, 0.5],
-                  }}
-                  transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatType: "reverse",
-                  }}
-                  className="absolute -top-4 -left-4 h-24 w-24 rounded-full bg-primary/20 blur-xl"
-                ></motion.div>
-                <motion.div
-                  animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.5, 1, 0.5],
-                  }}
-                  transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatType: "reverse",
-                  delay: 2,
-                  }}
-                  className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-secondary/20 blur-xl"
-                ></motion.div>
-                </motion.div>
-                <motion.div
-                initial={{ opacity: 1, x: 0 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-8"
-                >
-                <motion.div
-                  initial={{ opacity: 1, x: 0 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="relative h-[300px] overflow-hidden rounded-xl shadow-lg border border-gray-200"
-                >
-                  <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1655969611207!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-xl"
-                  ></iframe>
-                </motion.div>
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-primary text-center">
-                  Contact Information
-                  </h3>
-                  <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
-                    <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                    <h4 className="font-semibold text-primary">Visit Us</h4>
-                    <p className="text-gray-600">
-                      SB road, opp pavilion mall, Pune-411016.
-                    </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
-                    <Phone className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                    <h4 className="font-semibold text-primary">Call Us</h4>
-                    <p className="text-gray-600">+91 1234567890</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
-                    <Mail className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                    <h4 className="font-semibold text-primary">Email Us</h4>
-                    <p className="text-gray-600">
-                      info@rukhaminiyoga.com
-                    </p>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-                </motion.div>
-            </div>
-          </div>
-        </section>
-
-         {/* Featured blog Section */}
-         <section
+        {/* Featured blog Section */}
+        <section
           id="featured-products"
           className="py-12 bg-gray-100 md:py-20 lg:py-24"
         >
@@ -931,71 +741,234 @@ export default function LandingPage() {
               className="flex flex-col items-center gap-2 text-center"
             >
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
-              Latest Insights
+                Latest Insights
               </h2>
               <p className="max-w-[700px] text-muted-foreground md:text-lg">
-          Explore Our Most Popular Yoga Practices Loved by Our Community
+                Explore Our Most Popular Yoga Practices Loved by Our Community
               </p>
             </motion.div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {relatedPosts.map((relatedPost, index) => (
-          <motion.div
-            key={relatedPost.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
-          >
-            <div className="aspect-video overflow-hidden">
-              <Image
-                src={relatedPost.image || "/placeholder.svg"}
-                alt={relatedPost.title}
-                width={400}
-                height={225}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-            <div className="flex flex-1 flex-col justify-between p-4 bg-white">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <span>{relatedPost.category}</span>
-            <span>•</span>
-            <span>{relatedPost.date}</span>
-                </div>
-                <h3 className="font-bold leading-tight text-primary">
-            <Link
-              href={`/blog/blog-${relatedPost.id}`}
-              className="hover:underline"
-            >
-              {relatedPost.title}
-            </Link>
-                </h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
-            {relatedPost.excerpt}
-                </p>
-              </div>
-              <div className="pt-4">
-                <Link
-            href={`/blog/blog-${relatedPost.id}`}
-            className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
+                <motion.div
+                  key={relatedPost.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
                 >
-            Read more <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </motion.div>
+                  <div className="aspect-video overflow-hidden">
+                    <Image
+                      src={relatedPost.image || "/placeholder.svg"}
+                      alt={relatedPost.title}
+                      width={400}
+                      height={225}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col justify-between p-4 bg-white">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <span>{relatedPost.category}</span>
+                        <span>•</span>
+                        <span>{relatedPost.date}</span>
+                      </div>
+                      <h3 className="font-bold leading-tight text-primary">
+                        <Link
+                          href={`/articles/articles-${relatedPost.id}`}
+                          className="hover:underline"
+                        >
+                          {relatedPost.title}
+                        </Link>
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        {relatedPost.excerpt}
+                      </p>
+                    </div>
+                    <div className="pt-4">
+                      <Link
+                        href={`/articles/articles-${relatedPost.id}`}
+                        className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
+                      >
+                        Read more <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
               ))}
             </div>
             <div className="flex justify-center">
               <Button
-          variant="outline"
-          size="lg"
-          className="gap-2 hover:bg-secondary/5"
+                variant="outline"
+                size="lg"
+                className="gap-2 hover:bg-secondary/5"
               >
-          <Link href="/blog">View All Blogs</Link>
-          <ArrowRight className="h-4 w-4" />
+                <Link href="/articles">View All article</Link>
+                <ArrowRight className="h-4 w-4" />
               </Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative overflow-hidden rounded-lg shadow-lg bg-white border border-gray-200 p-8"
+              >
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-primary/10 opacity-20 pointer-events-none"></div> */}
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="space-y-6 relative z-10"
+                >
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary text-center">
+                    Inquiry Form
+                  </h2>
+                  <p className="text-muted-foreground md:text-lg text-center">
+                    Interested in our yoga classes? Fill out the form below and we'll get back to you soon.
+                  </p>
+                  <form className="space-y-6">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                      <div className="space-y-2">
+                        <Label htmlFor="fullName">Full Name</Label>
+                        <Input
+                          id="fullName"
+                          placeholder="Enter your full name"
+                          className="border-gray-300 focus:ring-primary focus:border-primary"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="Enter your email"
+                          className="border-gray-300 focus:ring-primary focus:border-primary"
+                        />
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Contact Number</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="Enter your contact number"
+                        className="border-gray-300 focus:ring-primary focus:border-primary"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea
+                        id="message"
+                        placeholder="Tell us about your yoga goals and any specific requirements"
+                        className="min-h-[150px] border-gray-300 focus:ring-primary focus:border-primary"
+                      />
+                    </div>
+                    <div className="flex justify-center">
+                      <Button
+                        type="submit"
+                        className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 transition-transform transform hover:scale-105"
+                      >
+                        <Send className="mr-2 h-4 w-4" />
+                        Submit Inquiry
+                      </Button>
+                    </div>
+                  </form>
+                </motion.div>
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: [0.5, 1, 0.5],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: "reverse",
+                  }}
+                  className="absolute -top-4 -left-4 h-24 w-24 rounded-full bg-primary/20 blur-xl"
+                ></motion.div>
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: [0.5, 1, 0.5],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: "reverse",
+                    delay: 2,
+                  }}
+                  className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-secondary/20 blur-xl"
+                ></motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-8"
+              >
+                <motion.div
+                  initial={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="relative h-[300px] overflow-hidden rounded-xl shadow-lg border border-gray-200 hidden md:block"
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1655969611207!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-xl"
+                  ></iframe>
+                </motion.div>
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-primary text-center">
+                    Address
+                  </h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
+                        <MapPin className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary">Location</h4>
+                        <p className="text-gray-600">
+                          SB road, opp pavilion mall, Pune-411016.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
+                        <Phone className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary">Contact Number</h4>
+                        <p className="text-gray-600">+91 1234567890</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
+                        <Mail className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary">Email Us</h4>
+                        <p className="text-gray-600">
+                          info@rukhaminiyoga.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>

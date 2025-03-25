@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -14,6 +14,19 @@ const ConsultationPopup: React.FC<ConsultationPopupProps> = ({
   isOpen,
   onClose,
 }) => {
+  // Add effect to prevent scrolling when popup is open
+  useEffect(() => {
+    if (isOpen) {
+      // Prevent scrolling on the body when popup is open
+      document.body.style.overflow = "hidden";
+    }
+
+    // Clean up function to restore scrolling when popup closes
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null
 
   return (
@@ -23,34 +36,34 @@ const ConsultationPopup: React.FC<ConsultationPopupProps> = ({
       )}
     >
       <div className={cn("bg-white p-6 rounded-lg shadow-lg w-full max-w-md")}>
-        <h2 className="text-2xl font-bold mb-4">Request Distribution</h2>
+        <h2 className="text-2xl font-bold mb-4">Inquiry Form</h2>
         <p className="mb-4 text-gray-600">
-          Complete this form to request our products for your business.
+          Complete this form to inquire about our yoga classes and services.
         </p>
         <form className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="full-name">Business Name</Label>
+            <Label htmlFor="full-name">Full Name</Label>
             <Input
               id="full-name"
-              placeholder="Enter your business name"
+              placeholder="Enter your full name"
               required
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Business Email</Label>
+            <Label htmlFor="email">Email Address</Label>
             <Input
               id="email"
               type="email"
-              placeholder="Enter your business email"
+              placeholder="Enter your email address"
               required
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="phone">Contact Number</Label>
+            <Label htmlFor="phone">Phone Number</Label>
             <Input
               id="phone"
               type="tel"
-              placeholder="Enter your contact number"
+              placeholder="Enter your phone number"
               required
             />
           </div>
@@ -58,7 +71,7 @@ const ConsultationPopup: React.FC<ConsultationPopupProps> = ({
             <Label htmlFor="message">Message</Label>
             <Textarea
               id="message"
-              placeholder="Tell us about your business and distribution requirements"
+              placeholder="Tell us about your yoga experience and what you're looking for"
               rows={4}
               required
             />
@@ -68,7 +81,7 @@ const ConsultationPopup: React.FC<ConsultationPopupProps> = ({
               Cancel
             </Button>
             <Button type="submit" className="hover:bg-secondary">
-              Submit Request
+              Submit Inquiry
             </Button>
           </div>
         </form>

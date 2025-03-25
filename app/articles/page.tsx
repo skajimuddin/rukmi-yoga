@@ -218,7 +218,7 @@ export default function BlogPage() {
                         <span>{featuredPost.category}</span>
                       </div>
                       <h2 className="text-2xl font-bold leading-tight md:text-3xl text-primary">
-                        <Link href={`/blog/blog-1`} className="hover:underline">
+                        <Link href={`articlesarticles-1`} className="hover:underline">
                           {featuredPost.title}
                         </Link>
                       </h2>
@@ -240,7 +240,7 @@ export default function BlogPage() {
                   </div>
                   <div className="mt-6">
                     <Button className="bg-secondary hover:bg-secondary/90 text-white" asChild>
-                      <Link href={`/blog/blog-1`}>Read Article</Link>
+                      <Link href={`articlesarticles-1`}>Read Article</Link>
                     </Button>
                   </div>
                 </div>
@@ -297,7 +297,7 @@ export default function BlogPage() {
                         <span>{post.category}</span>
                       </div>
                       <h3 className="text-xl font-bold leading-tight text-primary">
-                        <Link href={`/blog/blog-${post.id}`} className="hover:underline">
+                        <Link href={`articlesarticles-${post.id}`} className="hover:underline">
                           {post.title}
                         </Link>
                       </h3>
@@ -317,7 +317,7 @@ export default function BlogPage() {
                       <span className="text-sm">{post.author}</span>
                     </div>
                     <Link
-                      href={`/blog/blog-${post.id}`}
+                      href={`articlesarticles-${post.id}`}
                       className="inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline"
                     >
                       Read more <ArrowRight className="h-4 w-4" />
