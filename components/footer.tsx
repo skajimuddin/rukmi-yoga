@@ -11,24 +11,24 @@ export default function Footer() {
 
   return (
     <footer className="border-t bg-secondary">
-      <div className="container py-8 md:py-12">
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
+      <div className="container py-10 md:py-16">
+        <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2">
+          <div className="space-y-5">
+            <div className="flex items-center">
               <img className="h-16 px-3 bg-white rounded-md" src="/logo.svg" alt="logo" />
             </div>
-            <p className="text-sm text-white">
+            <p className="text-sm text-white max-w-md">
               Sri RukhaminiiYoga Gurukul, magical and soulful Yoga Training
             </p>
-            <div className="flex gap-4 flex-col">
-              <div className="hidden md:flex">
+            <div className="flex flex-col gap-4">
+              <div className="hidden md:block">
                 <form className="flex w-full max-w-sm items-center gap-2">
                   <input
                     type="email"
-                    className="flex-grow rounded-md border border-gray-300  bg-white text-xs text-gray-900  px-4 py-2  lg:h-11 h-11"
+                    className="flex-grow rounded-md border border-gray-300 bg-white text-xs text-gray-900 px-4 py-2 h-11"
                     placeholder="Subscribe to Our Newsletter"
                   />
-                  <Button className="text-xs">Subscribe</Button>
+                  <Button className="text-xs whitespace-nowrap">Subscribe</Button>
                 </form>
               </div>
               <div>
@@ -42,45 +42,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="grid md:gap-8 gap-5  grid-rows-2 grid-cols-2 sm:grid-cols-3 md:grid-rows-1 md:grid-cols-4">
-            <div className="md:space-y-4 space-y-1">
-              <h3 className="text-sm font-medium text-white">Shop</h3>
-              <ul className="space-y-2 text-sm text-white">
-                <li>
-                  <Link
-                    href="/products"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    All Products
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Essential Oils
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Supplements
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Wellness Kits
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="md:space-y-4 space-y-1">
+
+          <div className="grid gap-8 grid-cols-3">
+            <div className="space-y-4">
               <h3 className="text-sm font-medium text-white">Company</h3>
               <ul className="space-y-2 text-sm text-white">
                 <li>
@@ -89,22 +53,6 @@ export default function Footer() {
                     className="hover:text-foreground transition-colors"
                   >
                     Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact-us"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about-us"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    About us
                   </Link>
                 </li>
                 <li>
@@ -125,31 +73,23 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="md:space-y-4 space-y-1">
+            <div className="space-y-4">
               <h3 className="text-sm font-medium text-white">Help</h3>
               <ul className="space-y-2 text-sm text-white">
                 <li>
                   <Link
-                    href="#"
+                    href="/contact-us"
                     className="hover:text-foreground transition-colors"
                   >
-                    Shipping & Returns
+                    Contact
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/about-us"
                     className="hover:text-foreground transition-colors"
                   >
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Privacy Policy
+                    About us
                   </Link>
                 </li>
                 <li>
@@ -162,61 +102,57 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="md:space-y-4 space-y-1">
-              <h3 className="text-sm font-medium pb-2 text-white">Social</h3>
-              <ul className="space-y-4  text-sm text-white">
-                <li className="flex gap-4 items-center">
-                  {/* <div className="text-xs h-5 w-5">
-                    <Instagram />
-                  </div> */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-medium text-white">Social</h3>
+              <ul className="space-y-3 text-sm text-white">
+                <li>
                   <Link
                     href="https://www.instagram.com/srirukhaminiiyoga"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-foreground transition-colors flex items-center gap-2"
                   >
-                    Instagram
+                    {/* <Instagram className="h-4 w-4" /> */}
+                    <span>Instagram</span>
                   </Link>
                 </li>
-                <li className="flex gap-4 items-center">
-                  {/* <div className="text-xs h-5 w-5">
-                    <Facebook />
-                  </div> */}
+                <li>
                   <Link
                     href="https://www.facebook.com/people/Ashwini-Natu/pfbid0wntjKdeYRHARiBQGr63W8GMJcU3weeVJ1S3SxG4xjBtXwuX59MStx1Y3jcK4TnSwl/?mibextid=ZbWKwL"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-foreground transition-colors flex items-center gap-2"
                   >
-                    Facebook
+                    {/* <Facebook className="h-4 w-4" /> */}
+                    <span>Facebook</span>
                   </Link>
                 </li>
-                <li className="flex gap-4 items-center">
-                  {/* <div className="text-xs h-5 w-5">
-                    <Phone />
-                  </div> */}
+                <li>
                   <Link
                     href="https://www.youtube.com/channel/UCrXQ07_n6uFcH-C-kQa_Tzg"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-foreground transition-colors flex items-center gap-2"
                   >
-                    YouTube
+                    {/* <Phone className="h-4 w-4" /> */}
+                    <span>YouTube</span>
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="md:hidden">
-            <form className="flex w-full max-w-sm items-center gap-2">
-              <input
-                type="email"
-                className="flex-grow rounded-md border border-gray-300  bg-white text-xs text-gray-900  px-4 py-2  lg:h-11 h-11"
-                placeholder="Subscribe to Our Newsletter"
-              />
-              <Button className="text-xs">Subscribe</Button>
-            </form>
-          </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-white">
+
+        <div className="mt-8 md:hidden">
+          <form className="flex w-full items-center gap-2">
+            <input
+              type="email"
+              className="flex-grow rounded-md border border-gray-300 bg-white text-xs text-gray-900 px-4 py-2 h-11"
+              placeholder="Subscribe to Our Newsletter"
+            />
+            <Button className="text-xs whitespace-nowrap">Subscribe</Button>
+          </form>
+        </div>
+
+        <div className="mt-10 border-t pt-6 text-center text-sm text-white">
           <p>
             © {new Date().getFullYear()} SRI RUKHAMINI. All rights reserved.
           </p>
-          <p>
+          <p className="mt-1">
             Designed and Developed by{" "}
             <a
               href="https://www.astucreatives.com/"
