@@ -136,21 +136,26 @@ export default function LandingPage() {
   const maxIndex = Math.max(0, testimonials.length - cardsToShow);
   const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const isMobile = useIsMobile();
-
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setCardsToShow(3);
-      } else if (window.innerWidth >= 640) {
-        setCardsToShow(2);
-      } else {
-        setCardsToShow(1);
+      if (typeof window !== 'undefined') {
+        if (window.innerWidth >= 1024) {
+          setCardsToShow(3);
+        } else if (window.innerWidth >= 640) {
+          setCardsToShow(2);
+        } else {
+          setCardsToShow(1);
+        }
       }
     };
 
+    // Set initial value
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    
+    if (typeof window !== 'undefined') {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   useEffect(() => {
@@ -605,12 +610,15 @@ export default function LandingPage() {
                 </motion.div>
               ))}
             </div>
-            <div className="flex justify-center pt-8">
-              <Button
+            <div className="flex justify-center pt-8">              <Button
                 variant="outline"
                 size="lg"
                 className="gap-2 hover:bg-secondary/5"
-                onClick={() => window.location.href = "/gallery"}
+                onClick={() => {
+                  if (typeof window !== 'undefined') {
+                    window.location.href = "/gallery"
+                  }
+                }}
               >
                 View More
                 <ArrowRight className="h-4 w-4" />

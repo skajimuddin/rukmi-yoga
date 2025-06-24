@@ -25,8 +25,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import productsData from "@/data/products.json";
-import ConsultationPopup from "@/components/ConsultationPopup";
 
 export default function Gallerypage() {
 
@@ -186,6 +184,5 @@ export default function Gallerypage() {
       </AnimatePresence>
 
       <Footer />
-    </>
-  );
-}
+  </>
+);}

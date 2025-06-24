@@ -3,11 +3,16 @@
 import Link from "next/link"
 import { Leaf, Instagram, Facebook, Twitter, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import ConsultationPopup from "./ConsultationPopup"
 
 export default function Footer() {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const [currentYear, setCurrentYear] = useState(2024)
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear())
+  }, [])
 
   return (
     <footer className="border-t bg-secondary">
@@ -211,10 +216,9 @@ export default function Footer() {
               <Button className="text-xs">Subscribe</Button>
             </form>
           </div>
-        </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-white">
+        </div>        <div className="mt-8 border-t pt-8 text-center text-sm text-white">
           <p>
-            © {new Date().getFullYear()} SRI RUKHAMINI. All rights reserved.
+            © {currentYear} SRI RUKHAMINI. All rights reserved.
           </p>
           <p>
             Designed and Developed by{" "}

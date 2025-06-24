@@ -2,8 +2,15 @@
 
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import { useState, useEffect } from "react"
 
 export default function FooterMinimal() {
+  const [currentYear, setCurrentYear] = useState(2024)
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear())
+  }, [])
+
   return (
     <footer className="border-t bg-secondary">
       <div className="container py-4">
@@ -16,7 +23,7 @@ export default function FooterMinimal() {
             <span className="text-sm">Back to Home</span>
           </Link>
           <p className="text-sm text-white">
-            © {new Date().getFullYear()} RUKMI YOGA
+            © {currentYear} RUKMI YOGA
           </p>
         </div>
       </div>

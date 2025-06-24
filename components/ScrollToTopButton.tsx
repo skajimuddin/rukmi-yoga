@@ -5,22 +5,27 @@ import { ChevronUp } from "lucide-react"
 
 const ScrollToTopButton = () => {
   const [showTopButton, setShowTopButton] = useState(false)
-
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowTopButton(true)
-      } else {
-        setShowTopButton(false)
+      if (typeof window !== 'undefined') {
+        if (window.scrollY > 300) {
+          setShowTopButton(true)
+        } else {
+          setShowTopButton(false)
+        }
       }
     }
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    if (typeof window !== 'undefined') {
+      window.addEventListener("scroll", handleScroll)
+      return () => window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
   }
 
   return (
