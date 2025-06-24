@@ -29,7 +29,7 @@ import Footer from "@/components/footer";
 export default function Gallerypage() {
 
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
-  
+
   // Gallery images data
   const galleryImages = [
     {
@@ -184,5 +184,11 @@ export default function Gallerypage() {
       </AnimatePresence>
 
       <Footer />
+<<<<<<< HEAD
   </>
 );}
+=======
+    </>
+  );
+}
+>>>>>>> d85bb187f6aad6827ca0344fcee18e40b4a13c3e

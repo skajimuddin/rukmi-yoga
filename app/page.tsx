@@ -22,10 +22,11 @@ import {
   Clock,
   Shield,
   Target,
+  X,
 } from "lucide-react";
 import Gallerypage from "./gallery/page";
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 import Header from "@/components/header";
@@ -37,6 +38,7 @@ export default function LandingPage() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [cardsToShow, setCardsToShow] = useState(3);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const testimonials = [
     {
@@ -49,7 +51,7 @@ export default function LandingPage() {
       name: "Mr.  Abhijit Gandhi ( Businessman) ",
       role: "",
       quote:
-        "I have experienced a very positive transformation ever since I’ve joined Sri Rukhaminii Yoga Studio. Me and my friends have always taken fitness very seriously and we have been going for long walks and treks every morning for years now. Joining a Yoga Studio was a sudden decision and a very good one, because now along with fitness, I have improved flexibility, reducing stiffness. Also practicing meditation has greatly impacted my overall mood, and especially sleep cycle leading to a more relaxed and improved sleep.",
+        "Joining Sri Rukhaminii Yoga Studio has been a great decision. While I’ve always been serious about fitness with morning walks and treks, yoga has enhanced my flexibility and reduced stiffness. Meditation has also improved my mood and sleep, making me feel more relaxed and refreshed.",
     },
     {
       name: "Mr Garnard from London, UK.( A student of Music )",
@@ -243,6 +245,18 @@ export default function LandingPage() {
   const bestSellerProducts = productsData.bestSellers
     .map((id) => productsData.products.find((p) => p.id === id))
     .filter(Boolean);
+
+  // Function to open the lightbox with a specific image
+  const openLightbox = (image: { src: string; alt: string }) => {
+    setSelectedImage(image);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+  };
+
+  // Function to close the lightbox
+  const closeLightbox = () => {
+    setSelectedImage(null);
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -595,7 +609,8 @@ export default function LandingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="relative h-[200px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group"
+                  className="relative h-[200px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg group cursor-pointer"
+                  onClick={() => openLightbox(image)}
                 >
                   <Image
                     src={image.src}
@@ -604,9 +619,6 @@ export default function LandingPage() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  {/* <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <p className="text-sm font-medium">{image.alt}</p>
-                  </div> */}
                 </motion.div>
               ))}
             </div>
@@ -626,6 +638,47 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/* Lightbox Modal */}
+        <AnimatePresence>
+          {selectedImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+              onClick={closeLightbox}
+            >
+              <motion.div
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+                className="relative max-w-full max-h-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  className="absolute top-4 right-4 z-10 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
+                  onClick={closeLightbox}
+                >
+                  <X className="h-6 w-6" />
+                </button>
+                <div className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[80vh]">
+                  <Image
+                    src={selectedImage.src}
+                    alt={selectedImage.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="absolute bottom-4 left-0 right-0 text-center text-white text-sm px-4">
+                  {selectedImage.alt}
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Testimonials Section */}
         <section

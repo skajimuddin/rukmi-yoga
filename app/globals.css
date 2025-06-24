@@ -225,3 +225,26 @@ p {
 footer p {
   color: white !important;
 }
+
+/* Site Maintenance Styles */
+.site-maintenance {
+  cursor: not-allowed !important;
+  user-select: none !important;
+}
+
+.site-maintenance * {
+  pointer-events: none !important;
+}
+
+.maintenance-notice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  text-align: center;
+  z-index: 9999;
+  font-weight: bold;
+}
