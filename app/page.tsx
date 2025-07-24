@@ -215,9 +215,10 @@ export default function LandingPage() {
                 {/* <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-white hover:bg-primary/80 w-fit">
                   New Collection
                 </div> */}
-                <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
+                <h1 className="text-4xl text-center md:text-left font-bold tracking-tighter sm:text-5xl xl:text-6xl/non">
                   {/* Discover Holistic Wellness with */}
-                  Embrace Balance, Elevate Your Life with Yoga
+                  <span className="text-primary">Embrace Balance,</span> Elevate
+                  Your Life with Yoga
                 </h1>
                 <p className="text-center md:text-left max-w-[600px] text-gray-600 md:text-xl">
                   {/* Premium Ayurvedic products designed to restore balance and

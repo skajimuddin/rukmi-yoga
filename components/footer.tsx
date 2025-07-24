@@ -7,7 +7,7 @@ import { useState } from "react"
 import ConsultationPopup from "./ConsultationPopup"
 
 export default function Footer() {
-  const [isPopupOpen,setIsPopupOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   return (
     <footer className="border-t bg-secondary">
@@ -36,10 +36,10 @@ export default function Footer() {
                 </form>
               </div>
               <div>
-                <Button
-                     onClick={() => setIsPopupOpen(true)}
-                >Contact for Distribution</Button>
-                 <ConsultationPopup
+                <Button onClick={() => setIsPopupOpen(true)}>
+                  Contact for Distribution
+                </Button>
+                <ConsultationPopup
                   isOpen={isPopupOpen}
                   onClose={() => setIsPopupOpen(false)}
                 />
@@ -212,9 +212,14 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} RUKMI YOGA. All rights reserved.</p>
           <p>
             Designed and Developed by{" "}
-            <span className="font-medium underline text-white">
-              astucreatives.com
-            </span>
+            <a
+              href="http://skajimuddin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline text-white"
+            >
+              skajimuddin.com
+            </a>
           </p>
         </div>
       </div>
