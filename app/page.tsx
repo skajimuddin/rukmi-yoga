@@ -781,7 +781,7 @@ export default function LandingPage() {
                       <Phone className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h4 className="font-medium">Call Us</h4>
-                        <p className="text-muted-foreground">+91 98765 43210</p>
+                        <p className="text-muted-foreground">+91 1234567890</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
