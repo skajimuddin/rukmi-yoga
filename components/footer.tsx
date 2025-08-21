@@ -213,12 +213,12 @@ export default function Footer() {
           <p>
             Designed and Developed by{" "}
             <a
-              href="http://skajimuddin.com/"
+              href="https://zeonweb.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium underline text-white"
             >
-              skajimuddin.com
+              zeonweb.com
             </a>
           </p>
         </div>
